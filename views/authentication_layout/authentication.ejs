@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="/css/authentication.css" />
+<!--  Automatically logout after 5m-->
+<meta http-equiv="refresh" content="300; url = /logout" />
+
+<div class="d-flex justify-content-center mt-5">
+  <div class="mt-5">
+    <div class="title">
+      <!-- Title -->
+      <h5>Please enter your code</h5>
+    </div>
+    <form method="POST" action="/">
+      <div class="mt-3">
+        <input
+          type="password"
+          class="form-control mt-1"
+          name="authCode"
+          placeholder="ex:00000"
+        />
+      </div>
+      <div class="error" id="code_error"></div>
+
+      <!-- Button -->
+      <div class="wrap mt-4">
+        <button class="button">Verify</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-5 timer">
+  <span style="font-size: 2rem">The code will be expired after:</span>
+</div>
+<div class="d-flex justify-content-center mt-2">
+  <div class="mt-5">
+    <div>
+      <div class="timer"><span id="time">05:00</span></div>
+      <div class="timer" id="refl"><span id="time-shadow">05:00</span></div>
+    </div>
+    <div class="return">
+      <a href="/logout">
+        <button class="button-28" role="button">Return to login</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (even) => {
+    //to prevent refresh
+    event.preventDefault();
+
+    const authCode = form.authCode.value;
+    const codeError = document.querySelector("#code_error");
+
+    try {
+      codeError.textContent = "";
+      //to send post request and save it in result
+      const result = await fetch("/authentication", {
+        method: "POST", //we tell the server we will use  post
+        body: JSON.stringify({ authCode }), //what the body will contain
+        headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+      });
+      //take the result from the response and save it in data variable
+      const data = await result;
+      if (data.status == 200) {
+        location.assign("/");
+      } else {
+        codeError.textContent = "Invalid code";
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  /** Timer for Authentication */
+  function startTimer(duration, display) {
+    var timer = duration,
+      minutes,
+      seconds;
+    let executing = setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+      if (timer == 0) {
+        clearInterval(executing);
+        display.textContent = minutes + ":" + seconds;
+        location.assign("/logout ");
+      }
+    }, 1000);
+  }
+
+  window.onload = function () {
+    /*How many minutes you want*/
+    var fiveMinutes = 60 * 5,
+      display = document.querySelector("#time");
+    display2 = document.querySelector("#time-shadow");
+    startTimer(fiveMinutes, display);
+    startTimer(fiveMinutes, display2);
+  };
+</script>

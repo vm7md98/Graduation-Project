@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="/css/login.css" />
+<script src="/js/validation.js"></script>
+
+<div class="title">
+  <h1 class="display-1" style="color: #2f4f4f">HCT</h1>
+  <h5>HCT Registration Stuff System</h5>
+</div>
+<div class="mt-5 d-flex justify-content-center">
+  <!-- Form -->
+  <form method="POST" action="/">
+    <!-- Row -->
+    <div class="row m-2">
+      <!-- Email -->
+      <div class="col-md-12">
+        <div class="form-outline">
+          <label class="form-label" for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Enter Email"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="row m-2">
+      <div class="col-md-12">
+        <div class="form-outline">
+          <label class="form-label" for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Enter Password"
+          />
+        </div>
+      </div>
+      <!-- Error Text -->
+      <div class="error" id="loginError"></div>
+
+      <!-- Button -->
+      <div class="wrap">
+        <button class="button mt-3">Login</button>
+      </div>
+
+      <!-- Forget Password -->
+      <div class="d-flex justify-content-center mt-3">
+        <a href="" class="forget-pass">Forgot your password?</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  const form = document.querySelector("form");
+  const loginError = document.querySelector("#loginError");
+
+  form.addEventListener("submit", async (even) => {
+    //to prevent refresh
+    event.preventDefault();
+    //reset error
+    loginError.textContent = "";
+
+    //get the values
+    const email = form.email.value;
+    const password = form.password.value;
+    //validate email
+
+    if (validateLogin(email, password)) {
+      try {
+        //to send post request and save it in result
+        const result = await fetch("/login", {
+          method: "POST", //we tell the server we will use  post
+          body: JSON.stringify({ email, password }), //what the body will contain
+          headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+        });
+        //take the result from the response and save it in data variable
+        const data = await result.json();
+        if (data.errors) {
+          loginError.textContent = data.errors.email;
+          loginError.textContent = data.errors.password;
+        }
+        if (data.user) {
+          console.log(data.user);
+          location.assign("/authentication");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      loginError.textContent = "Email or Password not valid (interface level)";
+    }
+  });
+</script>

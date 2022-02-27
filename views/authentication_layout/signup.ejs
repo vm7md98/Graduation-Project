@@ -1,0 +1,226 @@
+<link rel="stylesheet" href="/css/registerStuff.css" />
+<script src="/js/validation.js"></script>
+
+<div class="title">
+  <h1 class="display-1" style="color: #2f4f4f">HCT</h1>
+  <h5>HCT Registration Stuff System</h5>
+</div>
+<div class="mt-5 d-flex justify-content-center ">
+  <!-- Form -->
+  <form method="POST" action="/">
+    <!-- First Name and Last Name-->
+
+    <div class="row m-2">
+      <!-- first name input -->
+      <div class="col-md-6">
+        <div class="form-outline">
+          <label class="form-label" for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            placeholder="ex: Abdullah"
+          />
+        </div>
+        <div class="error" id="firstName_error"></div>
+      </div>
+
+      <!-- last name input -->
+      <div class="col-md-6">
+        <div class="form-outline">
+          <label class="form-label" for="lastName">Last Name</label>
+
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            name="lastName"
+            placeholder="ex: Abdullah"
+          />
+        </div>
+        <div class="error" id="lastName_error"></div>
+
+      </div>
+    </div>
+    <!-- Email and Password-->
+
+    <!-- Row -->
+    <div class="row m-2">
+      <!-- Email -->
+      <div class="col-md-12">
+        <div class="form-outline">
+          <label class="form-label" for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            aria-describedby="emailHelp"
+            placeholder="ex: h00@hct.ac.ae"
+          />
+        </div>
+        <div class="error" id="email_error"></div>
+      </div>
+    </div>
+    <!-- Password -->
+    <div class="row m-2">
+      <div class="col-md-12">
+        <div class="form-outline">
+          <label class="form-label" for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="error" id="password_error"></div>
+      </div>
+    </div>
+
+    <!-- Semester and Role-->
+
+    <div class="row m-2">
+      <!-- Semester  input -->
+      <div class="col-md-6"  id="semester" >
+        <div class="form-outline">
+          <label class="form-label" for="semester">Semester</label>
+          <input
+            type="text"
+            class="form-control"
+            name="semester"
+            placeholder="ex: 1"
+            id="semester"
+
+          />
+        </div>
+        <div class="error" id="semester_error"></div>
+      </div>
+
+      <!--     role list -->
+      <div class="col-md-6 pt-4">
+        <select
+          class="form-select mt-2"
+          style="border-radius: 0.3rem"
+          aria-label="Default select example"
+          name="role"
+          onchange="dropboxAdvisorCheck()"
+        >
+          <option value="ST" selected>Student</option>
+          <option value="AV">Advisor</option>
+          <option value="AD">Admin</option>
+        </select>
+      </div>
+    </div>
+    <!--  list of advisors -->
+    <div class="p-3">
+      <select
+        class="form-select mt-2"
+        style="border-radius: 0.3rem"
+        aria-label="Default select example"
+        name="advisors"
+        id="advisor_dropbox"
+      >
+        <option value="0" selected disabled hidden>List of advisor</option>
+        <% Advisors.forEach(element => {%>
+        <option value=<%- element.id%>><%- element.firstName %></option>
+        <%}); %>
+        <option value="none">No advisor</option>
+      </select>
+    </div>
+<!-- Button -->
+
+    <div class="wrap  m-5 ">
+      <button class="button mt-4">Create</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  //variable
+  const form = document.querySelector("form");
+  const emailError = document.querySelector("#email_error");
+  const passwordError = document.querySelector("#password_error");
+  const firstNameError = document.querySelector("#firstName_error");
+  const lastNameError = document.querySelector("#lastName_error");
+
+  //event listener with function
+  form.addEventListener("submit", async (even) => {
+    //to prevent refresh
+    event.preventDefault();
+    //reset error
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    firstNameError.textContent = "";
+    lastNameError.textContent = "";
+    //get the values
+    const email = form.email.value;
+    const password = form.password.value;
+    const role = form.role.value;
+    const firstName = form.firstName.value;
+    const lastName = form.lastName.value;
+    const advisor = form.advisors.value;
+    const semester = form.semester.value;
+
+    //validate email
+    if (validateEmail(email)) {
+      //validate password
+      if (validatePassword(password)) {
+        if (validationName(firstName)) {
+          if (validationName(lastName)) {
+            if (confirm("Are you sure you want to register this User")) {
+              try {
+                //to send post request and save it in result
+                const result = await fetch("/signup", {
+                  method: "POST", //we tell the server we will use  post
+                  body: JSON.stringify({
+                    email,
+                    password,
+                    role,
+                    firstName,
+                    lastName,
+                    advisor,
+                    semester,
+                  }), //what the body will contain
+                  headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+                });
+                //take the result from the response and save it in data variable
+                const data = await result.json();
+                if (data.errors) {
+                  emailError.textContent = data.errors.email;
+                  passwordError.textContent = data.errors.password;
+                }
+                if (data.user) {
+                  alert("User has been created");
+                  location.assign("/");
+                }
+              } catch (error) {
+                console.log("catch");
+              }
+            } else {
+              alert("Registration canceled ");
+            }
+          } else {
+            lastNameError.textContent = "cannot be empty (interface level)";
+          }
+        } else {
+          firstNameError.textContent = "cannot be empty (interface level)";
+        }
+        //ask for confirmation
+      } else {
+        passwordError.textContent = "wrong password (interface level)";
+      }
+    } else {
+      emailError.textContent = "wrong email (interface level)";
+    }
+  });
+  function dropboxAdvisorCheck() {
+    if (form.role.value == "AV" || form.role.value == "AD") {
+      document.getElementById("advisor_dropbox").style.display = "none";
+      document.getElementById("semester").style.display = "none";
+    } else {
+      document.getElementById("advisor_dropbox").style.display = "block";
+      document.getElementById("semester").style.display = "block";
+    }
+  }
+</script>
+</div>

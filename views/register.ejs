@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/css/register.css" />
+
+<div class="container-lg">
+  <form action="">
+    <table class="table100-head">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% course.forEach(element => {%>
+        <tr>
+          <td class="column2"><%= element.code%></td>
+          <td class="column1">
+            <span style="float: left"> <%= element.courseName%> </span>
+            <span style="float: right; padding-right: 20%">
+              
+              <input class="size-check" type="checkbox" value=<%=element.code%> />
+            </span>
+          </td>
+        </tr>
+        <% })%>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-end">
+    <button class="btn btn-success" type="submit">Register</button>
+  </div>
+  </form>
+</div>
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (even) => {
+    //to prevent refresh
+    event.preventDefault();
+
+    var array = [];
+    var checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      array.push(checkboxes[i].value);
+    }
+    try {
+      if (confirm("you are sure?")) {
+        //to send post request and save it in result
+        const result = await fetch("/register", {
+          method: "POST", //we tell the server we will use  post
+          body: JSON.stringify({ code: array }), //what the body will contain
+          headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+        });
+        alert("course registered");
+        location.assign("/");
+      } else {
+        alert("Registration canceled ");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  });
+</script>

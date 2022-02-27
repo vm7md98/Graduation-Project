@@ -1,0 +1,78 @@
+<div class="form-card mt-2">
+  <!-- Title -->
+  <h1 class="display-1" style="color: #2f4f4f">HCT</h1>
+  <h5>HCT Registration Stuff System</h5>
+  <!-- Form Start -->
+  <form class="form-container mt-2" method="POST" action="/">
+    <!-- email input -->
+    <div class="form-group mt-2">
+      <label for="ID" class="mb-2">ID </label>
+      <input
+        type="text"
+        class="form-control"
+        name="id"
+        aria-describedby="idHelp"
+        placeholder="Enter ID"
+      />
+      <div class="error" id="email_error"></div>
+    </div>
+
+    <!-- Button -->
+    <div class="wrap">
+      <button class="button mt-4">Create</button>
+    </div>
+  </form>
+  <script>
+    //variable
+    const form = document.querySelector("form");
+    const emailError = document.querySelector("#email_error");
+
+    //event listener with function
+    form.addEventListener("submit", async (even) => {
+      //to prevent refresh
+      event.preventDefault();
+      //reset error
+      emailError.textContent = "";
+
+      //get the values
+      const email = form.email.value;
+      try {
+        //to send post request and save it in result
+        const result = await fetch("/signup", {
+          method: "POST", //we tell the server we will use  post
+          body: JSON.stringify({
+            email,
+            password,
+            role,
+            firstName,
+            lastName,
+            advisor,
+            semester,
+          }), //what the body will contain
+          headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+        });
+        //take the result from the response and save it in data variable
+        const data = await result.json();
+        if (data.errors) {
+          emailError.textContent = data.errors.email;
+          passwordError.textContent = data.errors.password;
+        }
+        if (data.user) {
+          alert("User has been created");
+          location.assign("/");
+        }
+      } catch (error) {
+        console.log("catch");
+      }
+    });
+    /*     function dropboxAdvisorCheck() {
+      if (form.role.value == "AV" || form.role.value == "AD") {
+        document.getElementById("advisor_dropbox").style.display = "none";
+        document.getElementById("firstName_input").style.display = "none";
+      } else {
+        document.getElementById("advisor_dropbox").style.display = "block";
+        document.getElementById("firstName_input").style.display = "block";
+      }
+    } */
+  </script>
+</div>

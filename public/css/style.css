@@ -1,0 +1,153 @@
+body {
+  background-color: #e5e5e5;
+}
+
+/*nav*/
+.navbar {
+  margin-left: 4em;
+}
+/* disabled anchar tag for nav (the name of the page)*/
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  font-weight: 500;
+}
+/*For Logout in top of the page*/
+#log-out {
+  text-decoration: underline;
+  font-weight: 300;
+}
+#log-out:hover {
+  color: black;
+  font-weight: 400;
+}
+/* Error message (validation)*/
+.error {
+  color: #f62d2d;
+  margin: 10px 2px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+/* For Home in top of the page*/
+.inner {
+  padding-right: 5%;
+}
+a {
+  color: rgba(75, 99, 107, 0.8);
+  text-decoration: none;
+}
+a span {
+  font-weight: 100;
+  transition: all 0.1s;
+  border-bottom: 1px solid;
+  color: black;
+}
+a span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+a span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+a span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+a:hover span {
+  font-weight: 700;
+}
+a:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+a:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+a:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+a:hover span:nth-child(1) {
+  transition-delay: 0s;
+}
+a.hover-shadow:hover {
+  text-shadow: 1px 1px 0px #ddd, 2px 2px 0px #ddd, 3px 3px 0px #ddd;
+}
+
+/*Fotter*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*fotter wave*/
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 100px;
+  background: rgba(75, 99, 107, 0.8);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+.parallax > use {
+  -webkit-animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .waves {
+    height: 1000px;
+    min-height: 120px;
+  }
+}

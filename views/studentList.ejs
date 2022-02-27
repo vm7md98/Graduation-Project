@@ -1,0 +1,20 @@
+Search: <input type="text">
+<div class="row mt-5">
+  <% Students.forEach(element => {%>
+  <div class="card" style="width: 17rem; margin-left: 0.5rem">
+    <img
+      class="card-img-top img-thumbnail"
+      src="../img/person.jpg"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+
+      <h6 >FirstName: <%- element.firstName%></h5>
+      <h6 >LastName: <%- element.lastName%></h5>
+      <h6 >ID: <%- element.id%></h5>
+
+      <a href="#" class="btn btn-primary">More Info</a>
+    </div>
+  </div>
+  <%}); %>
+</div>

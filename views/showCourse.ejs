@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/showCourse.css" />
+
+<div class="container-sm mt-5">
+  <form action="">
+    <table class="table100-head">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% course.forEach(function (item, index) {%>
+        <tr>
+          <td class="column2"><%=item.code%></td>
+          <td class="column1"><%=item.courseName%></td>
+        </tr>
+        <%});%>
+      </tbody>
+    </table>
+  </form>
+</div>
