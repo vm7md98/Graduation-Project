@@ -38,4 +38,6 @@ app.set("view engine", "ejs");
 const routes = require("./server/routes/webRoutes.js");
 app.use("/", routes);
 
-app.listen(port, () => console.log("Server start - Listening to port " + port));
+app.listen(process.env.PORT || 3000, () =>
+  console.log("Server start - Listening to port " + process.env.PORT || 3000)
+);
