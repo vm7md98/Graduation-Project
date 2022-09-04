@@ -1,4 +1,4 @@
-![HCT Logo](https://hct.ac.ae/wp-content/themes/HCTtheme/assets/images/logo.svg) <img src="https://hct.ac.ae/wp-content/themes/HCTtheme/assets/images/logo.svg " width="100">
+![HCT Logo](https://hct.ac.ae/wp-content/themes/HCTtheme/assets/images/logo.svg) <img src="https://hct.ac.ae/wp-content/themes/HCTtheme/assets/images/logo.svg " width="600">
 
 # Final Year Project
 # _Universities Registration System_
