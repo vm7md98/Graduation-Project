@@ -159,29 +159,109 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 In conclusion, chapter 3 should provide us with all requirements we need to build the system or what is important to our system and what is not important. Therefore, we will evaluate system according to these requirements. 
 
 ## Chapter 4: Computing-based Solution/System Design, Implementation, Test and validation
-### 4.1 Functional requirements
-
-### 4.2 Introduction
+### 4.1 Introduction
 The purpose of this chapter is to check if the product is ready to be in the stage of full production and product launch also, we will explain the two different phases we went through which design and implantation. 
 
-### 4.3	Testing Techniques
+### 4.2	Testing Techniques
 In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
 
-### Testing
+- Testing
 The goal of the testing phase is to ensure that the product is ready for launch. Therefore, the product will be tested in various aspects with different techniques and the aspects are functionality testing, usability testing, UI (User Interface) testing, compatibility (Configuration) testing and testing in controlled environment.   
 Functionality Testing
 First, functional testing is where we test or check if the system operates correctly without any problems. In this part we will do the following testing: Links testing, Forms testing, Cookies testing.
 
-### Links testing:
+- Links testing:
 In this part we will test emails, links pages that are not referenced, no broken links and Outbound links.
 
-### Forms testing:
+- Forms testing:
 In this part we will test data input, form option (drop-down list) and required input.  
 
-### Cookies testing:
+- Cookies testing:
 In this part we will test the application with disabled cookies, with enabled cookies and check the security aspects when removing the cookies.
 
-### 4.4 Functional requirements
-### 4.5 Functional requirements
-### 4.6 Functional requirements
-### 4.7 Functional requirements
+#### 4.2.1	Functionality Testing Result
+#### 4.2.2	Usability Testing
+#### 4.2.2 (User Interface) Testing
+#### 4.2.4 Compatibility Testing
+#### 4.2.5 Testing in Controlled Environment & Survey 
+#### 4.2.6	Final Testing Result 
+
+### 4.3	Validation Techniques
+#### 4.3.1	Discussion
+
+### 4.4 Design
+#### 4.4.1	Visibility
+#### 4.4.2	Feedback
+#### 4.4.3	Affordances
+#### 4.4.4	Constraints
+#### 4.4.5 Consistency
+#### 4.4.6	Accessibility
+#### 4.4.7	Discussion
+
+### 4.5	Hierarchical Task Analysis (HTA)
+#### 4.5.1 HTA for student (To register)
+#### 4.5.2	HTA for admin (To add a new user)
+#### 4.5.3	HTA for admin (To download a report)
+
+### 4.6 Pages
+#### 4.6.1 login.ejs 
+#### 4.6.2	authentication.ejs 
+#### 4.6.3 index.ejs
+#### 4.6.4 signup.ejs
+#### 4.6.5 report.ejs 
+#### 4.6.6	studentList.ejs 
+#### 4.6.7 studentList.ejs 
+#### 4.6.8	showCourse.ejs 
+
+## 4.7 Implementation
+#### 4.7.1	Technologies 
+
+#### 4.7.2	File structure
+##### 4.7.2.1	app.js
+##### 4.7.2.2	package.json 
+##### 4.7.2.3	package-lock.json 
+##### 4.7.2.4	middleware
+##### 4.7.2.5	node_modules 
+##### 4.7.2.6	public 
+##### 4.7.2.7	views 
+
+### 4.7.3	Model-View-Controller (MVC)
+### 4.7.4 Exports Modules
+### 4.7.5	Routing
+### 4.7.6	Functions
+### 4.7.7	Validation
+### 4.7.8	Models
+### 4.7.9	Algorithm
+### 4.7.10	webController.js
+### 4.7.11	authMiddleware.js
+
+## Chapter 5: Conclusion
+### 5.1	Summarize
+### 5.2	Reflection
+### 5.3	Future development
+
+
+## References
+
+Retrieved 4 24, 2002, from https://iopscience.iop.org/article/10.1088/1742-6596/1165/1/012012/pdf#page=1
+Chauhan, D., & Bansal, K. (2017, February ). Using the Advantages of NOSQL: A Case Study on MongoDB. Recent and Innovation Trends in Computing and Communication. Retrieved 3 18, 2022, from https://www.researchgate.net/profile/Divya-Chauhan-4/publication/349110376_Using_the_Advantages_of_NOSQL_A_Case_Study_on_MongoDB/links/6021154d92851c4ed5580298/Using-the-Advantages-of-NOSQL-A-Case-Study-on-MongoDB.pdf#page=1
+Frees, S. (2015, January). A Place for Node.Js in the Computer Science Curriculum. Computing Sciences in Colleges. Retrieved 3 18, 2022, from https://www.researchgate.net/profile/Scott-Frees/publication/271849731_A_Place_for_NodeJs_in_the_Computer_Science_Curriculum/links/54d4db340cf2970e4e63c479/A-Place-for-NodeJs-in-the-Computer-Science-Curriculum.pdf#page=1
+Glenn, & Glenn , S. (2001, August). Testing a Website: Best Practices. Retrieved 4 24, 2022, from https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1
+Miller, E. (2000). WebSite Testing. Software Research, Inc. Retrieved 4 24, 2022, from http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1
+Visočnik, V. (2018). Comparison of JWT and OAuth 2.0 authorisation and. University of Maribor. Retrieved 18 3, 2022, from https://core.ac.uk/download/pdf/159753962.pdf#page=1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [1] 	V. Korhonen, “Chapter 10 - Dialogic literacy: A sociocultural literacy learning approach,” in Practising Information Literacy, S. T. Annemaree Lloyd, Ed., Chandos Publishing, 2010, pp. 211-226.
+- [2] 	S. Suryawanshi, B. R. Chakravarthi, M. Arcan and P. B. Buitelaar, “Multimodal Meme Dataset (MultiOFF) for Identifying Offensive Content in Image and Text,” Multimodal Meme Dataset (MultiOFF) for Identifying Offensive Content in Image and Text, pp. 33-38, 2020. 
+- [3] 	“drivendata,” [Online]. Available: https://www.drivendata.org/competitions/64/hateful-memes/. [Accessed 21 8 2021].
+- [4] 	F. Yus, “Multimodality in Memes: A Cyberpragmatic Approach,” pp. 3-16, 2018. 
+- [5] 	“Republic of Ireland: Copyright FAQs,” [Online]. Available: https://iaml-uk-irl.org/copyright-faqs-%E2%80%94-ireland#7. [Accessed 22 8 2021].
+- [6] 	“9gag,” [Online]. Available: https://9gag.com/. [Accessed 22 8 2021].
+- [7] 	“Meme Templates,” [Online]. Available: https://imgflip.com/. [Accessed 22 8 2021].
+- [8] 	“Selenium,” [Online]. Available: https://www.selenium.dev/. [Accessed 21 8 2021].
+- [9] 	X. Zhou, C. Yao, H. Wen, Y. Wang, S. Zhou, W. He and J. Liang, “EAST: An Efficient and Accurate Scene Text Detector,” p. 1, 2017. 
+- [10] 	ZER-0-NE, “EAST Detector for Text Detection,” [Online]. Available: https://github.com/ZER-0-NE/EAST-Detector-for-text-detection-using-OpenCV. [Accessed 22 8 2021].
+- [11] 	Fleron-X, “How to make bounding box around text-areas in an image? (Even if text is skewed!!),” [Online]. Available: https://stackoverflow.com/questions/54821969/how-to-make-bounding-box-around-text-areas-in-an-image-even-if-text-is-skewed. [Accessed 22 8 2021].
+- [12] 	A. Rosebrock, “OpenCV Text Detection (EAST text detector),” [Online]. Available: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/. [Accessed 22 8 2021].
+- [13] 	G. Roy, A. Alekhin and V. R. Shrimali, “Github,” [Online]. Available: https://github.com/opencv/opencv/blob/1f726e81f91746e16f4a6110681658f8709e7dd2/samples/dnn/text_detection.py#L86. [Accessed 22 8 2021].
+- [14] 	S. K, “Non-maximum Suppression (NMS),” [Online]. Available: https://towardsdatascience.com/non-maximum-suppression-nms-93ce178e177c. [Accessed 22 8 2021].
+- [15] 	T. Fuentes, “What is a Meme?,” [Online]. Available: https://www.seventeen.com/life/tech-social-media/a26065897/what-is-a-meme/. [Accessed 22 8 2021].
