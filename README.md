@@ -47,8 +47,10 @@ The first and foremost purpose of the assignment was to test and analyze the who
 ### 2.2	Adopted Methodology
 As we know that the system is for a Higher College have clear requirements about new system, each and every term associated with the system is well defined and well explained that shows that the requirements of the system are very clear and understandable, due to the reason we choose to use the waterfall methodology for this project. Waterfall methodology is very basic software development methodology which were being use over the decades for software development and system development. 
 We have some advantages of this model, due to these advantages many of the organization still using this model on and off for their projects.
+
 I.	Easy to understand:
 This is sequential and hierarchal model thus easy to understand for people within the team and outside the team like clients. It provides a complete life cycle for controlling and organizing software development projects.
+
 II.	Focus on goal:
 Every team whether they are part of development team or part of design team, every person has a common goal to complete this project. They share common goal and stay stick on one point to complete their work in assigned time frame.
 
