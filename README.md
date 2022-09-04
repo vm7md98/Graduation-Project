@@ -29,4 +29,4 @@ To summarize our problem with the current registration system:
 -	The system is slow and freezes sometimes. 
 -	Time: The process itself is bad and slow because there are too many people involved therefore, we need to make it auto-register or at least reduce the number of interactions between students, advisors, and others.
 -	Human error: for example, register for courses for another major.
--	lack of feedback: student (user) should get Immediate feedback on their actions for example: when they register/drop to a course or not met the minimum credit.
+-	Lack of feedback: student (user) should get Immediate feedback on their actions for example: when they register/drop to a course or not met the minimum credit.
