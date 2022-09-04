@@ -38,3 +38,21 @@ The above services work efficiently but it is missing some important features/se
 ### Solution
 Our solution to this problem will be create a new feature/service that will count the needed classes numbers based on the student courses registration. This solution will solve a lot of problems that we have talked about previously. It will help the students to get enough classes in every semester. Lecturers can be prepared before the semester starts. It will save a lot of time and effort on advisors. As a supervisor, she/he will have enough data to decide the classes number. Eventually, administration will know the number of classes, budgets, and lecturers needed in every semester. This solution will benefit HCT organization in every aspect, from the financial to the operational processes. We believe that it will lead to less human errors and will add a high value to HCT registration system effectively.
 
+## Chapter 2: Domain related Concepts and Systems
+### 2.1	Introduction
+
+
+
+
+### 2.2	Introduction
+
+
+
+
+
+### 2.3	Introduction
+
+
+
+
+### 2.4	Introduction
