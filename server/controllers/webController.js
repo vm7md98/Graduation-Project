@@ -3,15 +3,12 @@ const User = require("../models/User");
 const Advisor = require("../models/Advisor");
 const Student = require("../models/Student");
 const verifyUser = require("../models/verifyUser");
-const { json } = require("express");
 const jwt_decode = require("jwt-decode");
 const otherFunction = require("../../public/js/otherFunction");
 const validation = require("../../public/js/validation");
 const VerifyCode = require("../models/verifyUser");
 const Course = require("../models/Course");
 const Student_Course = require("../models/Student_Course");
-const CourseStudent = require("../models/course_student");
-const mongoose = require("mongoose");
 
 /**
  * GET /
@@ -57,7 +54,7 @@ module.exports.login_post = async (req, res) => {
         { code },
         { upsert: true, new: true }
       );
-    }
+    }""
 
     //jwt: we assign token to user
     const token = createToken(user.id, user.role, "Not Verified");
@@ -72,6 +69,7 @@ module.exports.login_post = async (req, res) => {
     res.status(400).json({ errors });
   }
 };
+
 /**
  * auth get
  */
@@ -190,29 +188,14 @@ module.exports.studentList_get = async (req, res) => {
   //decode jwt
   const decode = jwt_decode(a);
   // search on database for the user we want
-  const user = await User.findById(decode.id);
+  const user = await User.find({ id: decode.id });
+  console.log(user[0].id);
 
-  //then search by advisor id
-  const allStudent = await Student.find({ advisorId: user.id });
+  //console search by advisor id
+  const allStudent = await Student.find({ advisorId: user[0].id });
 
   const Students = allStudent;
 
-  /*   
-   const ObjectId = mongoose.Types.ObjectId;
-  const zx = await User.aggregate([
-    {
-      $match: { _id: ObjectId(decode.id) },
-    },
-    {
-      $lookup: {
-        from: "students",
-        localField: "id",
-        foreignField: "advisorId",
-        as: "student",
-      },
-    },
-  ]);
-  console.log(zx[0]); */
   res.render("studentList", { title: "student list", Students });
 };
 
@@ -222,7 +205,6 @@ module.exports.studentList_get = async (req, res) => {
 module.exports.report_get = async function (req, res) {
   const course = await Course.find({});
 
-  const countStudent = await CourseStudent.find({});
 
   res.render("report", { title: "report", course });
 };
@@ -236,7 +218,7 @@ module.exports.register_get = async (req, res) => {
   //decode jwt
   const decode = jwt_decode(a);
   // search on database for the user we want
-  const user = await User.findById(decode.id);
+  const user = await User.findOne({ id: decode.id });
 
   const student = await Student.findOne({ id: user.id });
 
@@ -255,7 +237,7 @@ module.exports.register_post = async (req, res) => {
   //decode jwt
   const decode = jwt_decode(a);
   // search on database for the user we want
-  const user = await User.findById(decode.id);
+  const user = await User.findOne({ id: decode.id });
 
   const student = await Student.findOne({ id: user.id });
 
@@ -274,6 +256,8 @@ module.exports.register_post = async (req, res) => {
 
   await Course.updateMany({ code: code }, { $push: { id: [student.id] } });
 
+  otherFunction.sendEmailRegister(user.email);
+
   res.send("inserted course");
 };
 
@@ -288,7 +272,7 @@ module.exports.showCourse_Get = async (req, res) => {
     const decode = jwt_decode(a);
 
     // search on database for the user we want
-    const user = await User.findById(decode.id);
+    const user = await User.findOne({ id: decode.id });
 
     const StudentCourses = await Student_Course.findOne({ id: user.id });
 
@@ -337,41 +321,3 @@ const createToken = (id, role, verify) => {
   });
 };
 
-/**
- * handle error | we used in in signup_post and login_post
- */
-const handleErrors = (err) => {
-  let errors = { email: "", password: "", role: "" };
-
-  //incorrect email (for login)
-  if (err.message === "incorrect email") {
-    errors.email = "that email is not registered (database level)";
-  }
-  //incorrect password (for login)
-
-  if (err.message === "incorrect password") {
-    errors.password = "that password is incorrect (database level)";
-  }
-
-  if (err.message.includes("user validation failed")) {
-    //validation errors
-    Object.values(err.errors).forEach(({ properties }) => {
-      errors[properties.path] = properties.message;
-    });
-  }
-
-  if (err.message.includes("user validation failed")) {
-    //validation errors
-    Object.values(err.errors).forEach(({ properties }) => {
-      if (properties.path === "role") {
-        errors.role = "There is no such role";
-      }
-    });
-  }
-  //duplicate error code
-  if (err.code === 11000) {
-    errors.email = "that email is already registered (server level)";
-    return errors;
-  }
-  return errors;
-};

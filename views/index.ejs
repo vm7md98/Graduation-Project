@@ -1,17 +1,12 @@
 <link rel="stylesheet" href="/css/index.css" />
-<div class="container"><% if(user){ %> Welcome <%= user.email %> <%} %></div>
 <div class="container mt-5">
   <% if (user.role==="AD"){%>
   <a class="button1" href="/signup">Register stuff</a> <%}%> <%
-  if(user.role==="AD"){%> <a class="button1" href="/report">Reports</a><%}%> <%
-  if(user.role==="AD"){%>
-  <a class="button1" href="/UpdateStudent">Update Student</a><%}%> <%
-  if(user.role==="AD"){%>
-  <a class="button1" href="/AddCourse">Add course</a><%}%>
+  if(user.role==="AD"){%> <a class="button1" href="/report">Reports</a><%}%>
   <%if(user.role==="AV"){%>
-  <a class="button1" href="/studentList">student List</a><%}%>
+  <a class="button1" href="/studentList">Student List</a><%}%>
   <%if(user.role==="ST"){%>
-  <a class="button1" href="/register">register courses</a>
-  <a class="button1" href="/showCourse">show courses</a>
+  <a class="button1" href="/register">Register courses</a>
+  <a class="button1" href="/showCourse">Show courses</a>
   <%}%>
 </div>

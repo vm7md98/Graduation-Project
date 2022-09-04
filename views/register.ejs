@@ -44,7 +44,7 @@
       array.push(checkboxes[i].value);
     }
     try {
-      if (confirm("you are sure?")) {
+      if (confirm("you are sure you want these courses?")) {
         //to send post request and save it in result
         const result = await fetch("/register", {
           method: "POST", //we tell the server we will use  post

@@ -4,8 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "jsdoc": "jsdoc -c jsdoc.json"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +29,8 @@
     "nodemailer": "^6.7.2",
     "validator": "^13.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "description": ""
 }

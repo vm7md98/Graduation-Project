@@ -35,8 +35,15 @@
           <% } %>
 
           <li class="nav-item">
-            <a class="nav-link disabled" href="/"
-              > <%= typeof title != 'undefined' ? title:"Register"%>
+            <a class="nav-link disabled" href="/">
+              <%= typeof title != 'undefined' ? title:"Register"%>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/">
+              <div class="container">
+                <% if(user){ %> Welcome <%= user.email %> <%} %>
+              </div>
             </a>
           </li>
         </ul>
@@ -52,6 +59,7 @@
     </nav>
   </header>
   <%- body %>
+
   <footer>
     <svg
       class="waves"

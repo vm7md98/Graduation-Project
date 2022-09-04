@@ -31,16 +31,17 @@ function validateLogin(email, password) {
 /**
  * handle error |  login_post
  */
+
 const handleErrorsLogin = (err) => {
   let errors = { email: "", password: "" };
 
   //incorrect email (for login)
   if (err.message === "incorrect email") {
-    errors.email = "Email or Password not valid (database level)";
+    errors.email = "Email or Password not valid ";
   }
   //incorrect password (for login)
   if (err.message === "incorrect password") {
-    errors.password = "Email or Password not valid (database level)";
+    errors.password = "Email or Password not valid ";
   }
 
   if (err.message.includes("user validation failed")) {
@@ -50,6 +51,11 @@ const handleErrorsLogin = (err) => {
     });
   }
   console.log(errors);
+    //duplicate error code
+    if (err.code === 11000) {
+      errors.email = "that email is already registered ";
+      return errors;
+    }
   return errors;
 };
 

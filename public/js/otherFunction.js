@@ -58,7 +58,9 @@ const sendEmailSignUps = (email) => {
     from: "registersystemhct@gmail.com",
     to: email,
     subject: "Register HCT",
-    text: `You are now registered in `,
+    text:
+      `You are now registered in the system. Now you can lgoin using this email: ` +
+      email,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -71,10 +73,38 @@ const sendEmailSignUps = (email) => {
 };
 
 /**
+ * SendEmail for registerCourse | we used in in register_post
+ */
+const sendEmailRegister = (email) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "registersystemhct@gmail.com",
+      pass: "CAPPROJECTEMAIL",
+    },
+  });
+
+  var mailOptions = {
+    from: "registersystemhct@gmail.com",
+    to: email,
+    subject: "Courses added",
+    text: `New courses has ben added`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+};
+/**
  * export the function
  */
 module.exports = {
   randomString,
   sendEmailLogIn,
   sendEmailSignUps,
+  sendEmailRegister,
 };
