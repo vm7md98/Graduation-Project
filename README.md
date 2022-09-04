@@ -1,4 +1,4 @@
-![HCT Logo]([https://sendeyo.com/updownload/file/script/18ea666dfff7728a9e49013a156f19df.png](https://sendeyo.com/updownload/file/script/18ea666dfff7728a9e49013a156f19df.png))
+![HCT Logo](https://sendeyo.com/updownload/file/script/18ea666dfff7728a9e49013a156f19df.png)
 
 # Final Year Project
 # _Universities Registration System_
