@@ -83,13 +83,105 @@ We also researched the technical aspects, and we found that our project is possi
 The proposed service will have a positive effect on the organization structure and procedures because it will be less interaction between student, advisor, and others, which means it will reduce the errors that’s made by humans; therefore, it will save time and effort. Our system will fit the current registration system as it is a new function of it, therefore it has a small effect on day-to-day operations. The only sensible change that may occur is the classes counter that the system is missing.
 
 ### 2.5	Schedule feasibility
-I used MS Project to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3.`
+I used [MS Project](https://en.wikipedia.org/wiki/Microsoft_Project) to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3`.
 
 ![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
 ![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
 
 
 ### 2.6	Economic feasibility
+Here is the table that shows the cost in `Table 1`.
+
+![Table 1](https://user-images.githubusercontent.com/56771415/188313100-99815d71-ca65-4d04-b784-b155e2f893ff.png)
+
 ### 2.7	Risk management
-### 2.7.1	Risk management
-### 2.8	Operational feasibility
+Risk management is the process of identifying, analyzing, and responding to project risks. It includes risk description, probability, impact, and how to mitigate these risks. Risk management also includes accepting risk.
+
+### 2.7.1	Risk Register
+Here is the table that shows the Register Risk in `Table 2`.
+
+![Table 2](https://user-images.githubusercontent.com/56771415/188313245-e5a9f800-6c7b-47a5-b299-b099f947fe59.png)
+
+
+### 2.8	Requirements gathering
+Here is the table that shows the Requirements gathering in `Table 3`.
+
+![Table 3](https://user-images.githubusercontent.com/56771415/188313282-e1c90283-8c03-45b5-9149-458242ed71fe.png)
+
+### 2.8	Conclusion
+We believe that our system will solve two major problems we have in our current system, which is the lack of classes and the time needed to register for classes. We will solve the first problem which is lack of classes by counting the number of student for each course then display it in the form of report to supervisor which will give him accurate number for each course then he/she can decide how many classes he/she need to open and how many instructors needs for each course. For the second problem, our system will suggest or recommend courses to a student, depending on his/her semester or credit and prioritize the course the student need to complete first.
+By fixing these two problems, we will reduce the amount of interaction between the advisor and student and that will make course registration faster, easier and less stressful for both student and advisor.
+
+## Chapter 3: Computing-based Solution/System Analysis
+### 3.1	Introduction
+The first and foremost purpose of the assignment was to test and analyze the whole system that how it going to be built and how it’s going to fulfill the requirements of the institution. The analysis and design part provides a comprehensive idea about the view that how the system will look after the completion. The system analysis part will provide Domain requirements, Functional requirements, and Non-functional requirements.
+
+### 3.2	Domain requirements
+- System must be efficient to fetch complete student information from the college system to calculate courses and generate plan for each student.
+- System must provide reliable information and if the number of course is less than 4 ask the student to choose another course so he can take 4 courses in one semester.
+- Any student profile which is incomplete or insufficient for generating a course plan will not be entertained in this new registration system.
+
+### 3.3 Functional requirements
+Functional Requirements: Which are the essential things (functions) we want the system to do so we can focus on the important thing and not get distracted. (Specifies things the system should do)
+ 
+1.	Authentication				
+2.	Authorization levels
+3.	Create reports for supervisor
+4.	Send verification code after login
+5.	Send notification to students after drop/add any course  
+6.	Generate courses for students
+7.	Calculate how many classes needed for each course
+8.	Advisor can drop /add courses for students
+9.	Students can drop /add courses.
+10.	Checking if student need to repeat the course
+11.	Provide courses depending on the student data such as GPA, semester
+12.	Advisor can remove or give permission to allow student to add/delete courses
+13.	Student can view his courses
+14.	Supervisor (admin) can add new user
+15.	Supervisor (admin) can delete a user
+
+### 3.4 Non-functional requirements
+Non-Functional Requirements: The behavior of the system like user experience, general characteristics and some features.
+
+1.	Responsive website
+2.	Usability: How easily users will interact with the web
+3.	Reliability: Reduce or remove all the bugs
+4.	Mobile version or an app
+5.	Color blind mode
+6.	Dark mode
+7.	Provide courses with time
+8.	Prioritize or suggest important courses for student
+9.	Notify advisor if student change any course without permission
+10.	The application should work in most browser such as Safari, Firefox.
+11.	Provide auto-register button that register student automatically depending on student data
+
+### 3.5 Conclusion
+In conclusion, chapter 3 should provide us with all requirements we need to build the system or what is important to our system and what is not important. Therefore, we will evaluate system according to these requirements. 
+
+## Chapter 4: Computing-based Solution/System Design, Implementation, Test and validation
+### 4.1 Functional requirements
+
+### 4.2 Introduction
+The purpose of this chapter is to check if the product is ready to be in the stage of full production and product launch also, we will explain the two different phases we went through which design and implantation. 
+
+### 4.3	Testing Techniques
+In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
+
+ Testing
+- The goal of the testing phase is to ensure that the product is ready for launch. Therefore, the product will be tested in various aspects with different techniques and the aspects are functionality testing, usability testing, UI (User Interface) testing, compatibility (Configuration) testing and testing in controlled environment.   
+Functionality Testing
+- First, functional testing is where we test or check if the system operates correctly without any problems. In this part we will do the following testing: Links testing, Forms testing, Cookies testing.
+
+Links testing:
+- In this part we will test emails, links pages that are not referenced, no broken links and Outbound links.
+
+Forms testing:
+- In this part we will test data input, form option (drop-down list) and required input.  
+
+Cookies testing:
+- In this part we will test the application with disabled cookies, with enabled cookies and check the security aspects when removing the cookies.
+
+### 4.4 Functional requirements
+### 4.5 Functional requirements
+### 4.6 Functional requirements
+### 4.7 Functional requirements
