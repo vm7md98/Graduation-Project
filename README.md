@@ -84,6 +84,7 @@ The proposed service will have a positive effect on the organization structure a
 
 ### 2.5	Schedule feasibility
 I used MS Project to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3.`
+
 ![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
 ![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
 
