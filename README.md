@@ -167,19 +167,19 @@ The purpose of this chapter is to check if the product is ready to be in the sta
 ### 4.3	Testing Techniques
 In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
 
- Testing
-- The goal of the testing phase is to ensure that the product is ready for launch. Therefore, the product will be tested in various aspects with different techniques and the aspects are functionality testing, usability testing, UI (User Interface) testing, compatibility (Configuration) testing and testing in controlled environment.   
+### Testing
+The goal of the testing phase is to ensure that the product is ready for launch. Therefore, the product will be tested in various aspects with different techniques and the aspects are functionality testing, usability testing, UI (User Interface) testing, compatibility (Configuration) testing and testing in controlled environment.   
 Functionality Testing
-- First, functional testing is where we test or check if the system operates correctly without any problems. In this part we will do the following testing: Links testing, Forms testing, Cookies testing.
+First, functional testing is where we test or check if the system operates correctly without any problems. In this part we will do the following testing: Links testing, Forms testing, Cookies testing.
 
-Links testing:
-- In this part we will test emails, links pages that are not referenced, no broken links and Outbound links.
+### Links testing:
+In this part we will test emails, links pages that are not referenced, no broken links and Outbound links.
 
-Forms testing:
-- In this part we will test data input, form option (drop-down list) and required input.  
+### Forms testing:
+In this part we will test data input, form option (drop-down list) and required input.  
 
-Cookies testing:
-- In this part we will test the application with disabled cookies, with enabled cookies and check the security aspects when removing the cookies.
+### Cookies testing:
+In this part we will test the application with disabled cookies, with enabled cookies and check the security aspects when removing the cookies.
 
 ### 4.4 Functional requirements
 ### 4.5 Functional requirements
