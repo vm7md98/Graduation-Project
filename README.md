@@ -79,6 +79,16 @@ Furthermore, course registration for FCFS-based registration will be more time c
 We also researched the technical aspects, and we found that our project is possible to implement by using the MongoDB extension that the JavaScript programming language support. The most extensive defect of using this method is that we need to learn monody from scratch.
 
 
+### 2.4	Operational feasibility
+The proposed service will have a positive effect on the organization structure and procedures because it will be less interaction between student, advisor, and others, which means it will reduce the errors that’s made by humans; therefore, it will save time and effort. Our system will fit the current registration system as it is a new function of it, therefore it has a small effect on day-to-day operations. The only sensible change that may occur is the classes counter that the system is missing.
+
+### 2.5	Schedule feasibility
+I used MS Project to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3.`
+![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
+![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
 
 
-### 2.4	Introduction
+### 2.6	Economic feasibility
+### 2.7	Risk management
+### 2.7.1	Risk management
+### 2.8	Operational feasibility
