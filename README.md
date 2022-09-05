@@ -253,7 +253,7 @@ For the first point, we don’t have grammar or spelling mistakes because our we
 - Discussion
 To summarize the results of the usability test, we succeeded in both navigation testing and content testing. Therefore, according to the results the project succussed in usability test.
 
-#### 4.2.2 (User Interface) Testing
+#### 4.2.3 (User Interface) Testing
 Third, UI testing is where we test the graphics user interface of our product. In this part we will test the website with different screen resolutions such as personal computer  (1920 ×1080 dot), laptop (1280 × 800 dot) and mobile (2532 x 1170 pixels).
 
 - UI (User Interface) Final Testing Result as shown in `Table 11`
@@ -271,28 +271,203 @@ _^ Laptop resolution_
 
 _^ Mobile resolution_
 
-
-
 #### 4.2.4 Compatibility Testing
-#### 4.2.5 Testing in Controlled Environment & Survey 
-#### 4.2.6	Final Testing Result 
+Fourth, in this test we will check these three points which are using different operating system, different browser.
+
+- Compatibility Final Testing Result as shown in `Table 12`
+
+![Table 12](https://user-images.githubusercontent.com/56771415/188359485-9e6facaa-0c0d-49a4-b500-d97cbe5044c7.png)
+
+- Discussion
+The application operates with no problems in most browsers because we didn’t use any advanced features and as (Miller, 2000) said the website must use only those constructs that work with the majority of browsers. But this still leaves room for a lot of creativity. We failed in OS test because the application until now is local and not online so we can’t test it in other operating systems.
+
+<!--#### 4.2.5 Testing in Controlled Environment & Survey-->
+<!-- We cannot perform the last two tests because the application is not completed and we didn’t deploy it to the cloud. -->
+
+#### 4.2.5	Final Testing Result
+Final Testing Result as shown in `Table 13`
+![Table 13](https://user-images.githubusercontent.com/56771415/188359640-d8d6f8c4-cc46-405f-ab46-259443967aaf.png)
+
+- Discussion
+As we can see in Table 13 the product failed in most tests and that was what we expected because the project was not completed. So, according to the result the project must return to the development stage or the project must be canceled because it’s not ready to be launched.     
+
 
 ### 4.3	Validation Techniques
+Validation is the process of checking if the requirement actually met the product functionality or in other word, did we build the right product? The main goal of the validation phase is to determine if the final product is correct or no. To achieve that we must check the requirement we set before we build the product. Validation phase can be done during or after the testing phase.
+
+- Requirements
+
+Functional requirementsas shown in `Table 14`
+
+![Table 14](https://user-images.githubusercontent.com/56771415/188359778-df6446c9-e053-4d06-836c-5bb74691fea8.png)
+
+Non-Functional Requirementsas shown in `Table 15`
+
+![Table 15](https://user-images.githubusercontent.com/56771415/188359821-73f8e0fc-7beb-4ee0-bbb8-7e9a48601ab8.png)
+
 #### 4.3.1	Discussion
+After listing all the requirements in Table 14 and Table 15, we have concluded that we didn’t pass or we failed at this stage. 
+We failed due to different reasons first, we will start with functional requirements. As we can see in Table 14 we completed nine of the fifteen requirements, but the six requirements that we didn’t complete are very critical and have a huge impact on the application. For example, requirements 10 and 11 in Table 14 are not completed but they are very important because many student repeat courses or their GPA less than three and messing these functionalities will affect the system in many ways, such as, how many courses the student can take or what courses he must take.
+Second non-functional requirements, as we can see in Table 15, we did not complete most of the requirements, we only completed two of twelve and maybe non-functional requirements are not very important but it will improve the user experience very much especially requirements 5 and 7 because most of people prefer mobile over laptop or personal computer, also nowadays we can see dark mode almost in every application or website.
+In conclusion, we did not complete the requirements because of many reasons but the main reason is our estimation was wrong for most of the tasks in terms of how much time the task needed to complete. For example, requirement 1 in Table 14 was supposed to be easy and should not take long time but in reality we spend too much time on it and the estimation was wrong because we did not consider the issues related the requirement, such as fixing bugs or errors related to the version we are using and many others. I think there are many other reasons such as lack of teamwork, not all of us are good at programming, but incorrect estimation was behind the failure of this project. 
+
 
 ### 4.4 Design
+In the 1st GP course, we discussed the five design principles rules `Figure 14` and they are Visibility, Feedback, Affordances, Constraints, and Consistency. Therefore, in this section we will compare our application with the design principles rules we set before. 
+
+- Visibility: This principle is responsible for how the product or what the product is and what used for. 
+- Feedback: This principle is responsible for making a clear response on what has been accomplished by the user. 
+- Affordances: This principle is responsible for how the product is used.
+- Constraints: This principle is responsible for restricting the possible actions that can be performed.
+- Consistency: This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks.
+
+![Figure 14](https://user-images.githubusercontent.com/56771415/188360019-5aa40797-b12d-4bb4-bc30-b9737167bc78.png)
+
 #### 4.4.1	Visibility
+The main goal was to make the application as simple and clear as possible so the user knows what to do without any help from teachers or other staff. We believe we achieved that in all pages except in Authentication page because the idea was to make the page with just one button and one label `Figure 15` but at the end we added a timer, one more button, and more text `Figure 16`.
+
+![Figure 15](https://user-images.githubusercontent.com/56771415/188360188-78285b39-c0ab-4b0e-9177-a3b3c90bdc92.png)
+
+_^ Authentication before development_
+
+![Figure 16](https://user-images.githubusercontent.com/56771415/188360195-e098869a-2cad-4dac-b6e2-78c020943f1c.png)
+
+_^ Authentication after development_
+
 #### 4.4.2	Feedback
+For feedback we set three goals user location within the system, notify the user whenever he performs some action, such as submit or register or send notification when he successfully registers, and for the last goal notify the user when he does some unwanted action.
+
+- We achieve the first goal user location within the system as we can see in `Figure 17`
+
+![Figure 17](https://user-images.githubusercontent.com/56771415/188360285-4a0469b8-7a47-437a-9fac-48593cb94844.png)
+
+- For the second goal which notify the user whenever he perform some action we add window prompt in some pages for example it will window box will appear if the user click on register `Figure 19` or when the admin want to register a new student or staff `Figure 18` but I don’t think we success in this goal because there are still many thing user can do and he will not be notify such as logout.
+
+![Figure 18](https://user-images.githubusercontent.com/56771415/188360375-e8d40b14-cfb1-478e-be3f-a09b3d37cab3.png)
+
+_^ Window prompt appears when click on register a new student or staff_
+
+![Figure 19](https://user-images.githubusercontent.com/56771415/188360369-bc80209a-04fe-4b4b-bd42-d512d57b2535.png)
+
+_^ 19 Window prompt appears when click on register courses_
+
 #### 4.4.3	Affordances
+We set two main goals, the first one was to use icons or write text that anybody can understand and know how to use it, and the second goal was to remove any unnecessary part such as images and videos.
+-	To achieve this goal we used simple icon such as excel `Figure 21` icon in report page and very simple text `Figure 20` but I don’t think we successfully achieve this goal because there are some part where the user may be confused from the text or icon such as Home and logout as we can see in `Figure 22`.
+
+![Figure 21](https://user-images.githubusercontent.com/56771415/188360603-8223f401-627b-4504-92fa-9248cef60066.png)
+
+_^ Excel icon to download the report_
+
+![Figure 20](https://user-images.githubusercontent.com/56771415/188360611-c08ec211-c8d2-41f0-97aa-2263df9c184b.png)
+
+_^ Button to register courses_
+
+![Figure 22](https://user-images.githubusercontent.com/56771415/188360696-01ec59cc-88b9-4813-bdcd-defb1d207881.png)
+
+_^ RegisterStaff page_
+
 #### 4.4.4	Constraints
+The goal was to reduce human error as possible, therefore we use validation in three-level (interface, server, database) but this was not enough because there are still many bugs, for example, if the user write a certain email in RegisterStaff page `Figure 22` the system will be frozen some bugs we couldn't fixed due to the deadline.
+
 #### 4.4.5 Consistency
+For the last rule we design the application to have only one background on all pages, use similar color for buttons that have similar purpose such as login `Figure 23` and verify `Figure 24`.
+
+![Figure 23](https://user-images.githubusercontent.com/56771415/188360962-a70597dd-cfe4-4895-8e37-128134491982.png)
+
+![Figure 24](https://user-images.githubusercontent.com/56771415/188360965-46c1e5b9-3823-499a-ba49-57cff7d6e0ac.png)
+
 #### 4.4.6	Accessibility
+For accessibility we set many goals:
+-	We will use Alt Text to images or icons because people with this problem usually rely on
+assistive technologies such as Screen Readers and refreshable Braille Readers.
+-	Avoid using thin fonts and we will try to avoid adding links to images that can’t support Alt Text.
+-	Avoid using Place Holder because it’s usually gray and small which make it hard to see.
+-	Avoid Automatic Media and Navigation.
+-	Color- blind / dark-mode
+
 #### 4.4.7	Discussion
+In this section we will discuss the main reasons we failed in design principles and accessibility. I think the first and the main reason is time management, from both the group members and  HCT management that setup this course. First, let’s talk about the group members because this is the first big project, we did not have enough experience to estimate or give an accurate time for each task, for example giving a certain task a small amount of time but when we develop the project,  we spend more time in it than we expected like routing and fixing bugs. For HCT management I believe that when they setup the course time they did not consider some student may have problem or some of them may drop the course or they did not have enough skill to develop the project and all that reasons led to put the work in other members which cause a delay or in this case most of the goals were unsuccessful.
 
 ### 4.5	Hierarchical Task Analysis (HTA)
-#### 4.5.1 HTA for student (To register)
-#### 4.5.2	HTA for admin (To add a new user)
-#### 4.5.3	HTA for admin (To download a report)
+In the 1st GP course we provide HTA diagram therefore, in this section we will compare the previous diagram with the new one also we will discuss why we add two more HTA diagrams.
+Because we explained the symbols and notations of HTA in the previous assignments we will not explain in detail in this section.
+_If you want the detailed HTA Diagrams so bad just text me and i'll send it for your research :D_
+
+#### 4.5.1 HTA for student (Register)
+In this section we will talk about how students can register new courses.
+
+Tasks break down (Before Development):
+0. To register 
+1. Enter URL 
+2. Login 
+  2.1. Enter the Authentication code   
+3. Click register 
+  3.1. Select plan 	
+  3.2. Edit course 
+  3.3. Delete course
+4. Click confirm
+
+Diagram (Before Development) `Figure 25`:
+
+![Figure 25](https://user-images.githubusercontent.com/56771415/188361603-cfeeb5d9-7131-477d-b31a-08b2bec2a5ee.png)
+
+Tasks break down (After Development):
+0. To register courses 
+1. Enter URL 
+2. Login 
+  2.1. Enter the Authentication code   
+3. Click Register courses		
+  3.1. Select courses 	 
+4. Click Register
+  4.1. Click OK on window prompt
+  4.2. Click Ok on notification prompt
+
+Diagram (After Development) `Figure 26`:
+
+![Figure 26](https://user-images.githubusercontent.com/56771415/188361709-a36cb0ff-5536-4607-b1a3-0789ed51732c.png)
+
+- Discussion
+As we can `Figure 25` and `Figure 26` both of them are HTA diagrams for student to register courses. The first two step (1 - 2) are the same because we did not change the authentication process in term of operation. However next steps are different because we change from generating plans to generating courses and we removed delete and edit plan, and these change was needed for several reasons which we will discuss it later. Also we add two more steps in which is 4.1 and 4.2, we added these steps to reduce human errors.
+At the end both of them has their advantage and disadvantage. For example the old diagram Figure 25 is better in term of operation because the user can edit and delete a plan which is not available in new diagram Figure 26. However, the new diagram also has some advantage such as it’s more stable because there are step 4.1 and 4.2 also it’s better in term of fixability because you can select each course instead of generating a plan.       
+
+#### 4.5.2	HTA for admin (Add a New User)
+In this section we will talk about how admin can add new user.
+
+Tasks break down:
+0. To add new user
+1. Enter URL 
+2. Login 
+  2.1. Enter the Authentication code   	
+3. Click Register stuff
+  3.1. Fill all the input 		
+4. Click on Create
+  4.1. Click OK on window prompt
+  4.2. Click Ok on notification prompt
+  
+Diagram `Figure 27`:
+
+![Figure 27](https://user-images.githubusercontent.com/56771415/188361887-5e3377cd-2e71-4837-9394-c85fa420db7b.png)
+
+#### 4.5.3	HTA for admin (Download a Report)
+In this section we will talk about how admin can download a report.
+
+Tasks break down:
+0. To add new user
+1. Enter URL 
+2. Login 
+  2.1. Enter the Authentication code   
+3. Click on report	
+4. Click on the excel icon 
+
+Diagram `Figure 28`:
+
+![Figure 28](https://user-images.githubusercontent.com/56771415/188362016-e839ab9f-128a-4e84-bb84-dc41ed482b97.png)
+
+- Discussion
+In the previous reports we just add one HTA which if for students however, it was not enough to explain how the admin can interact with the system. As we can see in `Figure 27` and `Figure 28` both of them has the same first two steps which is Enter URL and Login in fact all roles in the system must do these two steps and after that each roles has different step depending on the service or the task they want to do as we can see in `Figure 29`.
+
+![Figure 29](https://user-images.githubusercontent.com/56771415/188362100-3ef70157-86d2-4da9-ab7e-dbb6aca02f05.png)
 
 ### 4.6 Pages
 #### 4.6.1 login.ejs 
