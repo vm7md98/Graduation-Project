@@ -181,13 +181,16 @@ In this part we will test the application with disabled cookies, with enabled co
 
 #### 4.2.1	Functionality Testing Result
 - Links testing result as shown in `Table 4`.
+
 ![Table 4](https://user-images.githubusercontent.com/56771415/188356837-5748cc03-2a24-4cf1-bd4c-d8f1e49c1233.png)
 
 - Discussion
-First email testing, we used email in three places, when the user registered in the system (Figure 4). Second, when the user logins the system will send the authentication code to the email (Figure 5). Third, when the student adds any new course (Figure 6). For the three other tests they all success, we referenced all the pages, we didn’t have broken links and we don’t have any outbound links.
+First email testing, we used email in three places, when the user registered in the system `Figure 4`. Second, when the user logins the system will send the authentication code to the email `Figure 5`. Third, when the student adds any new course `Figure 6`. For the three other tests they all success, we referenced all the pages, we didn’t have broken links and we don’t have any outbound links.
 
 ![Figure 4](https://user-images.githubusercontent.com/56771415/188357130-a92ace4a-83d5-4644-b635-9da090aafc77.png)
+
 ![Figure 5](https://user-images.githubusercontent.com/56771415/188357152-3092e0f3-9ff3-4eb3-9e2c-69298a6a9dba.png)
+
 ![Figure 6](https://user-images.githubusercontent.com/56771415/188357161-599fae26-0876-421e-9086-5ccdea85bff3.png)
 
 
