@@ -401,7 +401,9 @@ _(If you want the detailed HTA Diagrams so bad just text me and i'll send it for
 In this section we will talk about how students can register new courses.
 
 Tasks break down (Before Development):
+
 0. To register 
+
 1. Enter URL 
 
 2. Login
