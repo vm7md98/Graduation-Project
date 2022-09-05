@@ -546,26 +546,10 @@ In the previous reports we just add one HTA which if for students however, it wa
 
 
 ## References
-
-Retrieved 4 24, 2002, from https://iopscience.iop.org/article/10.1088/1742-6596/1165/1/012012/pdf#page=1
-Chauhan, D., & Bansal, K. (2017, February ). Using the Advantages of NOSQL: A Case Study on MongoDB. Recent and Innovation Trends in Computing and Communication. Retrieved 3 18, 2022, from https://www.researchgate.net/profile/Divya-Chauhan-4/publication/349110376_Using_the_Advantages_of_NOSQL_A_Case_Study_on_MongoDB/links/6021154d92851c4ed5580298/Using-the-Advantages-of-NOSQL-A-Case-Study-on-MongoDB.pdf#page=1
-Frees, S. (2015, January). A Place for Node.Js in the Computer Science Curriculum. Computing Sciences in Colleges. Retrieved 3 18, 2022, from https://www.researchgate.net/profile/Scott-Frees/publication/271849731_A_Place_for_NodeJs_in_the_Computer_Science_Curriculum/links/54d4db340cf2970e4e63c479/A-Place-for-NodeJs-in-the-Computer-Science-Curriculum.pdf#page=1
-Glenn, & Glenn , S. (2001, August). Testing a Website: Best Practices. Retrieved 4 24, 2022, from https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1
-Miller, E. (2000). WebSite Testing. Software Research, Inc. Retrieved 4 24, 2022, from http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1
-Visočnik, V. (2018). Comparison of JWT and OAuth 2.0 authorisation and. University of Maribor. Retrieved 18 3, 2022, from https://core.ac.uk/download/pdf/159753962.pdf#page=1
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- [1] 	V. Korhonen, “Chapter 10 - Dialogic literacy: A sociocultural literacy learning approach,” in Practising Information Literacy, S. T. Annemaree Lloyd, Ed., Chandos Publishing, 2010, pp. 211-226.
-- [2] 	S. Suryawanshi, B. R. Chakravarthi, M. Arcan and P. B. Buitelaar, “Multimodal Meme Dataset (MultiOFF) for Identifying Offensive Content in Image and Text,” Multimodal Meme Dataset (MultiOFF) for Identifying Offensive Content in Image and Text, pp. 33-38, 2020. 
-- [3] 	“drivendata,” [Online]. Available: https://www.drivendata.org/competitions/64/hateful-memes/. [Accessed 21 8 2021].
-- [4] 	F. Yus, “Multimodality in Memes: A Cyberpragmatic Approach,” pp. 3-16, 2018. 
-- [5] 	“Republic of Ireland: Copyright FAQs,” [Online]. Available: https://iaml-uk-irl.org/copyright-faqs-%E2%80%94-ireland#7. [Accessed 22 8 2021].
-- [6] 	“9gag,” [Online]. Available: https://9gag.com/. [Accessed 22 8 2021].
-- [7] 	“Meme Templates,” [Online]. Available: https://imgflip.com/. [Accessed 22 8 2021].
-- [8] 	“Selenium,” [Online]. Available: https://www.selenium.dev/. [Accessed 21 8 2021].
-- [9] 	X. Zhou, C. Yao, H. Wen, Y. Wang, S. Zhou, W. He and J. Liang, “EAST: An Efficient and Accurate Scene Text Detector,” p. 1, 2017. 
-- [10] 	ZER-0-NE, “EAST Detector for Text Detection,” [Online]. Available: https://github.com/ZER-0-NE/EAST-Detector-for-text-detection-using-OpenCV. [Accessed 22 8 2021].
-- [11] 	Fleron-X, “How to make bounding box around text-areas in an image? (Even if text is skewed!!),” [Online]. Available: https://stackoverflow.com/questions/54821969/how-to-make-bounding-box-around-text-areas-in-an-image-even-if-text-is-skewed. [Accessed 22 8 2021].
-- [12] 	A. Rosebrock, “OpenCV Text Detection (EAST text detector),” [Online]. Available: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/. [Accessed 22 8 2021].
-- [13] 	G. Roy, A. Alekhin and V. R. Shrimali, “Github,” [Online]. Available: https://github.com/opencv/opencv/blob/1f726e81f91746e16f4a6110681658f8709e7dd2/samples/dnn/text_detection.py#L86. [Accessed 22 8 2021].
-- [14] 	S. K, “Non-maximum Suppression (NMS),” [Online]. Available: https://towardsdatascience.com/non-maximum-suppression-nms-93ce178e177c. [Accessed 22 8 2021].
-- [15] 	T. Fuentes, “What is a Meme?,” [Online]. Available: https://www.seventeen.com/life/tech-social-media/a26065897/what-is-a-meme/. [Accessed 22 8 2021].
+- [1] 	“Usability testing on website wadaya,” [Online]. Available: https://iopscience.iop.org/article/10.1088/1742-6596/1165/1/012012/pdf#page=1. [Accessed 13 4 2022].
+- [2] 	“Using the Advantages of NOSQL: A Case,” [Online]. Available: https://www.researchgate.net/profile/Divya-Chauhan-4/publication/349110376_Using_the_Advantages_of_NOSQL_A_Case_Study_on_MongoDB/links/6021154d92851c4ed5580298/Using-the-Advantages-of-NOSQL-A-Case-Study-on-MongoDB.pdf#page=1. [Accessed 18 3 2022].
+- [3] 	“A Place for Node.Js in the Computer Science Curricu,” [Online]. Available: https://www.researchgate.net/profile/Scott-Frees/publication/271849731_A_Place_for_NodeJs_in_the_Computer_Science_Curriculum/links/54d4db340cf2970e4e63c479/A-Place-for-NodeJs-in-the-Computer-Science-Curriculum.pdf#page=1. [Accessed 13 4 2022].
+- [4] 	“Testing a Website: Best Practices” [Online]. Available: https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1. [Accessed 21 3 2022].
+- [5] 	“WebSite Testing. Software Research, Inc.” [Online]. Available: http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1. [Accessed 12 2 2022].
+- [6] 	ZER-0-NE, “Comparison of JWT and OAuth 2.0 authorisation,” [Online]. Available: https://core.ac.uk/download/pdf/159753962.pdf#page=1. [Accessed 24 9 2021].
+fe/tech-social-media/a26065897/what-is-a-meme/. [Accessed 22 8 2021].
