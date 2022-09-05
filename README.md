@@ -402,7 +402,7 @@ In this section we will talk about how students can register new courses.
 
 Tasks break down (Before Development):
 
-0. To register 
+0. To register
 
 1. Enter URL 
 
@@ -410,11 +410,11 @@ Tasks break down (Before Development):
 
   2.1. Enter the Authentication code   
 
-3. Click register 
+3. Click register
 
-  3.1. Select plan 
+  3.1. Select plan
 	
-  3.2. Edit course 
+  3.2. Edit course
 
   3.3. Delete course
 
