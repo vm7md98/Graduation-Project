@@ -453,7 +453,7 @@ Diagram (After Development) `Figure 26`:
 As we can `Figure 25` and `Figure 26` both of them are HTA diagrams for student to register courses. The first two step (1 - 2) are the same because we did not change the authentication process in term of operation. However next steps are different because we change from generating plans to generating courses and we removed delete and edit plan, and these change was needed for several reasons which we will discuss it later. Also we add two more steps in which is 4.1 and 4.2, we added these steps to reduce human errors.
 At the end both of them has their advantage and disadvantage. For example the old diagram Figure 25 is better in term of operation because the user can edit and delete a plan which is not available in new diagram Figure 26. However, the new diagram also has some advantage such as it’s more stable because there are step 4.1 and 4.2 also it’s better in term of fixability because you can select each course instead of generating a plan.       
 
-#### 4.5.2	HTA for admin (Add a New User)
+#### 4.5.2 HTA for admin (Add a New User)
 In this section we will talk about how admin can add new user.
 
 Tasks break down:
@@ -480,7 +480,7 @@ Diagram `Figure 27`:
 
 ![Figure 27](https://user-images.githubusercontent.com/56771415/188361887-5e3377cd-2e71-4837-9394-c85fa420db7b.png)
 
-#### 4.5.3	HTA for admin (Download a Report)
+#### 4.5.3 HTA for admin (Download a Report)
 In this section we will talk about how admin can download a report.
 
 Tasks break down:
@@ -491,7 +491,7 @@ Tasks break down:
 
 2. Login
 
-  2.1. Enter the Authentication code
+2.1. Enter the Authentication code
 
 3. Click on report
 
