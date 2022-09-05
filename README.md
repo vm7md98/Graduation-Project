@@ -2,7 +2,7 @@
 
 # Final Year Project
 # _Universities Registration System_
-**By [Mohammed, Bineid](https://github.com/vm7md98) and [Abdullah, Al Halabi](https://github.com/3boodx91)**
+**Done By [Mohammed, Bineid](https://github.com/vm7md98) and [Abdullah, Al Halabi](https://github.com/3boodx91)**
 
 _Project Supervisor: Dr. Madeleine Togher_
 
