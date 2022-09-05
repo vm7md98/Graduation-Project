@@ -306,7 +306,7 @@ Non-Functional Requirementsas shown in `Table 15`
 
 ![Table 15](https://user-images.githubusercontent.com/56771415/188359821-73f8e0fc-7beb-4ee0-bbb8-7e9a48601ab8.png)
 
-#### 4.3.1	Discussion
+-	Discussion
 After listing all the requirements in Table 14 and Table 15, we have concluded that we didn’t pass or we failed at this stage. 
 We failed due to different reasons first, we will start with functional requirements. As we can see in Table 14 we completed nine of the fifteen requirements, but the six requirements that we didn’t complete are very critical and have a huge impact on the application. For example, requirements 10 and 11 in Table 14 are not completed but they are very important because many student repeat courses or their GPA less than three and messing these functionalities will affect the system in many ways, such as, how many courses the student can take or what courses he must take.
 Second non-functional requirements, as we can see in Table 15, we did not complete most of the requirements, we only completed two of twelve and maybe non-functional requirements are not very important but it will improve the user experience very much especially requirements 5 and 7 because most of people prefer mobile over laptop or personal computer, also nowadays we can see dark mode almost in every application or website.
