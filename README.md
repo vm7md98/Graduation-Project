@@ -21,7 +21,7 @@ _Project Supervisor: Dr. Madeleine Togher_
 When I was a second-year student trying to register my courses, I was having many problems, such as what course should I register for? How many courses can I take? Am I allowed to take this course? Because of these questions, I was forced to ask my advisor. This process is repeated every semester and most students face these problems. Therefore, the inspiration and the whole idea came from the beginning of the problem. The main reason why we started this project is that there was a problem that the collage did not solve yet. As a team, we are motivated by our passion for making something useful for the long term and to know our limits and skills. Thus, we have this project idea where we plan on finding solutions to these problems by utilizing smarter solutions such as Internet of things (IoT) to improve the efficiency, enhance the system, optimize the parking utilization, reduce cost and time when using the parking system or even managing it. This project will focus on solving the problems one by one, along with having additional features included to furthermore enhance the user’s experience
 
 
-### 2.2	Problem statement
+### 1.2	Problem statement
 In every semester we are facing a problem with lack/surplus of classes due to having unbalanced number of lecturer and students. In 2020 fall semester, SMC student had a math course “Applied Mathematics” registered in his schedule. The problem is the system only allowing 10 students as minimum and they were 8 students only, but the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses which leads to more academic issues. The thought of doing this whole project was to solve this type of a problem and catch irregular behavior in the registration system.
 To summarize our problem with the current registration system:
 -	The main problem is having lack/surplus number of classes.
@@ -286,6 +286,7 @@ The application operates with no problems in most browsers because we didn’t u
 
 #### 4.2.5	Final Testing Result
 Final Testing Result as shown in `Table 13`
+
 ![Table 13](https://user-images.githubusercontent.com/56771415/188359640-d8d6f8c4-cc46-405f-ab46-259443967aaf.png)
 
 - Discussion
