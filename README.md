@@ -193,6 +193,14 @@ First email testing, we used email in three places, when the user registered in 
 
 ![Figure 6](https://user-images.githubusercontent.com/56771415/188357161-599fae26-0876-421e-9086-5ccdea85bff3.png)
 
+- Forms testing result shown in `Table 5`
+
+![Table 5](https://user-images.githubusercontent.com/56771415/188357406-1b35ebd2-e663-484d-ac0d-dce3ff4917e5.png)
+
+- Discussion
+We have three pages that need to be tested and they are login, signup and authentication. Login page and authentication page their data input has no problem, but signup page `Figure 7` has many problem that why we failed in this test. For example, we can register a user using numbers for first name and last name, therefore we need to add validation. Also, if we enter any letter in semester field the system will freeze and the system will need to be restarted because we need to enter a number but there is no validation. Form option and required input are both successful in the test phase for all pages.
+
+![Figure 7](https://user-images.githubusercontent.com/56771415/188357501-ac1bc582-1a22-44ed-ad8a-1adc150827e0.png)
 
 
 #### 4.2.2	Usability Testing
