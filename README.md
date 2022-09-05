@@ -387,7 +387,7 @@ assistive technologies such as Screen Readers and refreshable Braille Readers.
 -	Avoid Automatic Media and Navigation.
 -	Color- blind / dark-mode
 
-#### 4.4.7	Discussion
+#### Discussion
 In this section we will discuss the main reasons we failed in design principles and accessibility. I think the first and the main reason is time management, from both the group members and  HCT management that setup this course. First, let’s talk about the group members because this is the first big project, we did not have enough experience to estimate or give an accurate time for each task, for example giving a certain task a small amount of time but when we develop the project,  we spend more time in it than we expected like routing and fixing bugs. For HCT management I believe that when they setup the course time they did not consider some student may have problem or some of them may drop the course or they did not have enough skill to develop the project and all that reasons led to put the work in other members which cause a delay or in this case most of the goals were unsuccessful.
 
 ### 4.5	Hierarchical Task Analysis (HTA)
