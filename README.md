@@ -181,7 +181,6 @@ In this part we will test the application with disabled cookies, with enabled co
 
 #### 4.2.1	Functionality Testing Result
 - Links testing result as shown in `Table 4`.
-
 ![Table 4](https://user-images.githubusercontent.com/56771415/188356837-5748cc03-2a24-4cf1-bd4c-d8f1e49c1233.png)
 
 - Discussion
@@ -192,14 +191,16 @@ First email testing, we used email in three places, when the user registered in 
 
 ![Figure 6](https://user-images.githubusercontent.com/56771415/188357161-599fae26-0876-421e-9086-5ccdea85bff3.png)
 
-- Forms testing result shown in `Table 5`
-
+- Forms testing result as shown in `Table 5`
 ![Table 5](https://user-images.githubusercontent.com/56771415/188357406-1b35ebd2-e663-484d-ac0d-dce3ff4917e5.png)
 
 - Discussion
 We have three pages that need to be tested and they are login, signup and authentication. Login page and authentication page their data input has no problem, but signup page `Figure 7` has many problem that why we failed in this test. For example, we can register a user using numbers for first name and last name, therefore we need to add validation. Also, if we enter any letter in semester field the system will freeze and the system will need to be restarted because we need to enter a number but there is no validation. Form option and required input are both successful in the test phase for all pages.
 
 ![Figure 7](https://user-images.githubusercontent.com/56771415/188357501-ac1bc582-1a22-44ed-ad8a-1adc150827e0.png)
+
+- Cookies testing result shown in `Table 6`
+![Table 6](https://user-images.githubusercontent.com/56771415/188357748-09651b2e-3143-4ef9-bb9b-5fc6be4593e6.png)
 
 
 #### 4.2.2	Usability Testing
