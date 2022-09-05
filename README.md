@@ -263,14 +263,13 @@ Third, UI testing is where we test the graphics user interface of our product. I
 - Discussion
 We developed the application using a PC which is 1920 x 1080, therefore, the application would operate without any problems if we used a similar resolution or higher. However, for laptop and mobile the application is not compiled with them and has many problems, for example, as we can see in `Figure 12` or `Figure 13` the button for register is disappeared.
 
-_Laptop resolution_
-
 ![Figure 12](https://user-images.githubusercontent.com/56771415/188358794-f40664bf-cc23-49bc-aa92-c67cca4d131a.png)
 
-_Mobile resolution_
+_^ Laptop resolution_
 
 ![Figure 13](https://user-images.githubusercontent.com/56771415/188358810-e6cc9e33-d711-4b5a-a2ac-08ac766db5f4.png)
 
+_^ Mobile resolution_
 
 
 
