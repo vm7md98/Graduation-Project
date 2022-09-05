@@ -79,22 +79,22 @@ Furthermore, course registration for FCFS-based registration will be more time c
 We also researched the technical aspects, and we found that our project is possible to implement by using the MongoDB extension that the JavaScript programming language support. The most extensive defect of using this method is that we need to learn monody from scratch.
 
 
-### 2.4	Operational feasibility
+### 2.4	Operational Feasibility
 The proposed service will have a positive effect on the organization structure and procedures because it will be less interaction between student, advisor, and others, which means it will reduce the errors that’s made by humans; therefore, it will save time and effort. Our system will fit the current registration system as it is a new function of it, therefore it has a small effect on day-to-day operations. The only sensible change that may occur is the classes counter that the system is missing.
 
-### 2.5	Schedule feasibility
+### 2.5	Schedule Feasibility
 I used [MS Project](https://en.wikipedia.org/wiki/Microsoft_Project) to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3`.
 
 ![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
 ![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
 
 
-### 2.6	Economic feasibility
+### 2.6	Economic Feasibility
 Here is the table that shows the cost in `Table 1`.
 
 ![Table 1](https://user-images.githubusercontent.com/56771415/188313100-99815d71-ca65-4d04-b784-b155e2f893ff.png)
 
-### 2.7	Risk management
+### 2.7	Risk ,anagement
 Risk management is the process of identifying, analyzing, and responding to project risks. It includes risk description, probability, impact, and how to mitigate these risks. Risk management also includes accepting risk.
 
 ### 2.7.1	Risk Register
@@ -170,17 +170,17 @@ The goal of the testing phase is to ensure that the product is ready for launch.
 Functionality Testing
 First, functional testing is where we test or check if the system operates correctly without any problems. In this part we will do the following testing: Links testing, Forms testing, Cookies testing.
 
-- Links testing:
+- Links Testing:
 In this part we will test emails, links pages that are not referenced, no broken links and Outbound links.
 
-- Forms testing:
+- Forms Testing:
 In this part we will test data input, form option (drop-down list) and required input.  
 
-- Cookies testing:
+- Cookies Testing:
 In this part we will test the application with disabled cookies, with enabled cookies and check the security aspects when removing the cookies.
 
 #### 4.2.1	Functionality Testing Result
-- Links testing result as shown in `Table 4`.
+- Links Testing Result as shown in `Table 4`.
 
 ![Table 4](https://user-images.githubusercontent.com/56771415/188356837-5748cc03-2a24-4cf1-bd4c-d8f1e49c1233.png)
 
@@ -192,7 +192,7 @@ First email testing, we used email in three places, when the user registered in 
 
 ![Figure 6](https://user-images.githubusercontent.com/56771415/188357161-599fae26-0876-421e-9086-5ccdea85bff3.png)
 
-- Forms testing result as shown in `Table 5`
+- Forms Testing Result as shown in `Table 5`
 
 ![Table 5](https://user-images.githubusercontent.com/56771415/188357406-1b35ebd2-e663-484d-ac0d-dce3ff4917e5.png)
 
@@ -201,12 +201,58 @@ We have three pages that need to be tested and they are login, signup and authen
 
 ![Figure 7](https://user-images.githubusercontent.com/56771415/188357501-ac1bc582-1a22-44ed-ad8a-1adc150827e0.png)
 
-- Cookies testing result shown in `Table 6`
+- Cookies Testing Result as shown in `Table 6`
 
 ![Table 6](https://user-images.githubusercontent.com/56771415/188357748-09651b2e-3143-4ef9-bb9b-5fc6be4593e6.png)
 
+- Discussion
+We used cookies in the project to increase the security aspect. Therefore, the user with no cookies and the user that is using the wrong cookies should not be able to enter the application. First, we test the application with disabled cookies and the result was success because we cannot pass authentication page and it does not matter what the code, we enter it will always response with "Invalid code" as we can see in `Figure 8` and that because to register authentication code in the database we need to use cookies. Enabled cookies test was a success because the website operated with no problem. Finally, removing the cookies test also passes the test because whenever we delete it will redirect the user to the login page.
+
+![Figure 8](https://user-images.githubusercontent.com/56771415/188357899-a8c90a7d-f0ee-4062-909e-abe86833f21e.png)
+
+- Functionality Final Testing Result as shown in `Table 7`
+
+![Table 7](https://user-images.githubusercontent.com/56771415/188358002-0afcf44c-d545-499d-a1e9-44d736096a89.png)
+
+- Discussion
+To summarize the result of the functionality test, we succeeded in two tests, which is links test and cookies test but we failed in one test which is form test. Therefore, according to the results the system needs more validations on the signup page and beside that everything operates with no problem.  
 
 #### 4.2.2	Usability Testing
+Second, usability testing is where we evaluate our web page by acting like we are the users. This test helps us to know about the user perspective and according to (Arthana, 2019) good usability ensure users are happy and will return to using the system, However, it only consist of two part which are the navigation test and content test.
+
+- Navigation testing:
+This test consists of two parts which are checking if all pages are understandable and easy to use, and if there is an access to home page and logout button from all pages.
+
+- Content testing:
+In this test we need to check spelling mistakes and grammar, images or inputs are placed properly with proper sizes, using the right color palette of the site and font sizes.
+
+#### Usability Testing Result
+- Navigation Testing Result as shown in `Table 8`
+
+![Table 8](https://user-images.githubusercontent.com/56771415/188358173-4c5c5da4-53da-41b8-95d9-a12c7d479456.png)
+
+- Discussion
+I think we made the website very easy to understand by removing any additional images and animation, and for the second point the user can access the home page and logout button from any page as we can see in `Figure 9`.
+
+![Figure 9](https://user-images.githubusercontent.com/56771415/188358239-dff402c8-1b20-4369-8157-59a6802a024c.png)
+
+- Content Testing Result as shown in `Table 9`
+
+![Table 9](https://user-images.githubusercontent.com/56771415/188358284-f5026f56-a622-4927-b51f-4a7b91267ed6.png)
+
+- Discussion
+For the first point, we don’t have grammar or spelling mistakes because our website is very simple and most of the time we use one word or two  to explain the instructions. For the second point, we don’t have any images but for inputs we used bootstrap therefore bootstrap is responsible for the size. For the third point, I tried to use the right color such as green color to register a course as we can see in `Figure 11` also, I used some icons as we can see in `Figure 10`.
+
+![Figure 11](https://user-images.githubusercontent.com/56771415/188358501-d23ecc4a-159e-4a21-bde2-a3ef7cb06257.png)
+![Figure 10](https://user-images.githubusercontent.com/56771415/188358507-1987bf7a-f794-4505-b4e4-41eed518b52b.png)
+
+- Usability Final Testing Result as shown in `Table 10`
+
+![Table 10](https://user-images.githubusercontent.com/56771415/188358553-c528bed9-1b02-40f7-8efa-0a05551de78f.png)
+
+- Discussion
+To summarize the results of the usability test, we succeeded in both navigation testing and content testing. Therefore, according to the results the project succussed in usability test.
+
 #### 4.2.2 (User Interface) Testing
 #### 4.2.4 Compatibility Testing
 #### 4.2.5 Testing in Controlled Environment & Survey 
