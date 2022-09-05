@@ -392,6 +392,7 @@ In this section we will discuss the main reasons we failed in design principles 
 
 ### 4.5	Hierarchical Task Analysis (HTA)
 In the 1st GP course we provide HTA diagram therefore, in this section we will compare the previous diagram with the new one also we will discuss why we add two more HTA diagrams.
+
 Because we explained the symbols and notations of HTA in the previous assignments we will not explain in detail in this section.
 
 _If you want the detailed HTA Diagrams so bad just text me and i'll send it for your research :D_
