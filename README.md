@@ -188,8 +188,7 @@ In this part we will test the application with disabled cookies, with enabled co
 First email testing, we used email in three places, when the user registered in the system `Figure 4`. Second, when the user logins the system will send the authentication code to the email `Figure 5`. Third, when the student adds any new course `Figure 6`. For the three other tests they all success, we referenced all the pages, we didn’t have broken links and we don’t have any outbound links.
 
 ![Figure 4](https://user-images.githubusercontent.com/56771415/188357130-a92ace4a-83d5-4644-b635-9da090aafc77.png)
-
-![Figure 5](https://user-images.githubusercontent.com/56771415/188357152-3092e0f3-9ff3-4eb3-9e2c-69298a6a9dba.png)
+![Figure 5](https://user-images.githubusercontent.com/56771415/188357573-c7431b05-a755-4afc-9ab8-07c29a13f74c.png)
 
 ![Figure 6](https://user-images.githubusercontent.com/56771415/188357161-599fae26-0876-421e-9086-5ccdea85bff3.png)
 
