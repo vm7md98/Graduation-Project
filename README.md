@@ -254,6 +254,22 @@ For the first point, we don’t have grammar or spelling mistakes because our we
 To summarize the results of the usability test, we succeeded in both navigation testing and content testing. Therefore, according to the results the project succussed in usability test.
 
 #### 4.2.2 (User Interface) Testing
+Third, UI testing is where we test the graphics user interface of our product. In this part we will test the website with different screen resolutions such as personal computer  (1920 ×1080 dot), laptop (1280 × 800 dot) and mobile (2532 x 1170 pixels).
+
+- UI (User Interface) Final Testing Result as shown in `Table 11`
+
+![Table 11](https://user-images.githubusercontent.com/56771415/188358750-fd5c9983-980c-449e-ac2a-96061284e89f.png)
+
+- Discussion
+We developed the application using a PC which is 1920 x 1080, therefore, the application would operate without any problems if we used a similar resolution or higher. However, for laptop and mobile the application is not compiled with them and has many problems, for example, as we can see in `Figure 12` or `Figure 13` the button for register is disappeared.
+
+![Figure 12](https://user-images.githubusercontent.com/56771415/188358794-f40664bf-cc23-49bc-aa92-c67cca4d131a.png)
+_Laptop resolution_
+
+![Figure 13](https://user-images.githubusercontent.com/56771415/188358810-e6cc9e33-d711-4b5a-a2ac-08ac766db5f4.png)
+_Mobile resolution_
+
+
 #### 4.2.4 Compatibility Testing
 #### 4.2.5 Testing in Controlled Environment & Survey 
 #### 4.2.6	Final Testing Result 
