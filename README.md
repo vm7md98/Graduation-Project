@@ -395,7 +395,7 @@ In the 1st GP course we provide HTA diagram therefore, in this section we will c
 
 Because we explained the symbols and notations of HTA in the previous assignments we will not explain in detail in this section.
 
-_If you want the detailed HTA Diagrams so bad just text me and i'll send it for your research :D_
+_(If you want the detailed HTA Diagrams so bad just text me and i'll send it for your research :D)_
 
 #### 4.5.1 HTA for student (Register)
 In this section we will talk about how students can register new courses.
@@ -403,12 +403,19 @@ In this section we will talk about how students can register new courses.
 Tasks break down (Before Development):
 0. To register 
 1. Enter URL 
-2. Login 
+
+2. Login
+
   2.1. Enter the Authentication code   
+
 3. Click register 
-  3.1. Select plan 	
+
+  3.1. Select plan 
+	
   3.2. Edit course 
+
   3.3. Delete course
+
 4. Click confirm
 
 Diagram (Before Development) `Figure 25`:
@@ -416,14 +423,23 @@ Diagram (Before Development) `Figure 25`:
 ![Figure 25](https://user-images.githubusercontent.com/56771415/188361603-cfeeb5d9-7131-477d-b31a-08b2bec2a5ee.png)
 
 Tasks break down (After Development):
-0. To register courses 
-1. Enter URL 
-2. Login 
-  2.1. Enter the Authentication code   
-3. Click Register courses		
-  3.1. Select courses 	 
+
+0. To register courses
+
+1. Enter URL
+
+2. Login
+
+  2.1. Enter the Authentication code
+
+3. Click Register courses
+
+  3.1. Select courses
+
 4. Click Register
+
   4.1. Click OK on window prompt
+
   4.2. Click Ok on notification prompt
 
 Diagram (After Development) `Figure 26`:
@@ -431,6 +447,7 @@ Diagram (After Development) `Figure 26`:
 ![Figure 26](https://user-images.githubusercontent.com/56771415/188361709-a36cb0ff-5536-4607-b1a3-0789ed51732c.png)
 
 - Discussion
+
 As we can `Figure 25` and `Figure 26` both of them are HTA diagrams for student to register courses. The first two step (1 - 2) are the same because we did not change the authentication process in term of operation. However next steps are different because we change from generating plans to generating courses and we removed delete and edit plan, and these change was needed for several reasons which we will discuss it later. Also we add two more steps in which is 4.1 and 4.2, we added these steps to reduce human errors.
 At the end both of them has their advantage and disadvantage. For example the old diagram Figure 25 is better in term of operation because the user can edit and delete a plan which is not available in new diagram Figure 26. However, the new diagram also has some advantage such as it’s more stable because there are step 4.1 and 4.2 also it’s better in term of fixability because you can select each course instead of generating a plan.       
 
@@ -438,14 +455,23 @@ At the end both of them has their advantage and disadvantage. For example the ol
 In this section we will talk about how admin can add new user.
 
 Tasks break down:
+
 0. To add new user
-1. Enter URL 
-2. Login 
-  2.1. Enter the Authentication code   	
+
+1. Enter URL
+
+2. Login
+
+  2.1. Enter the Authentication code
+
 3. Click Register stuff
-  3.1. Fill all the input 		
+
+  3.1. Fill all the input
+
 4. Click on Create
+
   4.1. Click OK on window prompt
+
   4.2. Click Ok on notification prompt
   
 Diagram `Figure 27`:
@@ -456,18 +482,25 @@ Diagram `Figure 27`:
 In this section we will talk about how admin can download a report.
 
 Tasks break down:
+
 0. To add new user
-1. Enter URL 
-2. Login 
-  2.1. Enter the Authentication code   
-3. Click on report	
-4. Click on the excel icon 
+
+1. Enter URL
+
+2. Login
+
+  2.1. Enter the Authentication code
+
+3. Click on report
+
+4. Click on the excel icon
 
 Diagram `Figure 28`:
 
 ![Figure 28](https://user-images.githubusercontent.com/56771415/188362016-e839ab9f-128a-4e84-bb84-dc41ed482b97.png)
 
 - Discussion
+
 In the previous reports we just add one HTA which if for students however, it was not enough to explain how the admin can interact with the system. As we can see in `Figure 27` and `Figure 28` both of them has the same first two steps which is Enter URL and Login in fact all roles in the system must do these two steps and after that each roles has different step depending on the service or the task they want to do as we can see in `Figure 29`.
 
 ![Figure 29](https://user-images.githubusercontent.com/56771415/188362100-3ef70157-86d2-4da9-ab7e-dbb6aca02f05.png)
