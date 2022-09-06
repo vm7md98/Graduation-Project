@@ -671,37 +671,49 @@ In this section we will the explain the Development/Implementation phase in deta
 #### 4.7.1 Technologies
 In this section we will list the technologies we used in this project and explain why we used these technologies. 
 
-- Node.Js:
+- **Node.Js**:
+
 The main reasons we chose Node.js because based on JavaScript and according to (Frees, 2015) Node.js has many advantages such as it serves all requests in a single thread and  all HTTP requests are served out of the same thread.
 
-- MongoDB:
+- **MongoDB**:
+
 The main reasons we chose MongoDB because it has less restriction in term of CRUD operation for example, in SQL sometimes it will prevent the user from deleting a row because of the foreign key or the primary key relationship but in NoSQL this problem is not exist because there is no foreign key.  Also according to (Chauhan & Bansal, 2017) MongoDB has many advantages such as ease of use because it is very easy to install , maintain and configure.  
 
-- Express:
+- **Express**:
+
 Is a framework for Node.js that provide many features such as modules like HTTP, middleware body-parser therefore using these feature we reduced the needed to develop and building the application.
 
-- HTTP: is module includes classes, methods and events to create Node.js http server.
+- **HTTP**:
+
+Is a module includes classes, methods and events to create Node.js http server.
 Body-parser: is a middleware used to process data sent through an HTTP request body.
 
-- Mongoose:
+- **Mongoose**:
+
 Is a framework for MongoDB which provide many features such Pre/Post middleware’s therefore using these feature we reduced the needed to develop and building the application.
 
-- EJS:
+- **EJS**:
+
 Is a templating language allows us to use JavaScript in html pages and the main reason we used it is to display the data in the database to the client.
 
-- JSON Web Token (JWT):
+- **JSON Web Token (JWT)**:
+
 Is a technology to share security information between two parties or according to (Visočnik, 2018) JWT used for “for passing information securely, known as claims between two parties, usually a server and a client”.
 
-- Bcrypt:
+- **Bcrypt**:
+
 Is a library used to hash the password and we used it to hash user password also it contain many other function hashing with salt.
 
-- AutoIncrement:
+- **AutoIncrement**:
+
 Is a module used to generate id which we used it to auto increment user id whenever we create a new user.
 
-- Validator:
+- **Validator**:
+
 Is a module used to validate the email and we used this module to validate the email in database level. However this module only validate strings.
 
-- NodeMailer:
+- **NodeMailer**:
+
 Is a module used to send emails from our server and we used it because it’s very simple and free.
 
 #### 4.7.2 File structure
