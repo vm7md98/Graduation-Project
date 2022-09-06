@@ -508,36 +508,91 @@ In the previous reports we just add one HTA which if for students however, it wa
 ![Figure 29](https://user-images.githubusercontent.com/56771415/188362100-3ef70157-86d2-4da9-ab7e-dbb6aca02f05.png)
 
 ### 4.6 Pages
-#### 4.6.1 login.ejs 
-#### 4.6.2	authentication.ejs 
+In this section we will discuss about how each page is function and operate in term of design or client view (front-end) which mean will not focus in the validation or JavaScript in each page but instead of that will talk about html, CSS and some EJS. As we can see in `Figure 30` we have eight pages which are login.ejs, authentication.ejs, signup.ejs, index.ejs, register.ejs, report.ejs, showCourse.ejs and studentList.ejs however we did not include main.ejs file because it’s not page but it act like MasterPage in aspx which mean every page will take some html, CSS, Bootstrap code from it like background color and footer. Therefore we will explain main.ejs file in EJS section.
+
+![Figure 30](https://user-images.githubusercontent.com/56771415/188735077-50d78d36-2d8d-4339-acdd-3b95973386db.png)
+
+#### 4.6.1 login.ejs
+The main object of this page is to check if the user has an account or not, as shown in `Figure 31`.
+The idea of this design is to make the page obvious and not confuse the user, therefore we put the form in the middle and we did not use any images that will distract the user. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. 
+
+![Figure 31](https://user-images.githubusercontent.com/56771415/188736671-a519eca9-9a4d-4a7d-89aa-49564bec8e73.png)
+
+#### 4.6.2 authentication.ejs
+The main object of this page is to authenticate the user and we put a timer so the authentication code will be deleted after the timer end and send the user to login page as shown in `Figure 32`. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. Also we used JavaScript for the timer `Figure 33`.
+
+![Figure 32](https://user-images.githubusercontent.com/56771415/188740504-1d0115ff-bd7e-4e44-ba67-3d765b8268b6.png)
+```
+/** Timer for Authentication */
+  function startTimer(duration, display) {
+    var timer = duration,
+      minutes,
+      seconds;
+    let executing = setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+      if (timer == 0) {
+        clearInterval(executing);
+        display.textContent = minutes + ":" + seconds;
+        location.assign("/logout ");
+      }
+    }, 1000);
+  }
+
+  window.onload = function () {
+    /*How many minutes you want*/
+    var fiveMinutes = 60 * 5,
+      display = document.querySelector("#time");
+    display2 = document.querySelector("#time-shadow");
+    startTimer(fiveMinutes, display);
+    startTimer(fiveMinutes, display2);
+  };
+  ```
+![Figure 33](https://user-images.githubusercontent.com/56771415/188740525-f1d96179-5abb-483e-b02e-35a4ef656d2a.png)
+
 #### 4.6.3 index.ejs
+In `Figure 34`, the main object of this page is to show different services the application provide however the services depends on user rule. Also we can see logout to logout, user email to make sure that the user want to login this account and Home text as a link which redirect to home page. For the coding part we mainly used EJS so we can use JavaScript in html page. For example, as we can see in `Figure 35` we used if statement to show the buttons(services) which depends on user rule. 
+
+![Figure 34](https://user-images.githubusercontent.com/56771415/188745215-5e5ff369-3710-4c51-bf6e-9a4d6a87d34d.png)
+
+![Figure 35](https://user-images.githubusercontent.com/56771415/188745226-95aa5e39-6db9-44ea-a728-2087ff9eebd1.png)
+
 #### 4.6.4 signup.ejs
-#### 4.6.5 report.ejs 
-#### 4.6.6	studentList.ejs 
-#### 4.6.7 studentList.ejs 
-#### 4.6.8	showCourse.ejs 
+#### 4.6.5 report.ejs
+#### 4.6.6 studentList.ejs
+#### 4.6.7 studentList.ejs
+#### 4.6.8 showCourse.ejs
 
 ## 4.7 Implementation
-#### 4.7.1	Technologies 
+#### 4.7.1 Technologies
 
-#### 4.7.2	File structure
-##### 4.7.2.1	app.js
-##### 4.7.2.2	package.json 
-##### 4.7.2.3	package-lock.json 
-##### 4.7.2.4	middleware
-##### 4.7.2.5	node_modules 
-##### 4.7.2.6	public 
-##### 4.7.2.7	views 
+#### 4.7.2 File structure
+##### 4.7.2.1 app.js
+##### 4.7.2.2 package.json
+##### 4.7.2.3 package-lock.json
+##### 4.7.2.4 middlewares
+##### 4.7.2.5 node_modules
+##### 4.7.2.6 public 
+##### 4.7.2.7 views
 
-### 4.7.3	Model-View-Controller (MVC)
+### 4.7.3 Model-View-Controller (MVC)
 ### 4.7.4 Exports Modules
-### 4.7.5	Routing
-### 4.7.6	Functions
-### 4.7.7	Validation
-### 4.7.8	Models
-### 4.7.9	Algorithm
-### 4.7.10	webController.js
-### 4.7.11	authMiddleware.js
+### 4.7.5 Routing
+### 4.7.6 Functions
+### 4.7.7 Validation
+### 4.7.8 Models
+### 4.7.9 Algorithm
+### 4.7.10 webController.js
+### 4.7.11 authMiddleware.js
 
 ## Chapter 5: Conclusion
 ### 5.1	Summarize
