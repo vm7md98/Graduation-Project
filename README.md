@@ -522,7 +522,8 @@ The idea of this design is to make the page obvious and not confuse the user, th
 The main object of this page is to authenticate the user and we put a timer so the authentication code will be deleted after the timer end and send the user to login page as shown in `Figure 32`. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. Also we used JavaScript for the timer `Figure 33`.
 
 ![Figure 32](https://user-images.githubusercontent.com/56771415/188740504-1d0115ff-bd7e-4e44-ba67-3d765b8268b6.png)
-```
+
+```C#
 /** Timer for Authentication */
   function startTimer(duration, display) {
     var timer = duration,
