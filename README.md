@@ -508,7 +508,7 @@ In the previous reports we just add one HTA which if for students however, it wa
 ![Figure 29](https://user-images.githubusercontent.com/56771415/188362100-3ef70157-86d2-4da9-ab7e-dbb6aca02f05.png)
 
 ### 4.6 Pages
-In this section we will discuss about how each page is function and operate in term of design or client view (front-end) which mean will not focus in the validation or JavaScript in each page but instead of that will talk about html, CSS and some EJS. As we can see in `Figure 30` we have eight pages which are login.ejs, authentication.ejs, signup.ejs, index.ejs, register.ejs, report.ejs, showCourse.ejs and studentList.ejs however we did not include main.ejs file because it’s not page but it act like MasterPage in aspx which mean every page will take some html, CSS, Bootstrap code from it like background color and footer. Therefore we will explain main.ejs file in EJS section.
+In this section we will discuss about how each page is function and operate in term of design or client view (front-end) which mean will not focus in the validation or JavaScript in each page but instead of that will talk about html, CSS and some EJS. As we can see in `Figure 30` we have eight pages which are **login.ejs**, **authentication.ejs**, **signup.ejs**, **index.ejs**, **register.ejs**, **report.ejs**, **showCourse.ejs** and **studentList.ejs** however we did not include **main.ejs** file because it’s not page but it act like MasterPage in aspx which mean every page will take some html, CSS, Bootstrap code from it like background color and footer. Therefore we will explain **main.ejs** file in EJS section.
 
 ![Figure 30](https://user-images.githubusercontent.com/56771415/188735077-50d78d36-2d8d-4339-acdd-3b95973386db.png)
 
@@ -519,7 +519,7 @@ The idea of this design is to make the page obvious and not confuse the user, th
 ![Figure 31](https://user-images.githubusercontent.com/56771415/188736671-a519eca9-9a4d-4a7d-89aa-49564bec8e73.png)
 
 #### 4.6.2 authentication.ejs
-The main object of this page is to authenticate the user and we put a timer so the authentication code will be deleted after the timer end and send the user to login page as shown in `Figure 32`. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. Also we used JavaScript for the timer `Figure 33`.
+The main object of this page is to authenticate the user and we put a timer so the authentication code will be deleted after the timer end and send the user to login page as shown in `Figure 32`. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. Also we used JavaScript for the timer `Code 1`.
 
 ![Figure 32](https://user-images.githubusercontent.com/56771415/188740504-1d0115ff-bd7e-4e44-ba67-3d765b8268b6.png)
 
@@ -558,34 +558,353 @@ The main object of this page is to authenticate the user and we put a timer so t
     startTimer(fiveMinutes, display2);
   };
   ```
-![Figure 33](https://user-images.githubusercontent.com/56771415/188740525-f1d96179-5abb-483e-b02e-35a4ef656d2a.png)
+<!-- ![Figure 33](https://user-images.githubusercontent.com/56771415/188740525-f1d96179-5abb-483e-b02e-35a4ef656d2a.png) -->
 
 #### 4.6.3 index.ejs
-In `Figure 34`, the main object of this page is to show different services the application provide however the services depends on user rule. Also we can see logout to logout, user email to make sure that the user want to login this account and Home text as a link which redirect to home page. For the coding part we mainly used EJS so we can use JavaScript in html page. For example, as we can see in `Figure 35` we used if statement to show the buttons(services) which depends on user rule. 
+In `Figure 33`, the main object of this page is to show different services the application provide however the services depends on user rule. Also we can see logout to logout, user email to make sure that the user want to login this account and Home text as a link which redirect to home page. For the coding part we mainly used EJS so we can use JavaScript in html page. For example, as we can see in `Code 2` we used if statement to show the buttons(services) which depends on user rule. 
 
-![Figure 34](https://user-images.githubusercontent.com/56771415/188745215-5e5ff369-3710-4c51-bf6e-9a4d6a87d34d.png)
+![Figure 33](https://user-images.githubusercontent.com/56771415/188745215-5e5ff369-3710-4c51-bf6e-9a4d6a87d34d.png)
 
-![Figure 35](https://user-images.githubusercontent.com/56771415/188745226-95aa5e39-6db9-44ea-a728-2087ff9eebd1.png)
+```C#
+<link rel="stylesheet" href="/css/index.css" />
+<div class="container mt-5">
+  <% if (user.role==="AD"){%>
+  <a class="button1" href="/signup">Register stuff</a> <%}%> <%
+  if(user.role==="AD"){%> <a class="button1" href="/report">Reports</a><%}%>
+  <%if(user.role==="AV"){%>
+  <a class="button1" href="/studentList">Student List</a><%}%>
+  <%if(user.role==="ST"){%>
+  <a class="button1" href="/register">Register courses</a>
+  <a class="button1" href="/showCourse">Show courses</a>
+  <%}%>
+</div>
+```
 
 #### 4.6.4 signup.ejs
+In `Figure 34`, the main object of this page is to add a new user to the system. For the coding part we mainly used Bootstrap and some CSS for animation and other effect such as hover. Also we used some JavaScript with Document Object Model (DOM) as we can see in `Code 3` to show and hide some text box depending on the role the user pick.
+
+![Figure 34](https://user-images.githubusercontent.com/56771415/188746340-2d47b058-f184-4778-bf85-12b19c135683.png)
+
+```C#
+function dropboxAdvisorCheck() {
+    if (form.role.value == "AV" || form.role.value == "AD") {
+      document.getElementById("advisor_dropbox").style.display = "none";
+      document.getElementById("semester").style.display = "none";
+    } else {
+      document.getElementById("advisor_dropbox").style.display = "block";
+      document.getElementById("semester").style.display = "block";
+    }
+  }
+```
+
 #### 4.6.5 report.ejs
+In `Figure 35`, the main object of this page is to display the report and download the report in excel file. For the coding part we mainly used CSS for table design. Also we used JavaScript to create a function that convert html table to excel file as we can see in `Code 4`.
+
+![Figure 35](https://user-images.githubusercontent.com/56771415/188746522-7ee3f0a0-fc9d-4af9-b427-df2ba6e091ea.png)
+
+```C#
+function ExportToExcel(type, fn, dl) {
+    var elt = document.getElementById("tbl_exporttable_to_xls");
+    var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+    return dl
+      ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
+      : XLSX.writeFile(wb, fn || "Report." + (type || "xlsx"));
+  }
+```
+
 #### 4.6.6 studentList.ejs
+The main object of this page is to list all the student for the advisor as shown in `Figure 36`. For the coding part we only used Bootstrap.
+
+![Figure 36](https://user-images.githubusercontent.com/56771415/188746694-8cda101c-1931-41b9-ad1d-7cab6e3458dd.png)
+
 #### 4.6.7 studentList.ejs
+In `Figure 37`, the main object of this page is to show courses for students depending on the semester and register these courses. For the coding part we used Bootstrap and CSS also we used some ejs to display the courses from the database as we can see in `Code 5`.
+
+![Figure 37](https://user-images.githubusercontent.com/56771415/188746788-ac9e43d8-1467-438b-ad48-51aa46b91ed1.png)
+
+```C#
+<% course.forEach(element => {%>
+  <tr>
+    <td class="column2"><%= element.code%></td>
+    <td class="column1>
+      <span style="float: left"› <%= element.courseName%> </span>
+      <span style="float: right; padding-right: 20%"> 
+	 <input class="size-check" type="checkbox" value=<%=element.code%> />
+      </span>
+    </td>
+  </tr> 
+```
+
 #### 4.6.8 showCourse.ejs
+In `Figure 38`, the main object of this page is to show the courses he registered in. For the coding part we used Bootstrap and CSS also we used some ejs to display the courses from the database as we can see in `Code 6`.
+
+![Figure 38](https://user-images.githubusercontent.com/56771415/188747915-26e318c8-869a-4fa9-9bf2-af903c988952.png)
+
+```C#
+<link rel="stylesheet" href="/css/showCourse.css" />
+
+<div class="container-sm mt-5">
+  <form action="">
+    <table class="table100-head">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% course.forEach(function (item, index) {%>
+        <tr>
+          <td class="column2"><%=item.code%></td>
+          <td class="column1"><%=item.courseName%></td>
+        </tr>
+        <%});%>
+      </tbody>
+    </table>
+  </form>
+</div>
+```
 
 ## 4.7 Implementation
+In this section we will the explain the Development/Implementation phase in detail such as programing language, database, framework, tools, modules and the technologies we used in this application.
+
 #### 4.7.1 Technologies
+In this section we will list the technologies we used in this project and explain why we used these technologies. 
+
+- Node.Js:
+The main reasons we chose Node.js because based on JavaScript and according to (Frees, 2015) Node.js has many advantages such as it serves all requests in a single thread and  all HTTP requests are served out of the same thread.
+
+- MongoDB:
+The main reasons we chose MongoDB because it has less restriction in term of CRUD operation for example, in SQL sometimes it will prevent the user from deleting a row because of the foreign key or the primary key relationship but in NoSQL this problem is not exist because there is no foreign key.  Also according to (Chauhan & Bansal, 2017) MongoDB has many advantages such as ease of use because it is very easy to install , maintain and configure.  
+
+- Express:
+Is a framework for Node.js that provide many features such as modules like HTTP, middleware body-parser therefore using these feature we reduced the needed to develop and building the application.
+
+- HTTP: is module includes classes, methods and events to create Node.js http server.
+Body-parser: is a middleware used to process data sent through an HTTP request body.
+
+- Mongoose:
+Is a framework for MongoDB which provide many features such Pre/Post middleware’s therefore using these feature we reduced the needed to develop and building the application.
+
+- EJS:
+Is a templating language allows us to use JavaScript in html pages and the main reason we used it is to display the data in the database to the client.
+
+- JSON Web Token (JWT):
+Is a technology to share security information between two parties or according to (Visočnik, 2018) JWT used for “for passing information securely, known as claims between two parties, usually a server and a client”.
+
+- Bcrypt:
+Is a library used to hash the password and we used it to hash user password also it contain many other function hashing with salt.
+
+- AutoIncrement:
+Is a module used to generate id which we used it to auto increment user id whenever we create a new user.
+
+- Validator:
+Is a module used to validate the email and we used this module to validate the email in database level. However this module only validate strings.
+
+- NodeMailer:
+Is a module used to send emails from our server and we used it because it’s very simple and free.
 
 #### 4.7.2 File structure
+File management is essential aspect in every successful project. File management is important because of several reasons such as reusable code, easy to find and maintaining the code and many other reasons and all of them lead to one goal which is saving time.
+Most if not all operating systems are using hierarchical file systems. However hierarchical file system has few disadvantage such as it easily led to create many files and it is not efficient or friendly for non-GUI operating system is we can see in `Figure 39` such as MS-DOS. To solve these problem we focused in two things which are reducing the number if files by placing the files together and create file name that make sense. At the end we came up with five files and three files in the root directory `Figure 40`.
+
+![Figure 39](https://user-images.githubusercontent.com/56771415/188748598-0a3f5301-1e41-4b30-ab21-7071aa138cd9.png)
+
+![Figure 40](https://user-images.githubusercontent.com/56771415/188748607-4eb6ab94-7327-41a4-82f1-fa684f43e391.png)
+
 ##### 4.7.2.1 app.js
+This file is what the server will run and contain many things for example the frameworks that we are using (Express.js and Mongoose) or some middleware (cookieParser) and tools such as ejs as shown in `Code 7`.
+
+```C#
+const express = require("express"); //Framework
+const expressLayouts = require("express-ejs-layouts"); //Tool
+const mongoose = require("mongoose"); //Framework
+const cookieParser = require("cookie-parser"); //Middleware
+const app = express();
+const port = process.env.PORT || 3000;
+const { checkUser } = require("./middleware/authMiddleware");
+
+// to make port dynamic which mean you can use i server port not just host
+require("dotenv").config();
+
+//middleware
+//parse the url data into object  (ex:eq.body.id)
+app.use(express.urlencoded({ extended: true }));
+
+// it take any json data that comes from request and parse it into javascript object so we can use it (ex:eq.body.id)
+app.use(express.json());
+// To use cookies
+app.use(cookieParser());
+//so we dont need to write all the public path such as css path
+app.use(express.static("public"));
+
+//database
+const dbURI =
+  "mongodb+srv://abdullah-admin3:database000@cluster0.hou89.mongodb.net/hctDB"; //Databse Connection
+mongoose.connect(dbURI, {
+  /*     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true, */
+});
+```
+
 ##### 4.7.2.2 package.json
+This file contain all the dependencies such as nodemailer module also it devDependencies which is the dependencies that help the developer but not essential or important to run the application like nodemon, also it contain scripts that we are using for instance we are using script the help us to start the application using nodemon tool s shown in `Code 8`.
+Note: This file is auto generated and it updated automatically whenever we add new dependency. 
+
+```C#
+{
+  "name": "Project_v1",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": { // <-------
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js" // <-------
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": { // <-------
+    "alert": "^5.0.10",
+    "assert": "^2.0.0",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2", // <-------
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.4",
+    "mongoose-auto-increment": "^5.0.1",
+    "nodemailer": "^6.7.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": { // <-------
+    "nodemon": "^2.0.15"
+  },
+  "description": ""
+}
+
+
+```
 ##### 4.7.2.3 package-lock.json
-##### 4.7.2.4 middlewares
-##### 4.7.2.5 node_modules
-##### 4.7.2.6 public 
-##### 4.7.2.7 views
+This file is similar to **package.json** but with more details and that gives us more control over dependencies. For example in **package.json** file we can see express `Code 9` dependency version 4.17.2 but in **package-lock.json** we can see `Code 10` the same dependency but it has much more details like modules that express has. Therefore we can delete some modules if we don’t use them or if they contain some bugs.
+Note: This file is auto generated and it updated automatically whenever we add new dependency.
+
+```C#
+"express": { // <-------
+      "version": "4.17.2",
+      "resolved": "https://registry.npmjs.org/express/-/express-4.17.2.tgz", // <-------
+      "integrity": "sha512-oxlxJxcQlYwqPWKVJJtvQiwHgosH/LrLSPA+H4UxpyvSS6jC5aH+5MoHFM+KABgTOt0APue4w66Ha8jCUo9QGg==",
+      "requires": {
+        "accepts": "~1.3.7",
+        "array-flatten": "1.1.1",
+        "body-parser": "1.19.1",
+        "content-disposition": "0.5.4",
+        "content-type": "~1.0.4",
+        "cookie": "0.4.1",
+        "cookie-signature": "1.0.6",
+        "debug": "2.6.9",
+        "depd": "~1.1.2",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "finalhandler": "~1.1.2",
+        "fresh": "0.5.2",
+        "merge-descriptors": "1.0.1",
+        "methods": "~1.1.2",
+        "on-finished": "~2.3.0",
+        "parseurl": "~1.3.3",
+        "path-to-regexp": "0.1.7",
+        "proxy-addr": "~2.0.7",
+        "qs": "6.9.6",
+        "range-parser": "~1.2.1",
+        "safe-buffer": "5.2.1",
+        "send": "0.17.2",
+        "serve-static": "1.14.2",
+        "setprototypeof": "1.2.0",
+        "statuses": "~1.5.0",
+        "type-is": "~1.6.18",
+        "utils-merge": "1.0.1",
+        "vary": "~1.1.2"
+      }
+    },
+
+```
+
+##### 4.7.2.4 Middlewares
+In `Figure 41` there is a folder contain **authMiddleware.js** file which contain almost all the middleware we used in this application. For example `requireAuth()` method used to check if the user is login or authenticate or no as we can see in `Code 11`.
+
+![Figure 41](https://user-images.githubusercontent.com/56771415/188750311-b620a0ac-03e6-4ea4-ba8a-79e7d5950841.png)
+
+```C#
+//check if user is authenticate or no
+const requireAuth = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        res.redirect("/login");
+      } else {
+        next();
+      }
+    });
+  } else {
+    res.redirect("/login");
+  }
+};
+```
+
+##### 4.7.2.5 Node_Modules
+This folder contain all the dependencies material we need to use them as shown in `Figure 42`.
+Note: This file is auto generated and it updated automatically whenever we add new dependency. 
+
+![Figure 42](https://user-images.githubusercontent.com/56771415/188750517-659003e3-14c6-4868-86f4-034b622f51c5.png)
+
+##### 4.7.2.6 Public
+This folder contain three other folders and they are css folder, img folder and js folder as shown in `Figure 43`. The css folder contains all the css files we used in this project and img folder contain all the images we used in this project and for the last folder which is js it contains **validation.js** and **otherFunction.js**. The first file which **validation.js** file is responsible for validation for all validation level (interface, server, database) and **otherFunction.js** file contain many different functions like `randomString()` which we will mention it in `Code 20`.
+
+![image](https://user-images.githubusercontent.com/56771415/188750777-45177c78-2a8b-4c9e-a0d3-bd395eb32c85.png)
+
+##### 4.7.2.7 Views
+This folder contains all ejs files as shown in `Figure 44`.
+Note: read ejs section for more details.
+
+![Figure 44](https://user-images.githubusercontent.com/56771415/188751056-5f6c190e-e863-4598-9e68-d24dc1be65aa.png)
+
+##### 4.7.2.8 Server
+server folder is responsible for server-side operation and it has three folder controllers, models, routes as shown in `Figure 45`.
+Note: read controllers, models, routes 
+sections for more details.
+
+![Figure 45](https://user-images.githubusercontent.com/56771415/188751176-87048b9b-8152-4250-8971-0c56a50c248c.png)
 
 ### 4.7.3 Model-View-Controller (MVC)
+At the beginning of the internet most websites were static websites and did not have much organization on the server side, and with time the application became more complicated and harder to maintain. Architectural pattern is a software design pattern that helps developers to structure and organize files, provide reusable and easier to maintain code to the applications.
+Model-View-Controller (MVC) is the architectural pattern we will use in our project. 
+MVC separates application logic intro three elements which are Model, View and Controller `Figure 46`.
+
+- Model: 
+Responsible for the format, core functionality, structure and constraints of the data. However, in our project we used it to create schemas and some functions `Figure 45`.
+
+- View: 
+Responsible for displaying the information to the user, which is the template/layout of our website `Figure 45`. 
+
+- Controller: 
+The link between the View and Model and it handles the input from the user then converts it to a command for the Model and View `Figure 45`.
+
+![Figure 45](https://user-images.githubusercontent.com/56771415/188751454-a77e3004-f5b8-4ff4-882b-d64e59b486ae.png)
+
+![Figure 46](https://user-images.githubusercontent.com/56771415/188751624-d765d18b-193a-4e41-8d49-dc4799fd7b87.png)
+
 ### 4.7.4 Exports Modules
 ### 4.7.5 Routing
 ### 4.7.6 Functions
