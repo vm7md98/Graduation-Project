@@ -911,17 +911,558 @@ Responsible for the format, core functionality, structure and constraints of the
 Responsible for displaying the information to the user, which is the template/layout of our website `Figure 45`. 
 
 - Controller: 
-The link between the View and Model and it handles the input from the user then converts it to a command for the Model and View `Figure 45`.
+The link between the View and Model and it handles the input from the user then converts it to a command for the Model and View `Figure 46`.
 
 ![Figure 45](https://user-images.githubusercontent.com/56771415/188751454-a77e3004-f5b8-4ff4-882b-d64e59b486ae.png)
 
 ![Figure 46](https://user-images.githubusercontent.com/56771415/188751624-d765d18b-193a-4e41-8d49-dc4799fd7b87.png)
 
 ### 4.7.4 Exports Modules
+Modules in **Node.js* are something like libraries in JavaScript which are a set of functions we want to use in our application. **Node.js** comes with built-in modules such as http, OS ,or events. However, in this project we want to create our own modules and use it, to achieve that we used **module.exports** and require. There are many methods to exports module in node.js but we will use the basic and very simple method which is just exports the functions or the schema that we want then require it. For example, we exports these three methods in otherFunction.js file as we can see in `Code 21` and we want to use it in **webController.js** file so, we required **otherFunction.js** file as we can see in `Code 22` and require basically means load the module, then we stored it in the variable called **otherFunction**. By using the variable **otherFunction** we can access to the three functions we exports as we can see in `Code 23`.
+
+```C#
+/**
+ * export the function
+ */
+module.exports = {
+  randomString,
+  sendEmailLogIn,
+  sendEmailSignUps,
+  sendEmailRegister,
+};
+```
+
+```C#
+const otherFunction = require("../../public/js/otherFunction"); // <------- In "webController.js" File
+```
+
+```C#
+try {
+    const user = await User.login(email, password);
+    // so every time he logging in he will have different code
+    await VerifyCode.deleteMany({ id: user.id });
+
+    const code = otherFunction.randomString(5); // <-------
+    console.log(code);
+    otherFunction.sendEmailLogIn(email, code); // <-------
+
+    if (user.id) {
+      await verifyUser.findOneAndUpdate(
+        { id: user.id },
+        { code },
+        { upsert: true, new: true }
+      );
+    }
+```
+
 ### 4.7.5 Routing
+### Routing in simple application
+Routing the process of how the application response to a client request to a specific endpoint (URL) and a specific HTTP method (GET, POST,PUT). Express framework provide many method to define routes but before we explain how we used the routes in our project we need to understand the basic method of defining a route which can be seen in `Code 24`. The first line is to load express module and, the second line it to call the express function `express()` and puts new express application inside the app variable, then using app variable we created the route. As we can in `Code 24` the route consist of four part, the first part is app which is an instance of express, then get method which is an HTTP request method and it should be in lowercase. Number three is where we declare the path, finally the last part which is where the function is executed when the route is matched and in this example in will render **index.js** file.
+
+```C#
+const express = require("express");
+const app = express();
+
+//1 //2 //3
+app.get("/", (req, res) => {
+  res.render("index"); //4
+});
+```
+
+### Routing in MVC application
+Because we are using MVC model design pattern we separated the code into three different files and they are **app.js**, **webRoutes.js**, and **webController.js**.
+
+- webController.js
+
+Is where the functions is executed when the route is matched for example, we created a function called homePageGet and the purpose of this function is to render **index.ejs** and sends a JSON object if the response succussed or send an error message if the response filed as we can see in `Code 25` however we exports the function to use it in **webRoutes.js**.
+
+```C#
+/**
+ * GET /
+ * Homepage
+ */
+exports.homePageGet = async (req, res) => {
+  try {
+    res.render("index", { title: "HOME" });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- webRoutes.js
+
+Is where we define the **HTTP** method and the path for example, we used the path "/" to execute function **homePageGet**. To achieve `Code 26` that, first we create variable called express and load express module. second, we create variable called router and assign it to a function called `Router()` this function provided by express and it is used to create a new router object and stored it in array therefore, we can use router variable to store many routes as we want. Third we load **webController.js** using require and stored it in variable called **webController**. The fourth step using router variable we define the HTTP method which is get then we assign the path ("/") and last thing we put is **homePageGet** function. However the variables with the yellow line are middleware’s which will be explained in other section. Finally because we created all this by using router variable, we just need to exports the variable not the hole file as we can see in `Code 26`
+
+```C#
+const express = require("express"); //1
+const router = express.Router(); //2
+const webController = require("../controllers/webController"); //3
+const {
+  requireAuth,
+  requireAuthAdmin,
+  requireAuthAdvisor,
+  requireAuthAdmin_post,
+  requireAuthStudent,
+  requireAuthLogIn,
+  requireAuthVerify,
+} = require("../../middleware/authMiddleware");
+
+/**
+ * HOME
+ */
+router.get("/", requireAuth, requireAuthVerify, webController.homePageGet); //4
+```
+
+```C#
+module.exports = router;
+```
+
+- app.js
+
+In **app.js** we just need to load webRoutes.js then using `use()` function we need to assign a root path for the hole application and we need to put the router we just load as we can see in `Code 27`. We used **app.js** to run the router instead of webRoutes.js because the server only see **app.js** file similar to **index.html**.
+
+```C#
+const routes = require("./server/routes/webRoutes.js");
+app.use("/", routes);
+```
+
 ### 4.7.6 Functions
+In this part we will explain all the function we have in **otherFunction.js** file.
+
+- randomString()
+
+The purpose of this function is to generate random characters and return it as string as we can see in `Code 28`, then we use these characters as verification code to verify the user when he login. We need only one parameter which is the length of the code or string.
+
+```C#
+/**
+ * Generate random characters | we used in in login_post
+ */
+function randomString(length) {
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+```
+
+### Nodemailer
+
+**Nodemailer** is a **Node.js** module that’s make sending emails easier and faster also it has many features such as sending email attached with images and plain text. However, we used this module in **sendEmailLogIn** and **sendEmailSignUps** functions.
+
+- sendEmailLogIn()
+
+This function is responsible for sending an email with the verification code when the user login. The two parameters are, the email we want to send the verification code to and, the verification code itself. As we can see in `Code 29` the function contains two variables and one function which is `sendMail()`. The first variable is transporter and in it we need to specify the service and the email we want to use as host email. The second variable is mailOptions we need to specify the email that we want to send the verification code to and the verification code. The sendMail function is just to handle the errors. However, we need to require nodemailer module first before we can use it as shown in `Code 30`.
+
+```C#
+/**
+ * SendEmail for login auth | we used in in login_post
+ */
+const sendEmailLogIn = (email, code) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "registersystemhct@gmail.com",
+      pass: "CAPPROJECTEMAIL",
+    },
+  });
+
+  var mailOptions = {
+    from: "registersystemhct@gmail.com",
+    to: email,
+    subject: "Verify code",
+    text: code,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+};
+```
+
+```C#
+const nodemailer = require("nodemailer");
+```
+
+- sendEmailSignUps()
+
+As we can see in `Code 31` this function is similar to the function `sendEmailLogIn()` but the difference is it has only one parameter, because the purpose of this function is to send an email to the user to inform him that he is registered now in the system.
+
+```C#
+/**
+ * SendEmail for signup | we used in in signup_post
+ */
+const sendEmailSignUps = (email) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "registersystemhct@gmail.com",
+      pass: "CAPPROJECTEMAIL",
+    },
+  });
+
+  var mailOptions = {
+    from: "registersystemhct@gmail.com",
+    to: email,
+    subject: "Register HCT",
+    text:
+      `You are now registered in the system. Now you can lgoin using this email: ` +
+      email,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+};
+```
+
 ### 4.7.7 Validation
+Validation is the process of ensuring that a web application operates on clean, correct and useful data. In this project we have three types of validation and they are validation on interface level, validation on database level and validation on server level. Therefore in this section we will explain each one of them also we put all validation function in one file called **validation.js**.
+
+### Interface level
+Interface level validation is process that happen in the client side before it send any request to the server and we used this type of validation in login page and register page.
+
+- validateEmail()
+
+This function is used to validate user email whenever he login and because of that it only take one parameter which is email. We used regular expressions to check if the email is valid or not therefore if the email is valid it will return true and return false if it’s not valid as we can see in `Code 32`.
+
+```C#
+/** Email Validation */
+const validateEmail = (email) => {
+  /**
+   * re stand for  (regular expression:)
+   */
+  var re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+```
+
+- validatePassword()
+
+This function is used to validate user password. The only two condition we need for password is it should be more than 5 and not empty and at the end it will return true or false as we can see in `Code 33`.
+
+```C#
+/** Password Validation*/
+function validatePassword(password) {
+  if (password && password.length > 5 && password.indexOf(" ") < 0) {
+    return "true";
+  } else {
+    return false;
+  }
+}
+```
+
+- validateLogin()
+
+This purpose of this function is to reuse both of the previous function (**validateEmail** and **validatePassword**) without make the code look messy in the **login.ejs** file therefore we create this function as shown in `Code 34`.
+
+```C#
+/** Login Page Validation */
+function validateLogin(email, password) {
+  if (validateEmail(email) == false) {
+    return false;
+  } else if (validatePassword(password) == false) {
+    return false;
+  } else {
+    return true;
+  }
+}
+```
+
+### Usage
+
+We used these function in **login.ejs** file so first we load **validation.js** file as we can see in `Code 35` then we get the values of both email and password `Code 36` and used them `validateLogin()` function as parameters `input()`.
+
+```C#
+//get the values
+    const email = form.email.value;
+    const password = form.password.value;
+```
+
+```C#
+<link rel="stylesheet" href="/css/login.css" />
+<script src="/js/validation.js"></script> // <------- Load validation.js file
+```
+
+```C#
+//Interface validation
+if (validateLogin(email, password)) {
+      try {
+        //to send post request and save it in result
+        const result = await fetch("/login", {
+          method: "POST", //we tell the server we will use  post
+          body: JSON.stringify({ email, password }), //what the body will contain
+          headers: { "Content-Type": "application/json" }, // we tell the server what content type will be
+        });
+        //take the result from the response and save it in data variable
+        const data = await result.json();
+        if (data.errors) {
+          loginError.textContent = data.errors.email;
+          loginError.textContent = data.errors.password;
+        }
+        if (data.user) {
+          console.log(data.user);
+          location.assign("/authentication");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      loginError.textContent = "Email or Password not valid ";
+    }
+```
+
+### Server level
+
+We create a `handleErrorsLogin()` function to handle errors from server. As we can see in 
+`Code 37` the function handle three errors which is email, password and duplicated data (key).
+
+```C#
+/**
+ * handle error |  login_post
+ */
+
+const handleErrorsLogin = (err) => {
+  let errors = { email: "", password: "" };
+
+  //incorrect email (for login)
+  if (err.message === "incorrect email") {
+    errors.email = "Email or Password not valid ";
+  }
+  //incorrect password (for login)
+  if (err.message === "incorrect password") {
+    errors.password = "Email or Password not valid ";
+  }
+
+  if (err.message.includes("user validation failed")) {
+    //validation errors
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
+  console.log(errors);
+    //duplicate error code
+    if (err.code === 11000) {
+      errors.email = "that email is already registered ";
+      return errors;
+    }
+  return errors;
+};
+```
+### Usage
+We used this function in two function in **webController.js** file which are **login_post** and **signup_post** and validation work in both in the same way. For example, if we take a look at `Code 38` which is **login_post** function we can see many codes but for validation we only need the codes with the red line. try/catch are needed to catch any error inside try/catch then pass the error to `handleErrorsLogin()` and the function will read the error and decide what is the error type then send the error that decided through `handleErrorsLogin()` function to the client.
+
+```C#
+/**
+ * login post
+ */
+module.exports.login_post = async (req, res) => {
+  const { email, password } = req.body;
+  try { // <-------
+    const user = await User.login(email, password);
+    // so every time he logging in he will have different code
+    await VerifyCode.deleteMany({ id: user.id });
+
+    const code = otherFunction.randomString(5);
+    console.log(code);
+    otherFunction.sendEmailLogIn(email, code);
+
+    if (user.id) {
+      await verifyUser.findOneAndUpdate(
+        { id: user.id },
+        { code },
+        { upsert: true, new: true }
+      );
+    }""
+
+    //jwt: we assign token to user
+    const token = createToken(user.id, user.role, "Not Verified");
+
+    //jwt with cookie
+    res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+
+    //Response
+    res.status(200).json({ user: user.email });
+  } catch (error) { // <-------
+    const errors = validation.handleErrorsLogin(error); // <-------
+    res.status(400).json({ errors }); // <-------
+  }
+};
+```
+
+### Database level
+To handle errors in database we used mongoose framework and validator which is a module in **Node.js**. We will see later in `Code 41` mongoose provide validation within the schema creation which save us a lot of time and for we used validator to validate the email and whenever mongoose or validator any error it will end it to the client.
+
+- Client side
+
+After the error sent to the client side we store the error in a variable called data. Then we display the error with DOM. We are using if statement because if there are no error then the DOM code will not work `Code 39`.
+
+```C#
+const data = await result.json();
+        if (data.errors) {
+          loginError.textContent = data.errors.email;
+          loginError.textContent = data.errors.password;
+        }
+```
+
 ### 4.7.8 Models
+Model folder is where we stored our schemas and database related functions. Schema is a JSON object that define the structure of your data, basically schema is a map to MongoDB collection (table) that define the shape of the document (row) inside the collection. 
+
+- User.js
+
+The main purpose of this file is to check if the user is registered or no  in the system. First, we required all the dependencies we need as we can see in `Code 40` and they are mongoose framework, validator library which is a library of string validators, bcrypt to hash the password, and finally autoincrement which is mongoose plugin auto-increments any ID field we have.
+
+```C#
+const mongoose = require("mongoose");
+const { isEmail } = require("validator"); //98.1K (gzipped: 29.2K)
+const bcrypt = require("bcrypt");
+autoIncrement = require("mongoose-auto-increment"); //3K (gzipped: 1.3K)
+```
+
+Then using **Mongoose** framework we have created the schema `Code 41` with four property **id**, **email**, **password** ,and **role**. Also in schema we can do some validation for example email property has validate keyword which we used combined with validator library to validate if the email is valid or no. We can also specify what value the property contain using *enum* keyword which we used for role.
+
+```C#
+const userSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    unique: true,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: [true, "Please enter an email"], //Databse level 1
+    unique: true,
+    lowercase: true,
+    validate: [isEmail, "Please enter a valid email"], //Databse level 1
+    description: "must be a valid email",
+  },
+  password: {
+    type: String,
+    required: [true, "Please enter an password "], //Databse level 1
+    minlength: [6, "Minimum password length is 6 character"], //Databse level 1
+    description: "must be at least 6",
+  },
+  role: {
+    type: String,
+    required: true,
+    enum: ["AD", "AV", "ST"],
+    description: "can only be one of the enum values",
+  },
+});
+```
+
+After creating the schema we need to make the id generated automatically whenever we create a new document and every id should be unique that’s why we used **autoincrement** plugin. As we can see in `Code 42` we only need to specify the collection name, the field that we need to increase and the starting number, after that whenever we create a new document in will automatically generate and assign the value to id.
+
+```C#
+autoIncrement.initialize(mongoose.connection);
+userSchema.plugin(autoIncrement.plugin, {
+  model: "user",
+  field: "id",
+  startAt: 1,
+});
+```
+
+Then we have **Hooks** and they are middleware in **Mongoose** and there are many hooks and each one of them has a specific task to do but, in this project we will use two of them which are **Pre** and **Post**. Pre and Post are functions that will be executed before and after a certain action, to simplify it they are like a trigger in SQL. Pre will be executed before the document is saved in the database and Post will be executed after the document is saved in the database.   
+
+- Post
+
+We used Post middleware combined with **Alert** library `Code 43` to alert the admin when he successfully register any user as showin in `Figure 47`.
+
+```C#
+//fire a function after doc saved to db
+userSchema.post("save", (doc, next) => {
+  let alert = require("alert");
+  alert("Saved in database");
+  next();
+});
+```
+
+![Figure 47](https://user-images.githubusercontent.com/56771415/188979168-21fc2556-80c0-419a-9969-89af4f990106.png)
+
+- Pre
+
+We used Pre middleware combined with some functions provided by **Bcrypt** library `Code 44` to hash the password before we stored it in the database.
+
+```C#
+//fire a function before doc saved to db / we used it for hash the password
+userSchema.pre("save", async function (next) {
+  const salt = await bcrypt.genSalt(); // <-------
+  this.password = await bcrypt.hash(this.password, salt); // <-------
+  next();
+});
+```
+
+- Hashing and Salt
+
+Hashing is the process of converting a given value into another value `Figure 48`. However, hackers can reverse hashing and get the original value, that’s why to solve this problem we used something called salt. **Salt** basically is a string of characters so, we attached salt with the password then we hashed both of them as we can see in `Figure 49` and because of that hackers needs to know the salt value if they want to reverse hashing.
+
+![Figure 48](https://user-images.githubusercontent.com/56771415/188979754-ece6037b-0457-4ea8-adb4-db2845ba1744.png)
+
+![Figure 49](https://user-images.githubusercontent.com/56771415/188979764-02179a43-3010-49ff-b480-cfb21944785f.png)
+
+
+- Login()
+
+The final function we have in **User.js** is `login()` with two parameters **email** and **password**. 
+The purpose of this function is to check if the user is registered in the database or no. To search in the database we used **email** parameter as a condition in `findOne()` query, which is a query provided by **Mongoose** framework. This query will return **null** if the email doesn’t match any email in the database or return the document as **JSON** object, as we can see in `Code 45` then we store the result in a variable called **user**. Because the password is hashed, we need to use a function provided by **Bcrypt** library called compare() this function will compare the password we provided in parameter with the password that stored in **user** variable as we can see in `Code 46`.
+
+**Note**: The logic is explained in algorithm section for this function.
+
+```CMD
+//Example of the data that can be return from `findOne()` query
+{ 
+_id: new ObjectId(-61d46f9cca574b3aac8Odf41“),
+email: 'admin@hct.ac.ae',
+password: 1.2b$10$SZnKnalqj7amcmBkk6wrw0K41YhXuhdO.hGXuLpORxWE2BnQkPzdle,
+role: 'AD',
+v: 0,
+id: 1
+} 
+```
+
+```C#
+//static method to login use
+userSchema.statics.login = async function (email, password) {
+  const user = await this.findOne({ email });
+  if (user) {
+    const passCompare = await bcrypt.compare(password, user.password);
+    if (passCompare) {
+      return user;
+    }
+    throw Error("incorrect password");
+  }
+  throw Error("incorrect email");
+};
+```
+
+Finally before we can use it, we need to give the collection a name and exports it as we can see in `Code 47`. Now we can see in `Figure 50` the data are structure as we want, the password is hashed and id is generated automatically.
+
+```C#
+// The name of the collection
+const User = mongoose.model("user", userSchema);
+
+/**
+ * Export User schema
+ */
+module.exports = User;
+```
+
+![Figure 50](https://user-images.githubusercontent.com/56771415/188981197-b3dd8b38-45f2-4339-beda-a63e82a66493.png)
+
+
 ### 4.7.9 Algorithm
 ### 4.7.10 webController.js
 ### 4.7.11 authMiddleware.js
