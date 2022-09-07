@@ -1131,7 +1131,7 @@ const sendEmailSignUps = (email) => {
 ### 4.7.7 Validation
 Validation is the process of ensuring that a web application operates on clean, correct and useful data. In this project we have three types of validation and they are validation on interface level, validation on database level and validation on server level. Therefore in this section we will explain each one of them also we put all validation function in one file called **validation.js**.
 
-### Interface level
+#### Interface level
 Interface level validation is process that happen in the client side before it send any request to the server and we used this type of validation in login page and register page.
 
 - validateEmail()
@@ -1182,7 +1182,7 @@ function validateLogin(email, password) {
 }
 ```
 
-### Usage
+#### Usage
 
 We used these function in **login.ejs** file so first we load **validation.js** file as we can see in `Code 35` then we get the values of both email and password `Code 36` and used them `validateLogin()` function as parameters `input()`.
 
@@ -1225,7 +1225,7 @@ if (validateLogin(email, password)) {
     }
 ```
 
-### Server level
+#### Server level
 
 We create a `handleErrorsLogin()` function to handle errors from server. As we can see in 
 `Code 37` the function handle three errors which is email, password and duplicated data (key).
@@ -1262,7 +1262,7 @@ const handleErrorsLogin = (err) => {
   return errors;
 };
 ```
-### Usage
+#### Usage
 We used this function in two function in **webController.js** file which are **login_post** and **signup_post** and validation work in both in the same way. For example, if we take a look at `Code 38` which is **login_post** function we can see many codes but for validation we only need the codes with the red line. try/catch are needed to catch any error inside try/catch then pass the error to `handleErrorsLogin()` and the function will read the error and decide what is the error type then send the error that decided through `handleErrorsLogin()` function to the client.
 
 ```C#
@@ -1303,7 +1303,7 @@ module.exports.login_post = async (req, res) => {
 };
 ```
 
-### Database level
+#### Database level
 To handle errors in database we used mongoose framework and validator which is a module in **Node.js**. We will see later in `Code 41` mongoose provide validation within the schema creation which save us a lot of time and for we used validator to validate the email and whenever mongoose or validator any error it will end it to the client.
 
 - Client side
@@ -1321,7 +1321,7 @@ const data = await result.json();
 ### 4.7.8 Models
 Model folder is where we stored our schemas and database related functions. Schema is a JSON object that define the structure of your data, basically schema is a map to MongoDB collection (table) that define the shape of the document (row) inside the collection. 
 
-- User.js
+#### User.js
 
 The main purpose of this file is to check if the user is registered or no  in the system. First, we required all the dependencies we need as we can see in `Code 40` and they are mongoose framework, validator library which is a library of string validators, bcrypt to hash the password, and finally autoincrement which is mongoose plugin auto-increments any ID field we have.
 
@@ -1377,7 +1377,7 @@ userSchema.plugin(autoIncrement.plugin, {
 
 Then we have **Hooks** and they are middleware in **Mongoose** and there are many hooks and each one of them has a specific task to do but, in this project we will use two of them which are **Pre** and **Post**. Pre and Post are functions that will be executed before and after a certain action, to simplify it they are like a trigger in SQL. Pre will be executed before the document is saved in the database and Post will be executed after the document is saved in the database.   
 
-- Post
+#### Post
 
 We used Post middleware combined with **Alert** library `Code 43` to alert the admin when he successfully register any user as showin in `Figure 47`.
 
@@ -1392,7 +1392,7 @@ userSchema.post("save", (doc, next) => {
 
 ![Figure 47](https://user-images.githubusercontent.com/56771415/188979168-21fc2556-80c0-419a-9969-89af4f990106.png)
 
-- Pre
+#### Pre
 
 We used Pre middleware combined with some functions provided by **Bcrypt** library `Code 44` to hash the password before we stored it in the database.
 
@@ -1405,7 +1405,7 @@ userSchema.pre("save", async function (next) {
 });
 ```
 
-- Hashing and Salt
+#### Hashing and Salt
 
 Hashing is the process of converting a given value into another value `Figure 48`. However, hackers can reverse hashing and get the original value, that’s why to solve this problem we used something called salt. **Salt** basically is a string of characters so, we attached salt with the password then we hashed both of them as we can see in `Figure 49` and because of that hackers needs to know the salt value if they want to reverse hashing.
 
@@ -1461,8 +1461,172 @@ module.exports = User;
 
 ![Figure 50](https://user-images.githubusercontent.com/56771415/188981197-b3dd8b38-45f2-4339-beda-a63e82a66493.png)
 
+#### VerifyUser.js
+The purpose of this file is to store the verifying code and the user id attached to the verifying code. The `Code 48` shows the entire file which just 4 block of code. The first line is to require **Mongoose** then creating a schema it consist of three attributes which are **id**, **code**, and **expireAt**. 
+The first two attribute are user id and the verification code but the last attribute is used to delete the document (row) after specific time which five minutes. after that we give the collection a name and exports the module. The `Figure 51` shows the id of the user with verification code attached to it and when the document will be expired (deleted).
+
+```C#
+const mongoose = require("mongoose");
+
+const verifyCodeSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+  },
+  code: {
+    type: String,
+    require: true,
+  },
+  createdAt: { type: Date, expires: "5m", default: Date.now },
+});
+
+// The name of the collection
+const VerifyCode = mongoose.model("VerifyCode", verifyCodeSchema);
+
+module.exports = VerifyCode;
+```
+
+![Figure 51](https://user-images.githubusercontent.com/56771415/188984934-6d5ae30a-9b64-42c4-8419-5ffdec5e7cab.png)
+
+#### Student.js
+The purpose of this file is to store student data as we can see in `Code 49` it consist of five attributes which are **id**, **firstName**, **lastName**, **semester** and **advisorId**. We need to semester attrubte to decide what course he should take and advisorId to know what advisor he belong to.
+
+```C#
+const mongoose = require("mongoose");
+
+const studentSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    unique: true,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    require: true,
+    lowercase: true,
+  },
+  lastName: {
+    type: String,
+    require: true,
+    lowercase: true,
+  },
+  semester: {
+    type: Number,
+    require: false,
+  },
+  advisorId: {
+    type: Number,
+    require: false,
+  },
+});
+
+// The name of the collection
+const Student = mongoose.model("student", studentSchema);
+
+module.exports = Student;
+```
+Picture of students page in atlas `Figure 51`
+
+![Figure 51](https://user-images.githubusercontent.com/56771415/188985653-abda44cd-fbf0-4479-9f73-eb9224355c7e.png)
+
+#### Advisor.js
+The purpose of this file is to store advisor data as we can see in `Code 50` it consist of three attributes which are **id**, **firstName**, **lastName**.
+
+```C#
+const mongoose = require("mongoose");
+
+const advisorSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    unique: true,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    require: true,
+    lowercase: true,
+  },
+  lastName: {
+    type: String,
+    require: true,
+  },
+});
+
+
+
+// The name of the collection
+const Advisor = mongoose.model("advisor", advisorSchema);
+
+module.exports = Advisor;
+```
+
+Picture of advisors page in atlas `Figure 52`
+
+![Figure 52](https://user-images.githubusercontent.com/56771415/188986254-01a7279e-9def-47ad-8f3f-3118dda37be9.png)
+
+#### Course.js
+The purpose of this file is to store courses data as we can see in `Code 51` it consist of four attributes which are **courseName**, **code**, **semester** and **id** which is student id.
+
+```C#
+const mongoose = require("mongoose");
+
+const courseSchema = new mongoose.Schema({
+  courseName: {
+    type: String,
+    require: true,
+    lowercase: true,
+  },
+  code: {
+    type: String,
+    require: true,
+    uppercase: true,
+    unique: true,
+  },
+  semester: {
+    type: Number,
+    required: false,
+  },
+  id: [Number],
+  require: false,
+});
+
+// The name of the collection
+const Course = mongoose.model("course", courseSchema);
+
+module.exports = Course;
+```
+
+Picture of courses page in atlas `Figure 53`
+
+![Figure 53](https://user-images.githubusercontent.com/56771415/188986654-1c9a0b95-0ffb-49eb-a9b9-48e85d8a4395.png)
+
+#### Student_Course.js
+Because of some bugs in course collection we are forced to create another collection just to show it in page **showCourse** page. The bugs was that the data was keep changing if we used it in **showCourse** page therefore we create this collection.
+
+```C#
+const mongoose = require("mongoose");
+
+const student_courseSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    require: true,
+  },
+  code: [String],
+});
+
+// The name of the collection
+const StudentCourse = mongoose.model("student_course", student_courseSchema);
+
+module.exports = StudentCourse;
+```
+
+Picture of student_courses page in atlas `Figure 54`
+
+![Figure 54](https://user-images.githubusercontent.com/56771415/188986892-70d5ae29-0bbc-4d9b-866d-09e890b626ef.png)
 
 ### 4.7.9 Algorithm
+
+
+
 ### 4.7.10 webController.js
 ### 4.7.11 authMiddleware.js
 
