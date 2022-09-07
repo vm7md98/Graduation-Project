@@ -1425,9 +1425,9 @@ The purpose of this function is to check if the user is registered in the databa
 { 
 _id: new ObjectId("61d46f9cca574b3aac8Odf41"),
 email: 'admin@hct.ac.ae',
-password: 1.2b$10$SZnKnalqj7amcmBkk6wrw0K41YhXuhdO.hGXuLpORxWE2BnQkPzdle,
+password: $2b$10$SZnKnalqj7amcmBkk6wrw0K41YhXuhdO.hGXuLpORxWE2BnQkPzdk,
 role: 'AD',
-v: 0,
+__v: 0,
 id: 1
 } 
 ```
