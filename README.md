@@ -1421,7 +1421,7 @@ The purpose of this function is to check if the user is registered in the databa
 
 **Note**: The logic is explained in algorithm section for this function.
 
-```C#
+```
 { 
 _id: new ObjectId(-61d46f9cca574b3aac8Odf41“),
 email: 'admin@hct.ac.ae',
