@@ -1417,12 +1417,11 @@ Hashing is the process of converting a given value into another value `Figure 48
 - Login()
 
 The final function we have in **User.js** is `login()` with two parameters **email** and **password**. 
-The purpose of this function is to check if the user is registered in the database or no. To search in the database we used **email** parameter as a condition in `findOne()` query, which is a query provided by **Mongoose** framework. This query will return **null** if the email doesn’t match any email in the database or return the document as **JSON** object, as we can see in `Code 45` then we store the result in a variable called **user**. Because the password is hashed, we need to use a function provided by **Bcrypt** library called compare() this function will compare the password we provided in parameter with the password that stored in **user** variable as we can see in `Code 46`.
+The purpose of this function is to check if the user is registered in the database or no. To search in the database we used **email** parameter as a condition in `findOne()` query, which is a query provided by **Mongoose** framework. This query will return **null** if the email doesn’t match any email in the database or return the document as **JSON** object, as we can see in `Code 45` then we store the result in a variable called **user**. Because the password is hashed, we need to use a function provided by **Bcrypt** library called compare() this function will compare the password we provided in parameter with the password that stored in **user** variable as we can see in Batchfile (cmd/prompt/terminal) `Code 46`.
 
 **Note**: The logic is explained in algorithm section for this function.
 
-```Batchfile
-#Example of the data that can be return from `findOne()` query
+```Batch
 { 
 _id: new ObjectId(-61d46f9cca574b3aac8Odf41“),
 email: 'admin@hct.ac.ae',
