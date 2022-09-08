@@ -819,9 +819,22 @@ C:\Users\User\Desktop\..m>git push heroku master
 
 13. Finally click on the link or copy and paste it on the browser to go to your website.
 
+##
+
 #### 4.3.6 Other Technologies
 In this section we listed the rest of the programs/software that we used in this project.
 
+| Term | Meaning |
+| - | ----- |
+| Integrated Development Environment (IDE) | IDE is software or application to build other applications and it has tools and graphical user interface (GUI) to help developer |
+| Visual Studio Code (VS code) | It's a source-code editor made by Microsoft for window, Linux and macOS. We used Vs code because it has many plugins, fast and a nice interface |
+| CMD & Git Bash | A Command-Line maybe it’s not IDE but simply it just to run command. We used it because it fast, simpler, and efficient for large system or when we need to edit files |
+| Graphical tools | The tools we used to design our diagrams such as ERD, Context diagram and Use case |
+| Data Modeler | It is a free tool or software made by oracle, we used it to create ERDs |
+| Moon Modeler | It is a data modeling tool for MongoDB, PostgreSQL and other however, we used it to create our NoSQL diagram |
+| Lucid | is website to create diagrams and we used [**Lucid**](www.lucid.app) to create diagram such as Context diagrams and Use cases |
+
+<!--
 ##### 4.3.6.1 Integrated Development Environment (IDE)
 IDE is software or application to build other applications and it has tools and graphical user interface (GUI) to help developer.
 
@@ -835,6 +848,7 @@ A Command-Line maybe it’s not IDE but simply it just to run command. We used i
 The tools we used to design our diagrams such as ERD, Context diagram and Use case.
 
 First **Data Modeler** is a free tool or software made by oracle, we used it to create ERDs. Second **Moon Modeler** is a data modeling tool for MongoDB, PostgreSQL and other however, we used it to create our NoSQL diagram. Lastly [**Lucid**](www.lucid.app) is website to create diagrams and we used [**Lucid**](www.lucid.app) to create diagram such as Context diagrams and Use cases.
+-->
 
 #### 4.3.7 Summary
 To sum up, we will use **Front-End** tools like **HTML**, **CSS**, and **JavaScript** to design our interface. We also will use things like **jQuery** to cut or reduce time because it will reduce the code that we need to write like animation or event handling moreover, it’s fast, free and small.
