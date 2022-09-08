@@ -1626,7 +1626,7 @@ Picture of student_courses page in atlas `Figure 54`
 ### 4.7.9 Algorithm
 #### Login
 We used this algorithm in `Code 46` and the purpose and technical details in the same section however the steps are:
-
+```
 1- Get email and password.
 
 2- Search in the database using the provided email.
@@ -1635,7 +1635,7 @@ We used this algorithm in `Code 46` and the purpose and technical details in the
 
 4- If statement.
 
-  if user exist
+  if user exist:
   
      compare the password with the hashed password in the database
      
@@ -1650,7 +1650,7 @@ We used this algorithm in `Code 46` and the purpose and technical details in the
   else
   
        throw and error
-       
+```
 
 
 
