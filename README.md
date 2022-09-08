@@ -64,7 +64,7 @@ This development model allows departmentalization and managerial controls. They 
 
 Where the requirements of a system are not subject to change, we use waterfall methodology as this development methodologies gives us a clear roadmap and help us to focus on our goal. We are using waterfall for the project because it allows the owner to have control over system development team and system development progress can be access easily.
 
-## 2.3 Pre-Project Phases
+### 2.3 Pre-Project Phases
 #### 2.3.1 Technical feasibility / Literature Review
 In September 2020, SMC student had a course registered in his schedule with 12 credits. The problem is the system only allowing 10 students as minimum and they were 8 students only and the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. This problem leads to more academic issues. After discovering this problem, we read several pieces of literature about course registration systems.
 
@@ -88,7 +88,6 @@ I used [MS Project](https://en.wikipedia.org/wiki/Microsoft_Project) to create a
 
 ![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
 ![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
-
 
 #### 2.3.4 Economic Feasibility
 The above `Table 1` shows the balance and the cost for every asset we chose, it also shows if it's under or above our budget.
@@ -336,10 +335,10 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 #### 4.2.3 UI design
 Designing a web page from appearance and functionality to navigation and ease-of-use, can be time consuming and frustrating. Therefore, tools or processes like wireframes and prototypes are there to help designer. Wireframes are blueprints for the website or basic representations of the product. The two types of wireframes are low-fidelity, mid-fidelity and high-fidelity, but in this project, we will use low and high fidelity. Prototypes are early design models of the final UI of your website or simply an advanced wireframe with more visual detail and interaction. The benefit of these tools is to save time and money by having an idea on how the final product will look like.
 
-#### 4.2.3.1 Low-Fidelity
+##### 4.2.3.1 Low-Fidelity
 Low-fidelity wireframe is a basic or a skeleton of a web page. It helps programmer, stakeholders, and designers to have an idea of where the UI element might be placed. Low fidelity can be developed by hand as a sketch or using digital tools like **Figma** or **Adobe XD**, but we used Figma in this project. 
 
-#### 4.2.3.2 High-Fidelity
+##### 4.2.3.2 High-Fidelity
 High-fidelity wireframes are more complete version of the end product than low fidelity. Usually, high-fidelity is the last thing to be done in the project because it takes more effort to create, but they are effective in that they reveal how a product will look at project completion.
 
 #### Pages
@@ -350,7 +349,7 @@ High-fidelity wireframes are more complete version of the end product than low f
 - Report
 
 
-#### 4.2.3.3 Login
+##### 4.2.3.3 Login
 ![Figure 9](https://user-images.githubusercontent.com/56771415/189227660-f72e1121-239d-4ee7-9207-64dc8a2cc12f.png)
 ![Figure 10](https://user-images.githubusercontent.com/56771415/189227666-82cd754f-3c22-446e-b962-5d788c5ad25d.png)
 ![Figure 11](https://user-images.githubusercontent.com/56771415/189227671-7ec8348d-862d-44f2-890d-eba3bf6ecfc7.png)
@@ -358,7 +357,7 @@ High-fidelity wireframes are more complete version of the end product than low f
 #### Description 
 The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page you will see when you enter the portal or website. First you need to Enter your email and password in the **textboxes**, then click on **button**. After you click on the button you will redirect to **Authentication page**.
 
-#### 4.2.3.4 Authentication
+##### 4.2.3.4 Authentication
 ![Figure 12](https://user-images.githubusercontent.com/56771415/189227950-645fa2d8-d0b4-4d25-ab76-e0659acd1111.png)
 ![Figure 13](https://user-images.githubusercontent.com/56771415/189227956-e8dd617c-2e9c-4e1d-8e7f-b7b13300b4e8.png)
 ![Figure 14](https://user-images.githubusercontent.com/56771415/189227967-00d90a0d-1bf7-4f76-b085-106e436719cb.png)
@@ -366,7 +365,7 @@ The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page y
 #### Description 
 After being redirected to **Authentication page** the user should receive a code which he needs to enter in the **textbox**, then he needs to click on the **button** to make sure that no one can enter his account as shown in `Figure 12`, `Figure 13` and `Figure 14`. After you click on the button you will redirect to **Select_plan page**.
 
-#### 4.2.3.5 Select_plan
+##### 4.2.3.5 Select_plan
 ![Figure 15](https://user-images.githubusercontent.com/56771415/189228546-0e61bbdb-0a4e-4af7-89a5-cf464896f8ed.png)
 ![Figure 16](https://user-images.githubusercontent.com/56771415/189228551-e4c94122-3c2e-4f1d-9ce5-3eddc35993c2.png)
 ![Figure 17](https://user-images.githubusercontent.com/56771415/189228560-eeedd927-94a3-4c8e-a30d-f02aab85aa59.png)
@@ -374,7 +373,7 @@ After being redirected to **Authentication page** the user should receive a code
 #### Description 
 After being redirected to **Select_plan** page you need to select a plan by click on button or checkbox then clicking on the confirm button which is on the right side below the plan table. This page is for selecting a plan as shown in `Figure 15`, `Figure 16` and `Figure 17`, after you click on the confirm button you will redirect to **Approvement page**.
 
-#### 4.2.3.6 Approvement
+##### 4.2.3.6 Approvement
 ![Figure 18](https://user-images.githubusercontent.com/56771415/189228695-ee37c2f2-83c6-439b-98f7-7a2204fd1e40.png)
 ![Figure 19](https://user-images.githubusercontent.com/56771415/189228705-835a46fc-2589-4115-9c03-360e402f59dd.png)
 ![Figure 20](https://user-images.githubusercontent.com/56771415/189228710-90e28e1d-c494-464b-b212-cbc8777b5dca.png)
@@ -382,7 +381,7 @@ After being redirected to **Select_plan** page you need to select a plan by clic
 #### Description 
 After being redirected to **Approvement page**, this page is to change your courses or delete them as shown in `Figure 18`, `Figure 19` and `Figure 20`. After you are done you just need to click the approvement button then the system should send SMS or email to make sure you are registered.
 
-#### 4.2.3.7 Report
+##### 4.2.3.7 Report
 ![Figure 21](https://user-images.githubusercontent.com/56771415/189228975-a7568c65-c268-42f4-b2a8-78174e7e2cee.png)
 ![Figure 22](https://user-images.githubusercontent.com/56771415/189228983-424d894f-a11f-4113-a8b0-4cb7b01fa4b7.png)
 ![Figure 23](https://user-images.githubusercontent.com/56771415/189228990-de2eae06-4c2a-4b3a-bf3b-6d95030f8947.png)
@@ -390,7 +389,7 @@ After being redirected to **Approvement page**, this page is to change your cour
 #### Description
 Report page is for department or supervisor and it’s just for reading. It contains all the information about each course and suggested classes number as shown in `Figure 21`, `Figure 22` and `Figure 23`.
 
-#### 4.2.3.8 PDF's [Low & High Fidelity & Dark]
+##### 4.2.3.8 PDF's [Low & High Fidelity & Dark]
 [Low-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530736/Low-Fidelity.pdf)
 
 [High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530738/High-Fidelity.pdf)
@@ -402,7 +401,7 @@ Planning or designing an evaluation for a project is a critical step in every pr
 
 **Note: we can’t use Usability criteria because we need to develop the website to test it.**
 
-#### 4.2.4.1 Design Principles
+##### 4.2.4.1 Design Principles
 The rules a designer must follow to create an effective and attractive product or simply what you should do and don’t and it based on knowledge, experience, and common-sense. There are five Design Principles rules Visibility, Feedback, Affordances, Constraints, Consistency.
 
 | Principle | Meaning |
@@ -439,10 +438,10 @@ This principle is responsible for creating a uniform interface or having similar
 
 The above `Table 4` shows the design principles that we are going to use in our project.
 
-#### 4.2.4.2 Accessibility
+##### 4.2.4.2 Accessibility
 Thousand of students will use this system therefore, we need to make sure that everyone should be able to use our system and that’s called accessibility. Web Accessibility is all about designing or developing a website with tools and technologies so that people with disabilities can use them. In this project we will focus on one type of disabilities Visual Impairment.
 
-#### 4.2.4.3 Visual Impairment
+##### 4.2.4.3 Visual Impairment
 These types of people are blind, or they have any kind of vision loss, and they need some sort of feature. Therefore, we will provide these features in our website:
 - We will use Alt Text to images or icons because people with this problem usually rely on assistive technologies such as Screen Readers and refreshable Braille Readers.
 - Avoid using thin fonts and we will try to avoid adding links to images that can’t support Alt Text.
@@ -451,7 +450,7 @@ These types of people are blind, or they have any kind of vision loss, and they 
 **Color blind**: To avoid most problems with color blindness we will provide a dark-mode which will make the website just white, black, dark grey and more, but it will be limited color and the majority of space is dedicated to dark surfaces.
 
 
-#### 4.2.4.4 Discussion
+##### 4.2.4.4 Discussion
 Designing a website is one of the hardest parts of this project for several reasons. First, we can’t ask people about our design or get feedback from them because there is no time and it’s hard to find people. Second, we can’t design a website that is accessible for all types of people such as people with **Motor Skills/Physical Disabilities** because of time. However, we didn’t include **Usability criteria** because we need to develop the project (website) first then we can test it to see if it meets the criteria or not.
 
 #### 4.2.5 Hierarchical Task Analysis (HTA)
@@ -482,7 +481,7 @@ Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity
 
 **Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
 
-#### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
+##### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
 The first step to draw a **HTA** diagram is to make something called **tasks breakdown** which simply means breaking every task you have into smaller tasks. To make a task breakdown we need these steps:
 
 - Identify the task title or main task which is the starter point.
@@ -533,7 +532,7 @@ Diagrams or pictures are among the best and oldest forms of human communication 
 
 **Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 34`
 
-#### 4.2.6.1 Context level Diagram
+##### 4.2.6.1 Context level Diagram
 In the below diagram, **Auto-register system** is the main process, or we can call it **process 0**, is the process that represents the entire information system. There are eight entities Student, Advisor, Plan offering system, Course offering system, Advisor management system, Academic history system and Department. `Figure 35`
 
 ![Figure 35](https://user-images.githubusercontent.com/56771415/189233296-a4145d8f-2472-4656-8b47-feaf3eb7f948.png)
@@ -546,7 +545,7 @@ In the below diagram, **Auto-register system** is the main process, or we can ca
 - The student can edit or change courses depending on the filtered courses.
 - The system sends confirmation to students and generates reports for the department.
 
-#### 4.2.6.2 Level-0 Diagram
+##### 4.2.6.2 Level-0 Diagram
 In the context diagram we represent the entire system with a single process, which is **process 0**. However, in **level 0** we represent each process as **sub-processes** and now we can add **data store**, they are together form a complete system. `Figure 36`
 
 **Sub-processes**: Select Plan 0.1 - Get Information 2.0 - Filter Course 3.0.
@@ -566,14 +565,14 @@ Courses offered received from the Course Offering System.
 Checks if student needs to repeat courses and student status. 
 Other semester courses for the student are provided through Plan Offering System and stored. 
 
-#### 4.2.6.3 Level-1 Diagram
+##### 4.2.6.3 Level-1 Diagram
 At level 1 diagram we look at the processes that make up level 0 diagram but with more details. `Figure 37`
 
 Outside the rectangular boundary are external entities and data store however they are out of scope of this level 1 diagram.
 
 ![Figure 37](https://user-images.githubusercontent.com/56771415/189234076-3734e3d5-3a65-43ef-9e0d-452660c025fe.png)
 
-#### 4.2.6.4 Discussion
+##### 4.2.6.4 Discussion
 The first problem we faced in this report was understanding what context, level 0, level 1 diagrams are because many articles and papers contradict each other and because of that we took a lot of time and effort. To solve this problem, we read even more articles and watched many videos. In the end, the problem was there are two types or methods to create context, level 0, level 1 which are old and new. However, **we chose the old system because it is more logical**. 
 
 **Old method**: Starting with creating context then level 0 then level 1 and continue.
@@ -603,7 +602,7 @@ A use case diagram is used to describe the interaction between actors and the sy
 **Relationships or Associations**: Used to describe the relationships between actors and the use cases. `Figure 41`
 
 
-#### 4.2.7.1 Use case diagram
+##### 4.2.7.1 Use case diagram
 
 ![Figure 42](https://user-images.githubusercontent.com/56771415/189234581-f2554878-4955-4ed9-a21b-6f1984d11957.png)
 
@@ -630,7 +629,7 @@ The above `Figure 43` shows the state diagram of our system.
 
 The above `Figure 44` shows the sequence diagram of our system.
 
-#### 4.3 Development
+## 4.3 Development
 We classify our development tools into these four categories **Programming language, Database, Network configuration, along with other technologies**.
 
 #### 4.3.1 Programming language
@@ -639,87 +638,241 @@ A programming language is a formal language comprising a set of strings that pro
 #### 4.3.2 Front-End
 Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
 
-#### 4.3.2.1 HTML
+##### 4.3.2.1 HTML
 Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content.
 
-#### 4.3.2.2 CSS
+##### 4.3.2.2 CSS
 Stands for Cascading Style Sheets is one of the style sheet languages like DSSSL and XSL which responsible of the presentation of the website such as layout, colors, fonts.
 
-#### 4.3.2.3 JavaScript
+##### 4.3.2.3 JavaScript
 Used to make our website more interactive with users like drop-down menus and contact forms.
 
-#### 4.3.2.4 jQuery
+##### 4.3.2.4 jQuery
 Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more.
+
+##
 
 #### 4.3.3 Back-End
 Back-end or server-side is everything that happens behind-the-scenes activities such as communicating with servers or databases. However, we removed the database-side because
 we will explain it on the next section ####4.3.4 Database.
 
-#### 4.3.3.1 Node.js
+##### 4.3.3.1 Node.js
 An open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data.
 
-#### 4.3.3.2 Embedded JavaScript Templating (EJS)
+##### 4.3.3.2 Embedded JavaScript Templating (EJS)
 Is template language/system that help user to generate html pages with plain JavaScript. It works like a master page in .asp, however, we will use it because it makes things easier when we need to output html using JavaScript.
 
-#### 4.3.3.3 Document Object Model (DOM)
+##### 4.3.3.3 Document Object Model (DOM)
 Programming API for HTML and XML documents and it defines the logical structure of documents. The purpose of DOM is to allow language like JavaScript to style or structure your website.
 
-#### 4.3.3.4 Express.js
+##### 4.3.3.4 Express.js
 Is a back-end web application framework for Node.js.
 
-#### 4.3.3.5 Mongoose
+##### 4.3.3.5 Mongoose
 Is a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB.
 
-## -- ##
+##
 
 #### 4.3.4 Database
 Database is a set of organized collection of structured information or data stored electronically in a computer system. There are many types of databases, but we will use NoSQL database.
 
-#### 4.3.4.1 NoSQL
+##### 4.3.4.1 NoSQL
 Stand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data.
 
-#### 4.3.4.2 Atlas
+##### 4.3.4.2 Atlas
 A service or a cloud service that provided by MongoDB.
 
+##
+
 #### 4.3.5 Network configuration
+Configuring network is process of assigning network settings, policies, flows, and control or simply it’s a process to design some type of communication.
+
+##### 4.3.5.1 Heroku
+Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website.
+
+##### 4.3.5.2 Git
+Stand for Global Information Tracker which used to manage your source code.
+
+##### 4.3.5.3 Configure/deploy
+Since we will use Heroku we will explain the steps as developer and for end-user all he need is laptop or pc with internet using WI-FI or LAN.
+
+#### Steps
+**Note: In this part we will assume that all dependencies and plugins are already added to the project**.
+
+1. Create Account in [Heroku](https://www.heroku.com) (Free)
+2. Login
+3. Download Heroku Command Line Interface (CLI) and git.
+4. Using Command Line Interface like CMD or Git Bash login to Heroku.
+
+```CMD
+C:\Users\User>heroku login
+  >> Warning: heroku update availabe from 7.53.0 to 7.59.0.
+heroku: Press any key to open up the browser to login or q to exit:
+```
+
+5. Check that you have the prerequisites installed and they are node, npm and git this is important because some versions need different steps.
+
+5.1. Check node by enter: "node --version" `Code 2`
+
+```CMD
+C:\Users\User>node --version
+v14.18.1
+```
+
+5.2. Check node by enter: "npm --version" `Code 3`
+
+```CMD
+C:\Users\User>npm --version
+6.14.15
+```
+
+5.3. Check node by enter: "git --version" `Code 4`
+
+```CMD
+C:\Users\User>git --version
+git version 2.33.1.windows.1
+```
+
+6. Create a Profile file in your project folder to declare what command should be executed when you start your app. `Code 5`
+
+```CMD
+C:\Users\User\Desktop\..m>copy nul Procfile
+	1 file(s) copied.
+```
+
+7. Write this code in Profile file: web: node “your index name”. “file type”. `Code 6`
+
+```CMD
+web: node app.js
+```
+
+8. Run git init command to creates a new Git repository. `Code 7`
+
+```CMD
+C:\Users\User\Desktop\..m>git init
+```
+
+9. Run git add command to add files to the Git staging area. `Code 8`
+
+```CMD
+C:\Users\User\Desktop\..m>git add
+```
+
+10. Run git commit -m “ your comment” command to save what you did. `Code 9`
+
+```CMD
+C:\Users\User\Desktop\..m>git commit -m "1st GP Project commit"
+```
+
+11. Run heroku create command to create an app on Heroku. `Code 10`
+
+```CMD
+C:\Users\User\Desktop\..m>heroku create
+```
+
+12. Run git push heroku master command to upload your files to Heroku server. `Code 11`
+
+```CMD
+C:\Users\User\Desktop\..m>heroku create
+```
+
+12. Run git push heroku master command to upload your files to Heroku server. `Code 12`
+
+```CMD
+C:\Users\User\Desktop\..m>git push heroku master
+```
+
+13. Finally click on the link or copy and paste it on the browser to go to your website.
+
+#### 4.3.6 Other Technologies
+In this section we listed the rest of the programs/software that we used in this project.
+
+##### 4.3.6.1 Integrated Development Environment (IDE)
+IDE is software or application to build other applications and it has tools and graphical user interface (GUI) to help developer.
+
+##### 4.3.6.2 Visual Studio Code (VS code)
+It's a source-code editor made by Microsoft for window, Linux and macOS. We used Vs code because it has many plugins, fast and a nice interface.
+
+##### 4.3.6.3 CMD & Git Bash
+A Command-Line maybe it’s not IDE but simply it just to run command. We used it because it fast, simpler, and efficient for large system or when we need to edit files.
+
+##### 4.3.6.4 Graphical tools
+The tools we used to design our diagrams such as ERD, Context diagram and Use case.
+
+First **Data Modeler** is a free tool or software made by oracle, we used it to create ERDs. Second **Moon Modeler** is a data modeling tool for MongoDB, PostgreSQL and other however, we used it to create our NoSQL diagram. Lastly [**Lucid**](www.lucid.app) is website to create diagrams and we used [**Lucid**](www.lucid.app) to create diagram such as Context diagrams and Use cases.
+
+#### 4.3.7 Summary
+To sum up, we will use **Front-End** tools like **HTML**, **CSS**, and **JavaScript** to design our interface. We also will use things like **jQuery** to cut or reduce time because it will reduce the code that we need to write like animation or event handling moreover, it’s fast, free and small.
+
+After building our front-end we need to build our **Back-End** to handle all the requests, responses, and database. **Node.js** is what we will use for server-side because it is free, runs on various platforms , node.js uses JavaScript so we don’t need to learn new language, however, the main reason we chose **Node.js** is because of **Express.js** which is framework of node.js. We think Express.js will reduce coding time and effort required to build out project because express.js provides simple routing for requests made by the client and provides middleware that is responsible for making decisions based on the request and response by the client. On top of that, we will use **Embedded JavaScript Templating (EJS)** because our website needs to deal with a lot of HTML output and generated real-time updates like add or delete courses. Before talking about database, we will **Mongoose** because we think it will help us to reduce time in terms of managing schema, validation, and relationships. According to Mithun Satheesh, B. J. (2015) many companies used node.js such is PayPal, LinkedIn, eBay.
+
+on the other hand, building **database** is much simpler compared to back-end especially nowadays,  because databases are in cloud such as **Atlas** which we will use. We chose atlas because it has many features such as it’s free, fast and you can store up to 500 collections and you can create 100 databases moreover, you can pay if you more space. Atlas also provides **Security** by using **Authentication**, **Authorization**, **Encryption**, and more therefore, we don’t need to start from scratch we just need to do simple security processes. However, Kristina Cbodorow (2013) said that MongoDB has two main goals which is Easy of Use and Easy Scaling.
+
+Finally, **Network Configuration** is last and the easiest part which all we need to do is deploying our website online using **Heroku** platform. We will use Heroku because it’s free, simple and provide some security or at least for small project `Figure 45`.
+
+![Figure 45](https://user-images.githubusercontent.com/56771415/189238932-a73fc1b4-db5a-48f1-af98-6de6924b6ebc.png)
 
 
-#### 4.3.5.1 Heroku
+#### 4.4 Conclusion
+Challenges or problems we faced in this project were more than we expected in both design and development. The first challenge in the design phase was designing a user interface (UI) for both **Low-Fidelity** and **High-Fidelity**. The problem was we needed to design the UI according to **Design Principles** and **Accessibility** and, that took a lot of time from reading previous courses or articles online. The second problem was creating **Level 0** and **Level 1 diagrams**, because level 0 diagram depends on context diagram and level 1 diagram depends on level 0 therefore, if we change context diagram, we need to create all of them from the start and that’s what happened which took a lot of time.
+
+ However, for **Development** phase we didn’t face a lot of challenges because we knew all the technologies that’s we need to develop our project but, we may change a few technologies or tools such as choosing between SQL or NoSQL database. On the other hand, **Programming Language (Front-End & Back-End)**, **Network configuration** and **Other Technologies** will remain the same. Regarding the database type **Distributed** or **Centralized** we will use **Atlas** which is **NoSQL** database, and they will take care of our data, therefore, we don’t need to think about Centralized Database or Distributed Database but if an organization want to use, we recommend using Distributed Database because there are many campuses, and every campus should have their own database.
+
+ Lastly, **Graphical Tools** were one of the biggest problems we faced because most of them are not free, such as **Moon Modeler** which we used to create our ERD for NoSQL data and [Lucid](www.lucid.app) which we used to create other diagrams such as **level 0**, **1 diagrams** and **Use case**. **Moon Modeler** was free for a limited time (14 days) therefore, we need to create our database within 14days, which was hard because we can’t change it later. Lucid.app on the other hand, there is no limitation on time but there is on how much you can use, such as how many pages you can use or how many shapes you can put in the pages. 
 
 
-#### 4.3.5.2 Git
+### 4.5 Project Roadmap
+`Figure 46` Shows the whole Roadmap.
 
+![Figure 46](https://user-images.githubusercontent.com/56771415/189240460-25574083-ba8c-4c52-abbf-1efb9c3c9fdc.png)
 
-#### 4.3.5.3 Configure/deploy
+#### 4.5.1 Initiate Phase
+![Figure 47](https://user-images.githubusercontent.com/56771415/189240558-84397b38-f715-44a0-9413-7ea804f44e0d.png)
 
+`Figure 47` shows the Initiate Phase timeline that include Abstract, Introduction, Problem Statement, Project Objectives, Feasibilities, Contribution and Project Deliverables, and References parts.
 
-#### 
+#### 4.5.2 Planning & Analysis Phase
+![Figure 48](https://user-images.githubusercontent.com/56771415/189240629-9b8b3ea7-f880-45cf-b6ca-7e2adfc1bd6b.png)
 
+`Figure 48` shows the Planning & Analysis Phase timeline that include Abstract & Introduction, Methodology Selection & Discussion, Flowcharts, Context Diagrams, Entity Relationship Diagrams, Learning, Building a sample Databases, Functional and Non-Functional Requirements, Time & Cost & Risk Managements, and WBS parts.
 
-#### 
+#### 4.5.3 Design Phase
+![Figure 49](https://user-images.githubusercontent.com/56771415/189240632-a462a65c-ab7f-41fe-8e9e-973840d017d0.png)
 
+`Figure 49` shows the Design Phase timeline that include Abstract & Introduction, JSON, ERD's, UI Designs (Low & High Fidelities), Design Principles, HTA, System Descriptions, Level 0 and 1 Context Diagrams, Use Case Diagram, and State Diagram parts.
 
-#### 
+#### 4.5.4 Implementation Phase
+![Figure 50](https://user-images.githubusercontent.com/56771415/189240640-cc95513b-bea2-4b8e-8fe3-0b8dc61d650e.png)
 
+`Figure 50` shows the Implementation Phase timeline that Front-End & Back-End. For this part we used a specific programming language for the Front and Back End in our project. We also used MongoDB for our Database and Heroku for server/hosting.
 
-#### 
+## Chapter 5: Conclusion
+### 5.1 Conclusion
+In conclusion, Auto-Register system has two main goals which are every students must have enough courses and students cannot register any course by mistake. We can achieve the first goal by provide the management the data they need to decide how many classes they should open for every course.
+The second goal can be achieved by providing a plan for student, because the plan is generated by the system it will be free from mistake and student can modify the plan if they meet the requirements for the course that they want to add.
 
+#### 5.2 Reflection
+After the this project, now I can say that I'm more familiar with the structure of building/creating a project from zero. It's really useful and helpful to know how to start a project from the ground and organize/split the work on team members. I learned how to organize my and the team members time by using the MS Project application with helped us to estimate the time we need to work on every part. I also learned how to combine everything I learned in my previous 4 years in one project and now it makes since of why having diagrams which it means it saves a lot of time from the start instead of doing it without it. It really helped us to reduce time and errors from the start of the project.
 
+#### 5.3 Future Scope
+In the future, we are going to develop or implement the project (website) based on the plan we decided. From creating an interface , back-end, database and deploy the website online. We will divide the work equally between us and gives everyone the part he is expert or has experience on. However, to implement the project we need to learn new technologies such as React or Next.js for front-end and we need to learn how the server works in term of request, response, and process request time to control the speed of our website. Also, we will add more features and capabilities to our website like how many hours lest for student.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## References
+- [1] 	“Usability testing on website wadaya,” [Online]. Available: https://iopscience.iop.org/article/10.1088/1742-6596/1165/1/012012/pdf#page=1. [Accessed 13 4 2022].
+- [2] 	“Using the Advantages of NOSQL: A Case,” [Online]. Available: https://www.researchgate.net/profile/Divya-Chauhan-4/publication/349110376_Using_the_Advantages_of_NOSQL_A_Case_Study_on_MongoDB/links/6021154d92851c4ed5580298/Using-the-Advantages-of-NOSQL-A-Case-Study-on-MongoDB.pdf#page=1. [Accessed 18 3 2022].
+- [3] 	“A Place for Node.Js in the Computer Science Curricu,” [Online]. Available: https://www.researchgate.net/profile/Scott-Frees/publication/271849731_A_Place_for_NodeJs_in_the_Computer_Science_Curriculum/links/54d4db340cf2970e4e63c479/A-Place-for-NodeJs-in-the-Computer-Science-Curriculum.pdf#page=1. [Accessed 13 4 2022].
+- [4] 	“Testing a Website: Best Practices” [Online]. Available: https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1. [Accessed 21 3 2022].
+- [5] 	“WebSite Testing. Software Research, Inc.” [Online]. Available: http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1. [Accessed 18 11 2022].
+- [6] 	"Comparison of JWT and OAuth 2.0 authorisation,” [Online]. Available: https://core.ac.uk/download/pdf/159753962.pdf#page=1. [Accessed 11 10 2021].
+- [7] 	“Automated Course Advising System.” [Online]. Available: http://www.ijmlc.org/papers/384-H0018.pdf. [Accessed 19 1 2022].
+- [8] 	"Add-on Course Registration System.” [Online]. Available: https://digitalcommons.wou.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com/&httpsredir=1&article=1000&context=computerscience_studentpubs. [Accessed 24 9 2021].
+- [9] 	“An Automatic Dialog System for Student Advising.” [Online]. Available: https://cornerstone.lib.mnsu.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com.tw/scholar?hl=en&as_sdt=0%2C5&q=automated+student+registration+scheduling+system&btnG=&httpsredir=1&article=1041&context=jur. [Accessed 16 2 2022].
+- [10] 	"Advising for Course Registration: A UAE University,” [Online]. Available: https://www.researchgate.net/profile/Qurban-Memon/publication/270194000_Advising_for_course_registration_a_uae_university_perspective/links/54ab7ada0cf2bce6aa1d880d/Advising-for-course-registration-a-uae-university-perspective.pdf. [Accessed 27 9 2021].
+- [11] 	“ORIENTAL JOURNAL OF COMPUTER SCIENCE,” [Online]. Available: http://www.computerscijournal.org/vol9no2/development-of-online-student-course-registration-system/. [Accessed 14 3 2022].
+- [12] 	"A model for web-based course.” [Online]. Available: https://www.researchgate.net/profile/Indratmo-Indratmo/publication/263481101_A_model_for_web-based_course_registration_systems/links/5745777a08ae9f741b4091a6/A-model-for-web-based-course-registration-systems.pdf. [Accessed 18 2 2022].
+- [13] 	“MongoDB The Definitive Guide.” [Online]. Available: https://books.google.ae/books?hl=en&lr=&id=uGUKiNkKRJ0C&oi=fnd&pg=PP1&dq=mongodb+&ots=halARddUwk&sig=XLx8N4R6XYqgknRPfk9qLdcaDrk&redir_esc=y#v=onepage&q&f=false. [Accessed 12 4 2022].
+- [14] 	"Node.js, MongoDB, and AngularJS Web Development.” [Online]. Available: https://books.google.ae/books?hl=en&lr=&id=8kTCAwAAQBAJ&oi=fnd&pg=PR6&dq=node+js+mongodb&ots=Hh5ml0PBcz&sig=7Rj2hGLZiknxVFxji92U0r6sJA8&redir_esc=y#v=onepage&q=node%20js%20mongodb&f=false. [Accessed 23 5 2021].
+- [15] 	"Web Development with MongoDB and NodeJS. ” [Online]. Available: https://books.google.ae/books?hl=en&lr=&id=4QKACwAAQBAJ&oi=fnd&pg=PP1&dq=node+js+mongodb&ots=SdUDVKqgrx&sig=PEwyqIeQOAY6r_z-Jmja44z-fIU&redir_esc=y#v=onepage&q=node%20js%20mongodb&f=false. [Accessed 24 4 2021].
 
 
 <!--
