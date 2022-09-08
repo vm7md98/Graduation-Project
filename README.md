@@ -227,11 +227,11 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 ```C#
 [
   {
-    "std_id": "h00353197",
-    "first_name": "Abdullah",
-    "last_name": "Fisal",
+    "std_id": "h00353361",
+    "first_name": "Mohammed",
+    "last_name": "Bineid",
     "mobileNo": 567760020,
-    "year": 2021,
+    "year": 2022,
     "semNo": "1",
     "gpa": 2,
     "gender": "male",
@@ -247,10 +247,10 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
   },
   {
     "users_std": {
-      "username": "h00353197",
+      "username": "h00353361",
       "password": "0000",
       "email": "h000001@hct.ac.ae",
-      "std_id": "h00353197"
+      "std_id": "h00353361"
     },
     "user_adv": {
       "username": "h000002",
@@ -291,8 +291,8 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 
   {
     "sp_id": "h000003",
-    "first_name": "Madre",
-    "last_name": "Madre",
+    "first_name": "Unkown",
+    "last_name": "Unkown",
     "mobileNo": 567760020,
     "user": {
       "username": "h000003",
@@ -303,7 +303,7 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
   },
   {
     "d_id": 1,
-    "address:": "200 shj",
+    "address:": "200 SHJ",
     "city": "Dubai"
   },
   {
@@ -391,7 +391,9 @@ Report page is for department or supervisor and it’s just for reading. It cont
 
 #### 4.2.3.8 PDF's [Low & High Fidelity & Dark]
 [Low-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530736/Low-Fidelity.pdf)
+
 [High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530738/High-Fidelity.pdf)
+
 [Dark-Mode-High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530739/Dark-Mode-High-Fidelity.pdf)
 
 
