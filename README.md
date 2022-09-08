@@ -663,7 +663,7 @@ Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal 
 
 #### 4.3.2 Back-End
 Back-end or server-side is everything that happens behind-the-scenes activities such as communicating with servers or databases. However, we removed the database-side because
-we will explain it on the next section [#### 4.3.3 Database](#### 4.3.3 Database).
+we will explain it on the next [Database section](https://github.com/vm7md98/Graduation-Project/blob/master/README.md#433-database).
 
 | Term | Meaning |
 | - | ----- |
