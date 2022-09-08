@@ -168,6 +168,7 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 | 2 | Usability: How easily users will interact with the web |
 | 3 | Reliability: Reduce or remove all the bugs |
 | 4 | Front End: CSS and Bootstrap ...etc |
+
 <!-- | 5 | Color blind mode |
 | 6 | Dark mode |
 | 7 | Provide courses with time |
@@ -403,6 +404,13 @@ Planning or designing an evaluation for a project is a critical step in every pr
 
 #### 4.2.4.1 Design Principles
 The rules a designer must follow to create an effective and attractive product or simply what you should do and don’t and it based on knowledge, experience, and common-sense. There are five Design Principles rules Visibility, Feedback, Affordances, Constraints, Consistency.
+
+| Principle | Meaning |
+| Visibility | This principle is responsible for how the product or what the product is and what used for |
+| Feedback | This principle is responsible for making a clear response on what has been accomplished by the user |
+| Affordances | This principle is responsible for how the product is used |
+| Constraints | This principle is responsible for restricting the possible actions that can be performed |
+| Consistency | This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks |
 
 - ** Visibility **
 
