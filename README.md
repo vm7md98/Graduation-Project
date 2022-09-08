@@ -413,25 +413,27 @@ The rules a designer must follow to create an effective and attractive product o
 | Constraints | This principle is responsible for restricting the possible actions that can be performed |
 | Consistency | This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks |
 
-- ** Visibility **
+<!--
+- **Visibility**
 
 This principle is responsible for how the product or what the product is and what used for. 
 
-- ** Feedback **
+- **Feedback**
 
 This principle is responsible for making a clear response on what has been accomplished by the user. 
 
-- ** Affordances **
+- **Affordances**
 
 This principle is responsible for how the product is used.
 
-- ** Constraints **
+- **Constraints**
 
 This principle is responsible for restricting the possible actions that can be performed.
 
-- ** Consistency **
+- **Consistency**
 
 This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks.
+-->
 
 ![Table 4](https://user-images.githubusercontent.com/56771415/189230932-adb22fb2-6634-48f4-8729-70d46b284cdd.png)
 
@@ -452,10 +454,85 @@ These types of people are blind, or they have any kind of vision loss, and they 
 #### 4.2.4.4 Discussion
 Designing a website is one of the hardest parts of this project for several reasons. First, we can’t ask people about our design or get feedback from them because there is no time and it’s hard to find people. Second, we can’t design a website that is accessible for all types of people such as people with **Motor Skills/Physical Disabilities** because of time. However, we didn’t include **Usability criteria** because we need to develop the project (website) first then we can test it to see if it meets the criteria or not.
 
-#### 4.2.4.5 Design Principles
-#### 4.2.4.6 Design Principles
-#### 4.2.4.7 Design Principles
+#### 4.2.5 Hierarchical Task Analysis (HTA)
+Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity in terms of how to reach the goals. It focuses on physical and observable actions, and also includes actions not related to software.
+
+#### Symbols and Notation
+![Figure 24](https://user-images.githubusercontent.com/56771415/189231987-5fa7eee4-5242-4df4-913d-47c29a378b87.png)
+**Main Task**: main task always starts with number 0. `Figure 24`
+
+![Figure 25](https://user-images.githubusercontent.com/56771415/189232069-f2259ab1-9dad-4794-8eac-10527279a3a4.png)
+**Sub-Task**: sub-task always starts with number 1 or more. `Figure 25`
+
+![Figure 26](https://user-images.githubusercontent.com/56771415/189232118-d24a46ca-e3a1-46cd-b366-086c70c52a3b.png)
+**letter “ * ”**: Tasks that are repeated. `Figure 26`
+
+![Figure 27](https://user-images.githubusercontent.com/56771415/189232164-479936cc-6ad2-4367-bb69-0179724d601c.png)
+**letter “ O ”**: Tasks that are optional. `Figure 27`
+
+![Figure 28](https://user-images.githubusercontent.com/56771415/189232200-bfc1dab2-25bc-4f1d-95b2-7491242379ed.png)
+**A line**: under a task means there are no more subtasks. `Figure 28`
+
+![Figure 29](https://user-images.githubusercontent.com/56771415/189232216-1bb6befb-669e-4570-ad4c-e0edff74b823.png)
+**Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
+
+#### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
+The first step to draw a **HTA** diagram is to make something called **tasks breakdown** which simply means breaking every task you have into smaller tasks. To make a task breakdown we need these steps:
+
+- Identify the task title or main task which is the starter point.
+- Identify the first level of sub-tasks.
+- Identify which sub-tasks need further analysis.
+- Number task and all sub-tasks.
+
+#### Tasks break down:
+0. To register
+
+1. Enter URL
+
+2. Login
+
+  2.1. Enter the Authentication code
+
+3. Click register
+
+  3.1. Select plan
+
+  3.2. Edit course
+
+  3.3. Delete course
+
+4. Click confirm
+
+After making Task break down, we can draw the diagram. However, the diagram has more details like identifying **essential** and **optional** sub-tasks and finally planning for each path. `Figure 30`
+
+![Figure 30](https://user-images.githubusercontent.com/56771415/189232427-d5f34704-720b-4d5a-9007-6b800c09eb46.png)
+
+#### 4.2.6 Context diagram level 0 and 1
+Diagrams or pictures are among the best and oldest forms of human communication They are mainly used for representation. A **context diagram** or **data flow diagram** is a high-level model that shows or illustrates how your system interacts with alternative entities (systems, database, process) and how the data flows. The main benefit of context diagram is that no knowledge or experience is needed to understand the diagram. Levels in a context diagram or data flow diagram are numbered from **level 0** and **level 1** or more, they use a context diagram as a base to draw more detailed diagrams. 
+
+#### Symbols and Notation
+![Figure 31](https://user-images.githubusercontent.com/56771415/189232725-8f809f0f-e8b4-4f09-93e7-544158571719.png)
+**Process**: Any process that produces , updates, and performs computations. `Figure 31`
+
+![Figure 32](https://user-images.githubusercontent.com/56771415/189232735-009fd71e-58ff-4748-847d-0f83b423e491.png)
+**External entity**: External system that’s interact with the system by sending or receiving. `Figure 32`
+
+![Figure 33](https://user-images.githubusercontent.com/56771415/189232738-dc34daf0-aa5a-4530-bd52-18890684bde6.png)
+**Data store**: Is where we store or hold data to use it later (database). `Figure 33`
+
+![Figure 34](https://user-images.githubusercontent.com/56771415/189232748-1a664d7b-7cf3-4c2d-9b33-d22287c1995e.png)
+**Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 34`
+
+
 #### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+#### 4.2.4.8 Design Principles
+
 
 <!--
 
