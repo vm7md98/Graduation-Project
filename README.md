@@ -1628,17 +1628,29 @@ Picture of student_courses page in atlas `Figure 54`
 We used this algorithm in `Code 46` and the purpose and technical details in the same section however the steps are:
 
 1- Get email and password.
+
 2- Search in the database using the provided email.
+
 3- Store the result in variable we called it user.
+
 4- If statement.
+
   if user exist
+  
      compare the password with the hashed password in the database
+     
         if both password matched
+	
                   return user
-      else 
-             throw an error    
+		  
+      else
+      
+             throw an error
+	     
   else
+  
        throw and error
+       
 
 
 
