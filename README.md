@@ -638,7 +638,7 @@ A programming language is a formal language comprising a set of strings that pro
 #### 4.3.2 Front-End
 Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
 
-| Front-End |
+| Front-End | |
 | - | ----- |
 | HTML | Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content |
 | CSS | Stands for Cascading Style Sheets is one of the style sheet languages like DSSSL and XSL which responsible of the presentation of the website such as layout, colors, fonts |
