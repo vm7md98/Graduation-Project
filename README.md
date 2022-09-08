@@ -734,34 +734,9 @@ Since we will use Heroku we will explain the steps as developer and for end-user
 #### Steps
 **Note: In this part we will assume that all dependencies and plugins are already added to the project**.
 
-| No. | Steps | Code |
-| - | ----- | ---- |
-| 1 | Create Account in [Heroku](https://www.heroku.com) & Login (Free) |  aa  |
-| 2 | Download [Heroku Command Line Interface (CLI)](https://devcenter.heroku.com/articles/heroku-cli) and [Git](https://git-scm.com/downloads) |   |
-| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2`
-|
-```CMD 
-C:\Users\User>heroku login
-  >> Warning: heroku update availabe from 7.53.0 to 7.59.0. 
-heroku: Press any key to open up the browser to login or q to exit: 
-``` 
-|
-| 4 | Check that you have the prerequisites installed and they are node, npm and git this is important because some versions need different steps |
-| 4.1 | Stand for Global Information Tracker which used to manage your source code |
-| 4.2 | Used to make our website more interactive with users like drop-down menus and contact forms |
-| 4.3 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
-| 5 | Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website |
-| 6 | Stand for Global Information Tracker which used to manage your source code |
-| 7 | Used to make our website more interactive with users like drop-down menus and contact forms |
-| 8 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
-| 9 | Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website |
-| 10 | Stand for Global Information Tracker which used to manage your source code |
-| 11 | Used to make our website more interactive with users like drop-down menus and contact forms |
-| 12 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
-
 1. Create Account in [Heroku](https://www.heroku.com) (Free)
 2. Login
-3. Download Heroku Command Line Interface (CLI) and git.
+3. Download [Heroku Command Line Interface (CLI)](https://devcenter.heroku.com/articles/heroku-cli) and [Git](https://git-scm.com/downloads).
 4. Using Command Line Interface like CMD or Git Bash login to Heroku. `Code 2`
 
 ```CMD
