@@ -128,6 +128,21 @@ Functional Requirements: Which are the essential things (functions) we want the 
 | - | ----- |
 | 1 | Authentication |
 | 2 | Authorization levels |
+| 3 | Create reports for supervisor |
+| 4 | Send verification code after login |
+| 5 | Send notification to students after drop/add any course |
+| 6 | Generate courses for students |
+| 7 | Calculate how many classes needed for each course |
+| 8 | Advisor can drop/add courses for students |
+| 9 | Students can drop/add courses |
+| 10 | Checking if student need to repeat the course |
+| 11 | Provide courses depending on the student data such as GPA, semester |
+| 12 | Advisor can remove or give permission to allow student to add/delete courses |
+| 13 | Student can view his courses |
+| 14 | Supervisor (admin) can add new user |
+| 15 | Supervisor (admin) can delete a user |
+| 2 | Authorization levels |
+| 2 | Authorization levels |
  
 1.	Authentication				
 2.	Authorization levels
