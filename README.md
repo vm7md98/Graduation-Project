@@ -204,7 +204,200 @@ The entity-relationship diagram part is also tricky because there should never b
 Education is one of the major concerns for every state in the present time. Everyone and every country are focusing on the improvement in education system. According to research, the adult literacy rate in Arab Emirates is increased from 53% to 93% and this rate is recorded from 1975 to 2015 and now these days it is improving more. the primary concern of all the states these days. The average increase in literacy rate is 21.02%. With the growing literacy rate of course, we can say that people are getting admissions in different educational institutes rapidly.
 
 So, to takeover this huge amount of registrations day by day, every institution whether it’s a school, college, or university they want an efficient and automatic registration system that fills up their needs and make the registration process easy for both institute and the students. These automatic systems will reduce the workload and work forces in the college. This project is all about that online registration system named as HCT registration system. This system is going to solve all these registration and management problems.
-<!-- 
+
+### 4.2 Design
+Design phase is the longest part in this project because it explains the design of the whole computing-based solution from design deliverables, ERDs, Json and other diagrams.
+
+#### 4.2.1 Entity Relationship Diagram
+Relational design is the actual design of the database. We have two ERDs one for SQL and NoSQL, both of them are right but at first, we think that we will work with Oracle which SQL but at the end we decide MongoDB is better for us. However, because we are using MongoDB with Document-oriented Database we need to attach our JSON file with it.
+
+![image](https://user-images.githubusercontent.com/56771415/189226707-3bbfaa1c-9691-4420-971d-5c222bcc1e97.png)
+
+![image](https://user-images.githubusercontent.com/56771415/189226714-4ef4bf3e-8d98-4488-98ab-8ef85c726fed.png)
+
+The above `Figure 4` & `Figure 5` shows the SQL Relational Diagram and NoSQL Relational Diagram.
+
+#### 4.2.2 JSON
+Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
+
+![Figure 6](https://user-images.githubusercontent.com/56771415/189226954-cd9d94ad-b144-45d0-9775-0d14e8282d5c.png)
+![Figure 7](https://user-images.githubusercontent.com/56771415/189226968-f0122124-2d9c-4ddc-b161-9b1f6b882a7d.png)
+![Figure 8](https://user-images.githubusercontent.com/56771415/189226976-2446ba68-68d3-475b-b6af-e43ca23460ed.png)
+
+```C#
+[
+  {
+    "std_id": "h00353197",
+    "first_name": "Abdullah",
+    "last_name": "Fisal",
+    "mobileNo": 567760020,
+    "year": 2021,
+    "semNo": "1",
+    "gpa": 2,
+    "gender": "male",
+    "user": {
+      "username": "h000001",
+      "password": "0000",
+      "email": "h000001@hct.ac.ae"
+    },
+    "adv_Id": "h000002",
+    "d_id": 1,
+    "major_code": "CIS",
+    "course_id": [1, 2, 3, 4, 5]
+  },
+  {
+    "users_std": {
+      "username": "h00353197",
+      "password": "0000",
+      "email": "h000001@hct.ac.ae",
+      "std_id": "h00353197"
+    },
+    "user_adv": {
+      "username": "h000002",
+      "password": "0000",
+      "email": "mtogher@hct.ac.ae",
+      "adv_Id": "h000002"
+    },
+    "users_fac": {
+      "username": "h000003",
+      "password": "0000",
+      "email": "h000003@hct.ac.ae",
+      "std_id": "h000003"
+    }
+  },
+  {
+    "course_id": 1,
+    "title": "JAVA",
+    "credit_hours": 12,
+    "course_code": "CIS001"
+  },
+  {
+    "major_code": "CIS",
+    "major": "IT",
+    "course_id": [1, 2, 3, 4, 5]
+  },
+  {
+    "adv_id": "h000002",
+    "first_name": "Madeleine",
+    "last_name": "Togher",
+    "mobileNo": 567760020,
+    "user": {
+      "username": "h000002",
+      "password": "0000",
+      "email": "mtogher@hct.ac.ae"
+    },
+    "d_id": 1
+  },
+
+  {
+    "sp_id": "h000003",
+    "first_name": "Madre",
+    "last_name": "Madre",
+    "mobileNo": 567760020,
+    "user": {
+      "username": "h000003",
+      "password": "0000",
+      "email": "h000003@hct.ac.ae"
+    },
+    "d_id": 1
+  },
+  {
+    "d_id": 1,
+    "address:": "200 shj",
+    "city": "Dubai"
+  },
+  {
+    "semester_1": [
+      {
+        "plan_No": 1,
+        "course_id": [1, 2, 3, 4, 5]
+      },
+      {
+        "plan_No": 2,
+        "course_id": [1, 2, 3, 4, 5]
+      }
+    ],
+    "semester_2": [
+      {
+        "plan_No": 1,
+        "course_id": [1, 2, 3, 4, 5]
+      },
+      {
+        "plan_No": 2,
+        "course_id": [1, 2, 3, 4, 5]
+      }
+    ]
+  }
+]
+
+```
+
+#### 4.2.3 UI design
+Designing a web page from appearance and functionality to navigation and ease-of-use, can be time consuming and frustrating. Therefore, tools or processes like wireframes and prototypes are there to help designer. Wireframes are blueprints for the website or basic representations of the product. The two types of wireframes are low-fidelity, mid-fidelity and high-fidelity, but in this project, we will use low and high fidelity. Prototypes are early design models of the final UI of your website or simply an advanced wireframe with more visual detail and interaction. The benefit of these tools is to save time and money by having an idea on how the final product will look like.
+
+#### 4.2.3.1 Low-Fidelity
+Low-fidelity wireframe is a basic or a skeleton of a web page. It helps programmer, stakeholders, and designers to have an idea of where the UI element might be placed. Low fidelity can be developed by hand as a sketch or using digital tools like **Figma** or **Adobe XD**, but we used Figma in this project. 
+
+#### 4.2.3.2 High-Fidelity
+High-fidelity wireframes are more complete version of the end product than low fidelity. Usually, high-fidelity is the last thing to be done in the project because it takes more effort to create, but they are effective in that they reveal how a product will look at project completion.
+
+#### Pages
+- Login 
+- Authentication 
+- Select_plan
+- Approvement
+- Report
+
+
+#### 4.2.3.3 Login
+![Figure 9](https://user-images.githubusercontent.com/56771415/189227660-f72e1121-239d-4ee7-9207-64dc8a2cc12f.png)
+![Figure 10](https://user-images.githubusercontent.com/56771415/189227666-82cd754f-3c22-446e-b962-5d788c5ad25d.png)
+![Figure 11](https://user-images.githubusercontent.com/56771415/189227671-7ec8348d-862d-44f2-890d-eba3bf6ecfc7.png)
+
+#### Description 
+The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page you will see when you enter the portal or website. First you need to Enter your email and password in the **textboxes**, then click on **button**. After you click on the button you will redirect to **Authentication page**.
+
+#### 4.2.3.4 Authentication
+![Figure 12](https://user-images.githubusercontent.com/56771415/189227950-645fa2d8-d0b4-4d25-ab76-e0659acd1111.png)
+![Figure 13](https://user-images.githubusercontent.com/56771415/189227956-e8dd617c-2e9c-4e1d-8e7f-b7b13300b4e8.png)
+![Figure 14](https://user-images.githubusercontent.com/56771415/189227967-00d90a0d-1bf7-4f76-b085-106e436719cb.png)
+
+#### Description 
+After being redirected to **Authentication page** the user should receive a code which he needs to enter in the **textbox**, then he needs to click on the **button** to make sure that no one can enter his account as shown in `Figure 12`, `Figure 13` and `Figure 14`. After you click on the button you will redirect to **Select_plan page**.
+
+#### 4.2.3.5 Select_plan
+![Figure 15](https://user-images.githubusercontent.com/56771415/189228546-0e61bbdb-0a4e-4af7-89a5-cf464896f8ed.png)
+![Figure 16](https://user-images.githubusercontent.com/56771415/189228551-e4c94122-3c2e-4f1d-9ce5-3eddc35993c2.png)
+![Figure 17](https://user-images.githubusercontent.com/56771415/189228560-eeedd927-94a3-4c8e-a30d-f02aab85aa59.png)
+
+#### Description 
+After being redirected to **Select_plan** page you need to select a plan by click on button or checkbox then clicking on the confirm button which is on the right side below the plan table. This page is for selecting a plan as shown in `Figure 15`, `Figure 16` and `Figure 17`, after you click on the confirm button you will redirect to **Approvement page**.
+
+#### 4.2.3.6 Approvement
+![Figure 18](https://user-images.githubusercontent.com/56771415/189228695-ee37c2f2-83c6-439b-98f7-7a2204fd1e40.png)
+![Figure 19](https://user-images.githubusercontent.com/56771415/189228705-835a46fc-2589-4115-9c03-360e402f59dd.png)
+![Figure 20](https://user-images.githubusercontent.com/56771415/189228710-90e28e1d-c494-464b-b212-cbc8777b5dca.png)
+
+#### Description 
+After being redirected to **Approvement page**, this page is to change your courses or delete them as shown in `Figure 18`, `Figure 19` and `Figure 20`. After you are done you just need to click the approvement button then the system should send SMS or email to make sure you are registered.
+
+#### 4.2.3.7 Report
+![Figure 21](https://user-images.githubusercontent.com/56771415/189228975-a7568c65-c268-42f4-b2a8-78174e7e2cee.png)
+![Figure 22](https://user-images.githubusercontent.com/56771415/189228983-424d894f-a11f-4113-a8b0-4cb7b01fa4b7.png)
+![Figure 23](https://user-images.githubusercontent.com/56771415/189228990-de2eae06-4c2a-4b3a-bf3b-6d95030f8947.png)
+
+#### Description
+Report page is for department or supervisor and it’s just for reading. It contains all the information about each course and suggested classes number as shown in `Figure 21`, `Figure 22` and `Figure 23`.
+
+#### 4.2.3.8 PDF's [Low & High Fidelity & Dark]
+[Low-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530736/Low-Fidelity.pdf)
+[High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530738/High-Fidelity.pdf)
+[Dark-Mode-High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530739/Dark-Mode-High-Fidelity.pdf)
+
+
+
+<!--
+
 ### 4.2	Testing Techniques
 In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
 
@@ -324,8 +517,8 @@ Fourth, in this test we will check these three points which are using different 
 - Discussion
 The application operates with no problems in most browsers because we didn’t use any advanced features and as (Miller, 2000) said the website must use only those constructs that work with the majority of browsers. But this still leaves room for a lot of creativity. We failed in OS test because the application until now is local and not online so we can’t test it in other operating systems.
 
-<!--#### 4.2.5 Testing in Controlled Environment & Survey-->
-<!-- We cannot perform the last two tests because the application is not completed and we didn’t deploy it to the cloud. -->
+// #### 4.2.5 Testing in Controlled Environment & Survey
+// We cannot perform the last two tests because the application is not completed and we didn’t deploy it to the cloud. 
 
 #### 4.2.5	Final Testing Result
 Final Testing Result as shown in `Table 13`
@@ -601,7 +794,7 @@ The main object of this page is to authenticate the user and we put a timer so t
     startTimer(fiveMinutes, display2);
   };
   ```
-<!-- ![Figure 33](https://user-images.githubusercontent.com/56771415/188740525-f1d96179-5abb-483e-b02e-35a4ef656d2a.png) -->
+// ![Figure 33](https://user-images.githubusercontent.com/56771415/188740525-f1d96179-5abb-483e-b02e-35a4ef656d2a.png)
 
 #### 4.6.3 index.ejs
 In `Figure 33`, the main object of this page is to show different services the application provide however the services depends on user rule. Also we can see logout to logout, user email to make sure that the user want to login this account and Home text as a link which redirect to home page. For the coding part we mainly used EJS so we can use JavaScript in html page. For example, as we can see in `Code 2` we used if statement to show the buttons(services) which depends on user rule. 
@@ -2362,4 +2555,5 @@ For future plan we don’t think we will continue this project anymore for sever
 - [4] 	“Testing a Website: Best Practices” [Online]. Available: https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1. [Accessed 21 3 2022].
 - [5] 	“WebSite Testing. Software Research, Inc.” [Online]. Available: http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1. [Accessed 12 2 2022].
 - [6] 	ZER-0-NE, “Comparison of JWT and OAuth 2.0 authorisation,” [Online]. Available: https://core.ac.uk/download/pdf/159753962.pdf#page=1. [Accessed 24 9 2021].
+- 
  -->
