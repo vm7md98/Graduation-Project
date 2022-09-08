@@ -726,7 +726,9 @@ Is a platform (PaaS) in cloud used to deploy and manage apps or in our project w
 Stand for Global Information Tracker which used to manage your source code.
 -->
 
-##### 4.3.5.3 Configure/deploy
+##
+
+#### 4.3.5 Configure/deploy
 Since we will use Heroku we will explain the steps as developer and for end-user all he need is laptop or pc with internet using WI-FI or LAN.
 
 #### Steps
@@ -736,12 +738,7 @@ Since we will use Heroku we will explain the steps as developer and for end-user
 | - | ----- |
 | 1 | Create Account in [Heroku](https://www.heroku.com) & Login (Free) |
 | 2 | Download [Heroku Command Line Interface (CLI)](https://devcenter.heroku.com/articles/heroku-cli) and [Git](https://git-scm.com/downloads) |
-| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2`
-```CMD
-C:\Users\User>heroku login
-  >> Warning: heroku update availabe from 7.53.0 to 7.59.0.
-heroku: Press any key to open up the browser to login or q to exit:
-```
+| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2` ```CMD C:\Users\User>heroku login  >> Warning: heroku update availabe from 7.53.0 to 7.59.0. heroku: Press any key to open up the browser to login or q to exit: ```
  |
 | 4 | Check that you have the prerequisites installed and they are node, npm and git this is important because some versions need different steps |
 | 4.1 | Stand for Global Information Tracker which used to manage your source code |
