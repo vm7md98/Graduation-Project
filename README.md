@@ -16,9 +16,14 @@ _Project Supervisor: Dr. Madeleine Togher_
 -	MVC – Model-View-Controller, a design pattern used to achieve separation of concerns.
 -	IDE – Integrated Development Environment.
 
+## Abstract
+Auto-registration system utilizing artificial intelligence (AI) technology, in general, the
+project is providing a new technique that can be used efficiently for student to register. This new technique for registration will depend on server-side or backend. Students will be able to register for the course easily. The main goal of this project is to design a system that can help student to register easily and provide department or management the required data to decide how many classes they need for every course. The system we are using nowadays is not efficient and time consuming for both students and management. Therefore, this system will reduce time and effort.
+
+
 ## Chapter 1: Introduction
 ### 1.1	Context and motivation
-When I was a second-year student trying to register my courses, I was having many problems, such as what course should I register for? How many courses can I take? Am I allowed to take this course? Because of these questions, I was forced to ask my advisor. This process is repeated every semester and most students face these problems. Therefore, the inspiration and the whole idea came from the beginning of the problem. The main reason why we started this project is that there was a problem that the collage did not solve yet. As a team, we are motivated by our passion for making something useful for the long term and to know our limits and skills. Thus, we have this project idea where we plan on finding solutions to these problems by utilizing smarter solutions such as Internet of things (IoT) to improve the efficiency, enhance the system, optimize the parking utilization, reduce cost and time when using the parking system or even managing it. This project will focus on solving the problems one by one, along with having additional features included to furthermore enhance the user’s experience
+When I was a second-year student trying to register my courses, I was having many problems, such as what course should I register for? How many courses can I take? Am I allowed to take this course? Because of these questions, I was forced to ask my advisor. This process is repeated every semester and most students face these problems. Therefore, the inspiration and the whole idea came from the beginning of the problem. The main reason why we started this project is that there was a problem that the collage did not solve yet. As a team, we are motivated by our passion for making something useful for the long term and to know our limits and skills. Thus, we have this project idea where we plan on finding solutions to these problems by utilizing smarter solutions such as Internet of things (IoT) to improve the efficiency, enhance the system, optimize the parking utilization, reduce cost and time when using the parking system or even managing it. This project will focus on solving the problems one by one, along with having additional features included to furthermore enhance the user’s experience.
 
 
 ### 1.2	Problem statement
@@ -94,10 +99,10 @@ Here is the table that shows the cost in `Table 1`.
 
 ![Table 1](https://user-images.githubusercontent.com/56771415/188313100-99815d71-ca65-4d04-b784-b155e2f893ff.png)
 
-### 2.7	Risk ,anagement
+### 2.7	Risk Management
 Risk management is the process of identifying, analyzing, and responding to project risks. It includes risk description, probability, impact, and how to mitigate these risks. Risk management also includes accepting risk.
 
-### 2.7.1	Risk Register
+### 2.7.1 Risk Register
 Here is the table that shows the Register Risk in `Table 2`.
 
 ![Table 2](https://user-images.githubusercontent.com/56771415/188313245-e5a9f800-6c7b-47a5-b299-b099f947fe59.png)
@@ -2339,7 +2344,7 @@ module.exports = {
 Our project is Auto-Registration system which allow student to register with much greater ease compared to current system also, it will remove or reduce the needs of the advisor since courses is offered by the system and all the analysis which involves checking **GPA**, **repeated courses** and, **student semester** is done by the system which means it will reduce time and  human error for both advisor and student. At end the system will calculate the number of students in every course and suggest how many classes we need for each course and that will help the collage to decide how many classes they need to open for the next semester.
 
 ### 5.2	Reflection
-After finishing the first part of this project, now I can say that I'm more familiar with the structure of building/creating a project from zero. It's really useful and helpful to know how to start a project from the ground and organize/split the work on team members. I learned how to organize my and the team members time by using the MS Project application with helped us to estimate the time we need to work on every part. I also learned how to combine everything I learned in my previous 4 years in one project and now it makes since of why having diagrams which it means it saves a lot of time from the start instead of doing it without it. It really helped us to reduce time and errors from the start of the project.
+
 
 ### 5.3	Future development
 For future plan we don’t think we will continue this project anymore for several reasons but most important reason is registration system is a big project involves many rules and regulations which take huge amount time to make sure that the system is working without any problem. Also I think the technologies we used is unsuitable for this type of project especially our database technology which **NoSQL** because there is no consistency or much harder to make the data consistent compared to **SQL**. However, I think now we can decide what technology is better for us in our future projects.
