@@ -335,10 +335,10 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 #### 4.2.3 UI design
 Designing a web page from appearance and functionality to navigation and ease-of-use, can be time consuming and frustrating. Therefore, tools or processes like wireframes and prototypes are there to help designer. Wireframes are blueprints for the website or basic representations of the product. The two types of wireframes are low-fidelity, mid-fidelity and high-fidelity, but in this project, we will use low and high fidelity. Prototypes are early design models of the final UI of your website or simply an advanced wireframe with more visual detail and interaction. The benefit of these tools is to save time and money by having an idea on how the final product will look like.
 
-##### 4.2.3.1 Low-Fidelity
+#### 4.2.3.1 Low-Fidelity
 Low-fidelity wireframe is a basic or a skeleton of a web page. It helps programmer, stakeholders, and designers to have an idea of where the UI element might be placed. Low fidelity can be developed by hand as a sketch or using digital tools like **Figma** or **Adobe XD**, but we used Figma in this project. 
 
-##### 4.2.3.2 High-Fidelity
+#### 4.2.3.2 High-Fidelity
 High-fidelity wireframes are more complete version of the end product than low fidelity. Usually, high-fidelity is the last thing to be done in the project because it takes more effort to create, but they are effective in that they reveal how a product will look at project completion.
 
 #### Pages
@@ -402,6 +402,51 @@ Planning or designing an evaluation for a project is a critical step in every pr
 **Note: we can’t use Usability criteria because we need to develop the website to test it.**
 
 #### 4.2.4.1 Design Principles
+The rules a designer must follow to create an effective and attractive product or simply what you should do and don’t and it based on knowledge, experience, and common-sense. There are five Design Principles rules Visibility, Feedback, Affordances, Constraints, Consistency.
+
+- **Visibility- **
+
+This principle is responsible for how the product or what the product is and what used for. 
+
+- **Feedback- **
+
+This principle is responsible for making a clear response on what has been accomplished by the user. 
+
+- **Affordances- **
+
+This principle is responsible for how the product is used.
+
+- **Constraints- **
+
+This principle is responsible for restricting the possible actions that can be performed.
+
+- **Consistency- **
+
+This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks.
+
+![Table 4](https://user-images.githubusercontent.com/56771415/189230932-adb22fb2-6634-48f4-8729-70d46b284cdd.png)
+
+The above `Table 4` shows the design principles that we are going to use in our project.
+
+#### 4.2.4.2 Accessibility
+Thousand of students will use this system therefore, we need to make sure that everyone should be able to use our system and that’s called accessibility. Web Accessibility is all about designing or developing a website with tools and technologies so that people with disabilities can use them. In this project we will focus on one type of disabilities Visual Impairment.
+
+#### 4.2.4.3 Visual Impairment
+These types of people are blind, or they have any kind of vision loss, and they need some sort of feature. Therefore, we will provide these features in our website:
+- We will use Alt Text to images or icons because people with this problem usually rely on assistive technologies such as Screen Readers and refreshable Braille Readers.
+- Avoid using thin fonts and we will try to avoid adding links to images that can’t support Alt Text.
+- Avoid using Place Holder because it’s usually gray and small which make it hard to see.
+- Avoid Automatic Media and Navigation.
+**Color blind**: To avoid most problems with color blindness we will provide a dark-mode which will make the website just white, black, dark grey and more, but it will be limited color and the majority of space is dedicated to dark surfaces.
+
+
+#### 4.2.4.4 Discussion
+Designing a website is one of the hardest parts of this project for several reasons. First, we can’t ask people about our design or get feedback from them because there is no time and it’s hard to find people. Second, we can’t design a website that is accessible for all types of people such as people with **Motor Skills/Physical Disabilities** because of time. However, we didn’t include **Usability criteria** because we need to develop the project (website) first then we can test it to see if it meets the criteria or not.
+
+#### 4.2.4.5 Design Principles
+#### 4.2.4.6 Design Principles
+#### 4.2.4.7 Design Principles
+#### 4.2.4.8 Design Principles
 
 <!--
 
