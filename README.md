@@ -1652,9 +1652,324 @@ We used this algorithm in `Code 46` and the purpose and technical details in the
        throw and error
 ```
 
+#### Calculate the recommended class for each course
+```
+1- Get the number of student in each course from the database.
+2- Divide the number of student in each course with 25 (the number of student in each class).
+3- Use the result in Math.ceil() function.
+4- Show the result in report page.
+```
 
+**Note**: `Math.ceil()` is a function that always rounds a number up to the next largest integer we used it because the result of dividing the number of students in each course with 25 will always be less than 1 unless it is 25 which will be 1.
 
 ### 4.7.10 webController.js
+This file contains all the logic and it act like a brain most of the data are controlled by this file.
+
+#### Dependencies
+As we can see in `Code 52` we can see all the Dependencies we need in this file.
+
+```C#
+const jwt = require("jsonwebtoken"); //68.5K (gzipped: 20.4K)
+const User = require("../models/User");
+const Advisor = require("../models/Advisor");
+const Student = require("../models/Student");
+const verifyUser = require("../models/verifyUser");
+const { json } = require("express");
+const jwt_decode = require("jwt-decode"); //1.7K (gzipped: 951)
+const otherFunction = require("../../public/js/otherFunction");
+const validation = require("../../public/js/validation");
+const VerifyCode = require("../models/verifyUser");
+const Course = require("../models/Course");
+const Student_Course = require("../models/Student_Course");
+const CourseStudent = require("../models/course_student");
+const mongoose = require("mongoose");
+```
+
+#### Jwt & jwt_decode
+Both of them modules related to cookies which we will explain it in another section but basically, they are modules to **encrypt** and **decrypt** cookies.
+
+#### Schemas
+User, Advisor, Student, verifyUser, Course and Student_Course all of them are schemas we exports before so we now we just use them.
+
+#### Functions
+Validation and otherFunction are just  modules with functions that we exports from before which is explained in other section.
+
+#### Main functions
+Here we will talk about the main functions in this file.
+
+- homePageGet()
+
+This function is responsible for rendering **index.ejs** (Home page) and send **JSON** object contain the webpage title as shown in `Code 53`.
+
+```C#
+/**
+ * GET /
+ * Homepage
+ */
+exports.homePageGet = async (req, res) => {
+  try {
+    res.render("index", { title: "HOME" });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- login_get()
+
+This function is responsible for rendering **login.ejs** (login page) and send **JSON** object contain the webpage title.
+
+```C#
+/**
+ * Login Get
+ */
+
+exports.login_get = async (req, res) => {
+  try {
+    res.render("authentication_layout/login", { title: "Login" });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- login_post()
+
+This function will be triggered whenever a user try to login. It contain code related to login process such as check if email and password match or generate authentication code and save it in the database.
+
+```C#
+/**
+ * Login Post
+ */
+module.exports.login_post = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await User.login(email, password);
+    // so every time he logging in he will have different code
+    await VerifyCode.deleteMany({ id: user.id });
+
+    const code = otherFunction.randomString(5);
+    console.log(code);
+    otherFunction.sendEmailLogIn(email, code);
+
+    if (user.id) {
+      await verifyUser.findOneAndUpdate(
+        { id: user.id },
+        { code },
+        { upsert: true, new: true }
+      );
+    }
+
+    //jwt: we assign token to user
+    const token = createToken(user.id, user.role, "Not Verified");
+
+    //jwt with cookie
+    res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+
+    //Response
+    res.status(200).json({ user: user.email });
+  } catch (error) {
+    const errors = validation.handleErrorsLogin(error);
+    res.status(400).json({ errors });
+  }
+};
+```
+
+- authenticationPage_get()
+
+This function is responsible for rendering **authentication.ejs** (authentication page) and send **JSON** object contain the webpage title.
+
+```C#
+/**
+ * Auth Get
+ */
+exports.authenticationPage_get = async (req, res) => {
+  try {
+    res.render("authentication_layout/authentication", {
+      title: "Authentication",
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- authenticationPage_post()
+
+This function will be triggered whenever a user enter authentication code and submit. It contain code related to authentication process like checking if the user entered the right code or no create cookie for the user.
+
+```C#
+module.exports.authenticationPage_post = async (req, res) => {
+  try {
+    //take jwt from cookie
+    const a = req.cookies.jwt;
+    //decode jwt
+    const decode = jwt_decode(a);
+    // search on database for the user we want
+    const userCode = await VerifyCode.findOne({ id: decode.id });
+
+    if (req.body.authCode == userCode.code) {
+      await VerifyCode.deleteMany({ code: req.body.authCode });
+
+      //jwt: we assign token to user
+      const token = createToken(decode.id, decode.role, "Verified");
+
+      //jwt with cookie
+      res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+
+      res.status(200).json({ userCode });
+    } else {
+      res.status(400).json({ error: "error" });
+    }
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- signup_get()
+
+This function is responsible for rendering **signup.ejs** (signup page) and send **JSON** object contain the webpage title also it will send **advisor list** to the client so we can display all the advisors in the drop box.
+
+```C#
+/**
+ * Signup Get
+ */
+module.exports.signup_get = async (req, res) => {
+  try {
+    //send advisors list to signup page
+    const allAdvisor = await Advisor.find({});
+    const Advisors = allAdvisor;
+
+    res.render("authentication_layout/signup", {
+      title: "RegisterStuff",
+      Advisors,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+};
+```
+
+- signup_post()
+
+This function will be triggered if the user want to add or register a new user. It contain all the code related to adding new a user also it will send email the user.
+
+```C#
+/**
+ * Signup Post
+ */
+module.exports.signup_post = async (req, res) => {
+  const { email, password, role, firstName, lastName, advisor, semester } =
+    req.body;
+  try {
+    //asynchronous / create user
+    const user = await User.create({ email, password, role });
+    if (role === "AV") {
+      /* await Advisor.create({firstName, lastName }); */
+
+      await Advisor.findOneAndUpdate(
+        { id: user.id },
+        { firstName, lastName },
+        {
+          upsert: true,
+          new: true,
+        }
+      );
+    }
+    if (role === "ST") {
+      await Student.findOneAndUpdate(
+        { id: user.id },
+        { firstName, lastName, semester: semester, advisorId: advisor },
+        {
+          upsert: true,
+          new: true,
+        }
+      );
+    }
+    //this function to send email
+    otherFunction.sendEmailSignUps(email);
+    //201 = successfully created
+    res.status(201).json({ user: user._id });
+  } catch (error) {
+    const errors = validation.handleErrors(error);
+    //400 = error
+    res.status(400).json({ errors });
+  }
+};
+```
+
+- logout_get()
+
+This function will be triggered if the user click on **logout** it will just delete all the cookies and redirect the user to home page which will redirect him to login page because he doesn’t have any cookies.
+
+```C#
+/**
+ * Logout Get
+ */
+module.exports.logout_get = (req, res) => {
+  res.cookie("jwt", "", { maxAge: 1 });
+
+  res.redirect("/");
+};
+```
+
+- studentList_get()
+
+This function is responsible for rendering **studentList.ejs** (studentlist page) and send **JSON** object contain the webpage title also it will send **student list** to the client so we can display all the student in the page and it depend on the advisor.
+
+```C#
+/**
+ * StudentList Get
+ */
+module.exports.studentList_get = async (req, res) => {
+  //take jwt from cookie
+  const a = req.cookies.jwt;
+  //decode jwt
+  const decode = jwt_decode(a);
+  // search on database for the user we want
+  const user = await User.find({ id: decode.id });
+  console.log(user[0].id);
+
+  //console search by advisor id
+  const allStudent = await Student.find({ advisorId: user[0].id });
+
+  const Students = allStudent;
+
+  res.render("studentList", { title: "student list", Students });
+};
+```
+- report_get()
+
+```C#
+
+```
+- register_get()
+
+```C#
+
+```
+- register_post()
+
+```C#
+
+```
+- showCourse_Get()
+
+```C#
+
+```
+- delete()
+
+```C#
+
+```
+- Cookies
+
+```C#
+
+```
+
 ### 4.7.11 authMiddleware.js
 
 ## Chapter 5: Conclusion
