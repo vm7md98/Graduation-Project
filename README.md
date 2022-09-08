@@ -335,10 +335,10 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 #### 4.2.3 UI design
 Designing a web page from appearance and functionality to navigation and ease-of-use, can be time consuming and frustrating. Therefore, tools or processes like wireframes and prototypes are there to help designer. Wireframes are blueprints for the website or basic representations of the product. The two types of wireframes are low-fidelity, mid-fidelity and high-fidelity, but in this project, we will use low and high fidelity. Prototypes are early design models of the final UI of your website or simply an advanced wireframe with more visual detail and interaction. The benefit of these tools is to save time and money by having an idea on how the final product will look like.
 
-#### 4.2.3.1 Low-Fidelity
+##### 4.2.3.1 Low-Fidelity
 Low-fidelity wireframe is a basic or a skeleton of a web page. It helps programmer, stakeholders, and designers to have an idea of where the UI element might be placed. Low fidelity can be developed by hand as a sketch or using digital tools like **Figma** or **Adobe XD**, but we used Figma in this project. 
 
-#### 4.2.3.2 High-Fidelity
+##### 4.2.3.2 High-Fidelity
 High-fidelity wireframes are more complete version of the end product than low fidelity. Usually, high-fidelity is the last thing to be done in the project because it takes more effort to create, but they are effective in that they reveal how a product will look at project completion.
 
 #### Pages
@@ -396,7 +396,12 @@ Report page is for department or supervisor and it’s just for reading. It cont
 
 [Dark-Mode-High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530739/Dark-Mode-High-Fidelity.pdf)
 
+#### 4.2.4 Design Evaluation
+Planning or designing an evaluation for a project is a critical step in every project because it will give the developer an idea about product quality. The design evaluation criteria are different for every project because the criteria depend on the product. However, Design Principles and Accessibility are the criteria we chose.
 
+**Note: we can’t use Usability criteria because we need to develop the website to test it.**
+
+#### 4.2.4.1 Design Principles
 
 <!--
 
