@@ -632,37 +632,20 @@ The above `Figure 44` shows the sequence diagram of our system.
 ## 4.3 Development
 We classify our development tools into these four categories **Programming language, Database, Network configuration, along with other technologies**.
 
-#### 4.3.1 Programming language
+#### Programming language
 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output or simply mean a way to communicate with computers. We classify programming languages into two categories front-end and Back-end.
 
-#### 4.3.2 Front-End
+#### 4.3.1 Front-End
 Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
 
+| Term | Meaning |
 | - | ----- |
 | HTML | Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content |
 | CSS | Stands for Cascading Style Sheets is one of the style sheet languages like DSSSL and XSL which responsible of the presentation of the website such as layout, colors, fonts |
 | JavaScript | Used to make our website more interactive with users like drop-down menus and contact forms |
 | jQuery | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
 
-
-
-
-| 5 | Generate plan for students |
-| 6 | Calculate how many classes needed for each course |
-| 7 | Advisor: Edit Student Plan |
-| 8 | Student: Edit Plan |
-| 9 | Checking if student need to repeat the course |
-| 1 | Authentication |
-| 2 | Authorization levels |
-| 3 | Create reports for supervisor |
-| 4 | Send notification to students |
-| 5 | Generate plan for students |
-| 6 | Calculate how many classes needed for each course |
-| 7 | Advisor: Edit Student Plan |
-| 8 | Student: Edit Plan |
-| 9 | Checking if student need to repeat the course |
-
-
+<!--
 ##### 4.3.2.1 HTML
 Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content.
 
@@ -674,13 +657,23 @@ Used to make our website more interactive with users like drop-down menus and co
 
 ##### 4.3.2.4 jQuery
 Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more.
+-->
 
 ##
 
-#### 4.3.3 Back-End
+#### 4.3.2 Back-End
 Back-end or server-side is everything that happens behind-the-scenes activities such as communicating with servers or databases. However, we removed the database-side because
 we will explain it on the next section ####4.3.4 Database.
 
+| Term | Meaning |
+| - | ----- |
+| Node.js | SAn open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data |
+| Embedded JavaScript Templating (EJS) | Is template language/system that help user to generate html pages with plain JavaScript. It works like a master page in .asp, however, we will use it because it makes things easier when we need to output html using JavaScript |
+| Document Object Model (DOM) | Programming API for HTML and XML documents and it defines the logical structure of documents. The purpose of DOM is to allow language like JavaScript to style or structure your website |
+| Express.js | Is a back-end web application framework for Node.js |
+| Mongoose | Is a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB |
+
+<!--
 ##### 4.3.3.1 Node.js
 An open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data.
 
@@ -695,28 +688,43 @@ Is a back-end web application framework for Node.js.
 
 ##### 4.3.3.5 Mongoose
 Is a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB.
+-->
 
 ##
 
-#### 4.3.4 Database
+#### 4.3.3 Database
 Database is a set of organized collection of structured information or data stored electronically in a computer system. There are many types of databases, but we will use NoSQL database.
 
+| Term | Meaning |
+| - | ----- |
+| NoSQL | SStand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data |
+| Atlas | IA service or a cloud service that provided by MongoDB |
+
+<!--
 ##### 4.3.4.1 NoSQL
 Stand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data.
 
 ##### 4.3.4.2 Atlas
 A service or a cloud service that provided by MongoDB.
+-->
 
 ##
 
-#### 4.3.5 Network configuration
+#### 4.3.4 Network configuration
 Configuring network is process of assigning network settings, policies, flows, and control or simply it’s a process to design some type of communication.
 
+| Term | Meaning |
+| - | ----- |
+| Heroku | Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website |
+| Git | Stand for Global Information Tracker which used to manage your source code |
+
+<!--
 ##### 4.3.5.1 Heroku
 Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website.
 
 ##### 4.3.5.2 Git
 Stand for Global Information Tracker which used to manage your source code.
+-->
 
 ##### 4.3.5.3 Configure/deploy
 Since we will use Heroku we will explain the steps as developer and for end-user all he need is laptop or pc with internet using WI-FI or LAN.
@@ -724,10 +732,34 @@ Since we will use Heroku we will explain the steps as developer and for end-user
 #### Steps
 **Note: In this part we will assume that all dependencies and plugins are already added to the project**.
 
+| No. | Steps |
+| - | ----- |
+| 1 | Create Account in [Heroku](https://www.heroku.com) & Login (Free) |
+| 2 | Download [Heroku Command Line Interface (CLI)](https://devcenter.heroku.com/articles/heroku-cli) and [Git](https://git-scm.com/downloads) |
+| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2`
+```CMD
+C:\Users\User>heroku login
+  >> Warning: heroku update availabe from 7.53.0 to 7.59.0.
+heroku: Press any key to open up the browser to login or q to exit:
+```
+ |
+| 4 | Check that you have the prerequisites installed and they are node, npm and git this is important because some versions need different steps |
+| 4.1 | Stand for Global Information Tracker which used to manage your source code |
+| 4.2 | Used to make our website more interactive with users like drop-down menus and contact forms |
+| 4.3 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
+| 5 | Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website |
+| 6 | Stand for Global Information Tracker which used to manage your source code |
+| 7 | Used to make our website more interactive with users like drop-down menus and contact forms |
+| 8 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
+| 9 | Is a platform (PaaS) in cloud used to deploy and manage apps or in our project we will deploy a website |
+| 10 | Stand for Global Information Tracker which used to manage your source code |
+| 11 | Used to make our website more interactive with users like drop-down menus and contact forms |
+| 12 | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
+
 1. Create Account in [Heroku](https://www.heroku.com) (Free)
 2. Login
 3. Download Heroku Command Line Interface (CLI) and git.
-4. Using Command Line Interface like CMD or Git Bash login to Heroku.
+4. Using Command Line Interface like CMD or Git Bash login to Heroku. `Code 2`
 
 ```CMD
 C:\Users\User>heroku login
@@ -737,71 +769,71 @@ heroku: Press any key to open up the browser to login or q to exit:
 
 5. Check that you have the prerequisites installed and they are node, npm and git this is important because some versions need different steps.
 
-5.1. Check node by enter: "node --version" `Code 2`
+5.1. Check node by enter: "node --version" `Code 3`
 
 ```CMD
 C:\Users\User>node --version
 v14.18.1
 ```
 
-5.2. Check node by enter: "npm --version" `Code 3`
+5.2. Check node by enter: "npm --version" `Code 4`
 
 ```CMD
 C:\Users\User>npm --version
 6.14.15
 ```
 
-5.3. Check node by enter: "git --version" `Code 4`
+5.3. Check node by enter: "git --version" `Code 5`
 
 ```CMD
 C:\Users\User>git --version
 git version 2.33.1.windows.1
 ```
 
-6. Create a Profile file in your project folder to declare what command should be executed when you start your app. `Code 5`
+6. Create a Profile file in your project folder to declare what command should be executed when you start your app. `Code 6`
 
 ```CMD
 C:\Users\User\Desktop\..m>copy nul Procfile
 	1 file(s) copied.
 ```
 
-7. Write this code in Profile file: web: node “your index name”. “file type”. `Code 6`
+7. Write this code in Profile file: web: node “your index name”. “file type”. `Code 7`
 
 ```CMD
 web: node app.js
 ```
 
-8. Run git init command to creates a new Git repository. `Code 7`
+8. Run git init command to creates a new Git repository. `Code 8`
 
 ```CMD
 C:\Users\User\Desktop\..m>git init
 ```
 
-9. Run git add command to add files to the Git staging area. `Code 8`
+9. Run git add command to add files to the Git staging area. `Code 9`
 
 ```CMD
 C:\Users\User\Desktop\..m>git add
 ```
 
-10. Run git commit -m “ your comment” command to save what you did. `Code 9`
+10. Run git commit -m “ your comment” command to save what you did. `Code 10`
 
 ```CMD
 C:\Users\User\Desktop\..m>git commit -m "1st GP Project commit"
 ```
 
-11. Run heroku create command to create an app on Heroku. `Code 10`
-
-```CMD
-C:\Users\User\Desktop\..m>heroku create
-```
-
-12. Run git push heroku master command to upload your files to Heroku server. `Code 11`
+11. Run heroku create command to create an app on Heroku. `Code 11`
 
 ```CMD
 C:\Users\User\Desktop\..m>heroku create
 ```
 
 12. Run git push heroku master command to upload your files to Heroku server. `Code 12`
+
+```CMD
+C:\Users\User\Desktop\..m>heroku create
+```
+
+12. Run git push heroku master command to upload your files to Heroku server. `Code 13`
 
 ```CMD
 C:\Users\User\Desktop\..m>git push heroku master
