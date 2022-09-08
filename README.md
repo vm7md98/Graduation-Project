@@ -16,17 +16,14 @@ _Project Supervisor: Dr. Madeleine Togher_
 -	MVC – Model-View-Controller, a design pattern used to achieve separation of concerns.
 -	IDE – Integrated Development Environment.
 
-## Abstract
-Auto-registration system utilizing artificial intelligence (AI) technology, in general, the
-project is providing a new technique that can be used efficiently for student to register. This new technique for registration will depend on server-side or backend. Students will be able to register for the course easily. The main goal of this project is to design a system that can help student to register easily and provide department or management the required data to decide how many classes they need for every course. The system we are using nowadays is not efficient and time consuming for both students and management. Therefore, this system will reduce time and effort.
-
+## ABSTRACT
+Auto-registration system utilizing artificial intelligence (AI) technology, in general, the project is providing a new technique that can be used efficiently for student to register. This new technique for registration will depend on server-side or backend. Students will be able to register for the course easily. The main goal of this project is to design a system that can help student to register easily and provide department or management the required data to decide how many classes they need for every course. The system we are using nowadays is not efficient and time consuming for both students and management. Therefore, this system will reduce time and effort.
 
 ## Chapter 1: Introduction
 ### 1.1	Context and motivation
 When I was a second-year student trying to register my courses, I was having many problems, such as what course should I register for? How many courses can I take? Am I allowed to take this course? Because of these questions, I was forced to ask my advisor. This process is repeated every semester and most students face these problems. Therefore, the inspiration and the whole idea came from the beginning of the problem. The main reason why we started this project is that there was a problem that the collage did not solve yet. As a team, we are motivated by our passion for making something useful for the long term and to know our limits and skills. Thus, we have this project idea where we plan on finding solutions to these problems by utilizing smarter solutions such as Internet of things (IoT) to improve the efficiency, enhance the system, optimize the parking utilization, reduce cost and time when using the parking system or even managing it. This project will focus on solving the problems one by one, along with having additional features included to furthermore enhance the user’s experience.
 
-
-### 1.2	Problem statement
+### 1.2	Problem Statement
 In every semester we are facing a problem with lack/surplus of classes due to having unbalanced number of lecturer and students. In 2020 fall semester, SMC student had a math course “Applied Mathematics” registered in his schedule. The problem is the system only allowing 10 students as minimum and they were 8 students only, but the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses which leads to more academic issues. The thought of doing this whole project was to solve this type of a problem and catch irregular behavior in the registration system.
 
 To summarize our problem with the current registration system:
@@ -38,7 +35,7 @@ To summarize our problem with the current registration system:
 -	Human error: for example, register for courses for another major.
 -	Lack of feedback: student (user) should get Immediate feedback on their actions for example: when they register/drop to a course or not met the minimum credit.
 
-### 1.3	Project objectives
+### 1.3	Project Objectives
 HCT registration system is a system that provides and manages college courses. Their goal is to provide a fast, secure, and easier way to register courses to students across all HCT campuses. 
 HCT registration system providing a lot of services for student such as: Prepare for Registration, Register for Classes, Plan Ahead, Browse, View Registration Information, Browse Course Catalog.
 The above services work efficiently but it is missing some important features/services. One of these features is having a lack/surplus of classes due to having unbalanced number of lecturer and students. Currently system is not counting and dividing the classes based on the number of student and lecturer. This problem would affect every stakeholder (Students, Lecturers, Advisors, Supervisors, Administrations) in a separate way. For students, this will affect them by having the minimum/maximum number of credits, for ex. If a student had 4 courses and then they decided to cancel his 4th course, then he will stick with 3 course which will leave him with 9 credits, and this is not allowed due to HCT regulations. For Lecturers, the system will keep adding/dropping courses from their schedule, and this will confuse the lecturers. As an advisor, the students will ask the advisor frequently to send a request to the administrations to open/add new courses which will lead to consume more unneeded effort and time to the advisor. As a supervisor, he will have to check for the number of registered students in each course to open classes manually which leading to a lot of human errors. For administrations, they will have to deal with the massive number of courses requests that are coming from the supervisors.
