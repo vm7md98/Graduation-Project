@@ -141,10 +141,8 @@ Functional Requirements: Which are the essential things (functions) we want the 
 | 13 | Student can view his courses |
 | 14 | Supervisor (admin) can add new user |
 | 15 | Supervisor (admin) can delete a user |
-| 2 | Authorization levels |
-| 2 | Authorization levels |
  
-1.	Authentication				
+<!-- 1.	Authentication				
 2.	Authorization levels
 3.	Create reports for supervisor
 4.	Send verification code after login
@@ -158,12 +156,26 @@ Functional Requirements: Which are the essential things (functions) we want the 
 12.	Advisor can remove or give permission to allow student to add/delete courses
 13.	Student can view his courses
 14.	Supervisor (admin) can add new user
-15.	Supervisor (admin) can delete a user
+15.	Supervisor (admin) can delete a user -->
 
 ### 3.4 Non-functional requirements
 Non-Functional Requirements: The behavior of the system like user experience, general characteristics and some features.
 
-1.	Responsive website
+| No. | Requirements |
+| - | ----- |
+| 1 | Responsive website |
+| 2 | Usability: How easily users will interact with the web |
+| 3 | Reliability: Reduce or remove all the bugs |
+| 4 | Mobile version or an app |
+| 5 | Color blind mode |
+| 6 | Dark mode |
+| 7 | Provide courses with time |
+| 8 | Prioritize or suggest important courses for student |
+| 9 | Notify advisor if student change any course without permission |
+| 10 | The application should work in most browser such as Safari, Firefox |
+| 11 | Provide auto-register button that register student automatically depending on student data |
+
+<!-- 1.	Responsive website
 2.	Usability: How easily users will interact with the web
 3.	Reliability: Reduce or remove all the bugs
 4.	Mobile version or an app
@@ -173,7 +185,7 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 8.	Prioritize or suggest important courses for student
 9.	Notify advisor if student change any course without permission
 10.	The application should work in most browser such as Safari, Firefox.
-11.	Provide auto-register button that register student automatically depending on student data
+11.	Provide auto-register button that register student automatically depending on student data -->
 
 ### 3.5 Conclusion
 In conclusion, chapter 3 should provide us with all requirements we need to build the system or what is important to our system and what is not important. Therefore, we will evaluate system according to these requirements. 
