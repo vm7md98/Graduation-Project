@@ -533,8 +533,25 @@ Diagrams or pictures are among the best and oldest forms of human communication 
 
 **Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 34`
 
+#### 4.2.6.1 Context level Diagram
+In the below diagram, **Auto-register system** is the main process, or we can call it **process 0**, is the process that represents the entire information system. There are eight entities Student, Advisor, Plan offering system, Course offering system, Advisor management system, Academic history system and Department. `Figure 35`
 
-#### 4.2.4.8 Design Principles
+![Figure 35](https://user-images.githubusercontent.com/56771415/189233296-a4145d8f-2472-4656-8b47-feaf3eb7f948.png)
+
+#### System Description
+The system provides the specific Plans for each student and generates reports.
+
+The system filters out those courses that cannot be selected by students because their 
+pre-requisites, GPA , and semester are not satisfied. Repeated courses are also added to the plan.
+
+The student makes Plan selections.
+
+The advisor has permission to edit or change plans for students.
+
+The student can edit or change courses depending on the filtered courses.
+
+The system sends confirmation to students and generates reports for the department.
+
 #### 4.2.4.8 Design Principles
 #### 4.2.4.8 Design Principles
 #### 4.2.4.8 Design Principles
