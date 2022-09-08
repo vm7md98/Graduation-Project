@@ -123,6 +123,11 @@ The first and foremost purpose of the assignment was to test and analyze the who
 
 ### 3.3 Functional requirements
 Functional Requirements: Which are the essential things (functions) we want the system to do so we can focus on the important thing and not get distracted. (Specifies things the system should do)
+
+| No. | Requirements |
+| - | ----- |
+| 1 | Authentication |
+| 2 | Authorization levels |
  
 1.	Authentication				
 2.	Authorization levels
