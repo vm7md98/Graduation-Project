@@ -204,7 +204,7 @@ The entity-relationship diagram part is also tricky because there should never b
 Education is one of the major concerns for every state in the present time. Everyone and every country are focusing on the improvement in education system. According to research, the adult literacy rate in Arab Emirates is increased from 53% to 93% and this rate is recorded from 1975 to 2015 and now these days it is improving more. the primary concern of all the states these days. The average increase in literacy rate is 21.02%. With the growing literacy rate of course, we can say that people are getting admissions in different educational institutes rapidly.
 
 So, to takeover this huge amount of registrations day by day, every institution whether it’s a school, college, or university they want an efficient and automatic registration system that fills up their needs and make the registration process easy for both institute and the students. These automatic systems will reduce the workload and work forces in the college. This project is all about that online registration system named as HCT registration system. This system is going to solve all these registration and management problems.
-
+<!-- 
 ### 4.2	Testing Techniques
 In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
 
@@ -2362,3 +2362,4 @@ For future plan we don’t think we will continue this project anymore for sever
 - [4] 	“Testing a Website: Best Practices” [Online]. Available: https://www.heromotocorp.com/en-in/uploads/Annual_Reports/pdf/20130315113443-pdf-68.pdf#page=1. [Accessed 21 3 2022].
 - [5] 	“WebSite Testing. Software Research, Inc.” [Online]. Available: http://www.lieb.com/Readings/evalid%20site%20testing.pdf#page=1. [Accessed 12 2 2022].
 - [6] 	ZER-0-NE, “Comparison of JWT and OAuth 2.0 authorisation,” [Online]. Available: https://core.ac.uk/download/pdf/159753962.pdf#page=1. [Accessed 24 9 2021].
+ -->
