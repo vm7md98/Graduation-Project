@@ -459,21 +459,27 @@ Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity
 
 #### Symbols and Notation
 ![Figure 24](https://user-images.githubusercontent.com/56771415/189231987-5fa7eee4-5242-4df4-913d-47c29a378b87.png)
+
 **Main Task**: main task always starts with number 0. `Figure 24`
 
 ![Figure 25](https://user-images.githubusercontent.com/56771415/189232069-f2259ab1-9dad-4794-8eac-10527279a3a4.png)
+
 **Sub-Task**: sub-task always starts with number 1 or more. `Figure 25`
 
 ![Figure 26](https://user-images.githubusercontent.com/56771415/189232118-d24a46ca-e3a1-46cd-b366-086c70c52a3b.png)
+
 **letter “ * ”**: Tasks that are repeated. `Figure 26`
 
 ![Figure 27](https://user-images.githubusercontent.com/56771415/189232164-479936cc-6ad2-4367-bb69-0179724d601c.png)
+
 **letter “ O ”**: Tasks that are optional. `Figure 27`
 
 ![Figure 28](https://user-images.githubusercontent.com/56771415/189232200-bfc1dab2-25bc-4f1d-95b2-7491242379ed.png)
+
 **A line**: under a task means there are no more subtasks. `Figure 28`
 
 ![Figure 29](https://user-images.githubusercontent.com/56771415/189232216-1bb6befb-669e-4570-ad4c-e0edff74b823.png)
+
 **Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
 
 #### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
@@ -512,15 +518,19 @@ Diagrams or pictures are among the best and oldest forms of human communication 
 
 #### Symbols and Notation
 ![Figure 31](https://user-images.githubusercontent.com/56771415/189232725-8f809f0f-e8b4-4f09-93e7-544158571719.png)
+
 **Process**: Any process that produces , updates, and performs computations. `Figure 31`
 
 ![Figure 32](https://user-images.githubusercontent.com/56771415/189232735-009fd71e-58ff-4748-847d-0f83b423e491.png)
+
 **External entity**: External system that’s interact with the system by sending or receiving. `Figure 32`
 
 ![Figure 33](https://user-images.githubusercontent.com/56771415/189232738-dc34daf0-aa5a-4530-bd52-18890684bde6.png)
+
 **Data store**: Is where we store or hold data to use it later (database). `Figure 33`
 
 ![Figure 34](https://user-images.githubusercontent.com/56771415/189232748-1a664d7b-7cf3-4c2d-9b33-d22287c1995e.png)
+
 **Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 34`
 
 
