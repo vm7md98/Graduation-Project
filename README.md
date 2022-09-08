@@ -667,11 +667,11 @@ we will explain it on the next [Database section](https://github.com/vm7md98/Gra
 
 | Term | Meaning |
 | - | ----- |
-| Node.js | SAn open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data |
+| Node.js | An open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data |
 | Embedded JavaScript Templating (EJS) | Is template language/system that help user to generate html pages with plain JavaScript. It works like a master page in .asp, however, we will use it because it makes things easier when we need to output html using JavaScript |
 | Document Object Model (DOM) | Programming API for HTML and XML documents and it defines the logical structure of documents. The purpose of DOM is to allow language like JavaScript to style or structure your website |
-| Express.js | Is a back-end web application framework for Node.js |
-| Mongoose | Is a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB |
+| Express.js | It's a back-end web application framework for Node.js |
+| Mongoose | It's a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB |
 
 <!--
 ##### 4.3.3.1 Node.js
@@ -697,8 +697,8 @@ Database is a set of organized collection of structured information or data stor
 
 | Term | Meaning |
 | - | ----- |
-| NoSQL | SStand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data |
-| Atlas | IA service or a cloud service that provided by MongoDB |
+| NoSQL | Stand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data |
+| Atlas | A service or a cloud service that provided by MongoDB |
 
 <!--
 ##### 4.3.4.1 NoSQL
