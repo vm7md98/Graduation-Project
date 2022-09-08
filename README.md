@@ -45,9 +45,7 @@ Our solution to this problem will be create a new feature/service that will coun
 
 ## Chapter 2: Domain related Concepts and Systems
 ### 2.1	Introduction
-The first and foremost purpose of the assignment was to test and analyze the whole system that how it going to be built and how it’s going to fulfill the requirements of the institution. The analysis and design part provides a comprehensive idea about the view that how the system will look after the completion and how it will get, store and transfer the data and also gives an idea about the data processing inside the system. The system analysis part will provide the cost idea and also provide the UML model of this system so, it would be easy for the developers to read this document and start the development process step by step. The edge system analysis provides us is that it enables us to decrease the risks and deal will all the sensitive components efficiently. 
-
-
+The HCT registration system is going to fulfil all the requirements and problems stated in the problem statement and this system will deal with all those problems efficiently. It will enhance the speed of work and will reduce the workforce cost. The reliability will be increased by the use of HCT registration system. Because in traditional systems generally institutions store the data on documents, files or on spread sheets but now it will provide a specific database in which it will be easy to insert of delete some kind of data about any registration and system will also allow to modify the data.
 
 ### 2.2	Adopted Methodology
 As we know that the system is for a Higher College have clear requirements about new system, each and every term associated with the system is well defined and well explained that shows that the requirements of the system are very clear and understandable, due to the reason we choose to use the waterfall methodology for this project. Waterfall methodology is very basic software development methodology which were being use over the decades for software development and system development. 
@@ -59,8 +57,6 @@ This is sequential and hierarchal model thus easy to understand for people withi
 - II.	Focus on goal:
 Every team whether they are part of development team or part of design team, every person has a common goal to complete this project. They share common goal and stay stick on one point to complete their work in assigned time frame as in shown in `Figure 1`.
 
-
-
 - III.	Coordination between teams:
 This development model allows departmentalization and managerial controls. They focus to coordinate with each team and provide a specific time frame to each of them to complete their work on time. In this model team’s coordination is easy when a design team finish their work and complete design phase, they handover all the material to development team to start coding the design.
 
@@ -68,10 +64,10 @@ This development model allows departmentalization and managerial controls. They 
 
 Where the requirements of a system are not subject to change, we use waterfall methodology as this development methodologies gives us a clear roadmap and help us to focus on our goal. We are using waterfall for the project because it allows the owner to have control over system development team and system development progress can be access easily.
 
-
-
-### 2.3	Technical feasibility / Literature Review
+## 2.3 Pre-Project Phases
+#### 2.3.1 Technical feasibility / Literature Review
 In September 2020, SMC student had a course registered in his schedule with 12 credits. The problem is the system only allowing 10 students as minimum and they were 8 students only and the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. This problem leads to more academic issues. After discovering this problem, we read several pieces of literature about course registration systems.
+
 One of the literatures Ruben Estevez, S. R. (2013) found or mentions in his research that there are actually some researchers who built an auto-registered system in which they used "genetic algorithms to generate satisfactory schedules" and found that the algorithms reduced the time needed to create course schedules, and the resulting schedules satisfy instructors. There are also other researchers who have built a system using wireless application protocol which enables the student to register over mobile but still requires the presence of students on campus. However, the problem is none of them mention how the user feels about for example: "the usability of course, registration systems. Can users learn to use a course registration system easily? Can they use it properly? Are they satisfied with the system?".
 
 (LI, Y. ,2017) wrote a paper about Add-on Course Registration System and he/she talk about the problems, business component, technology component, Disadvantages and advantageous but he/she mention one feature about the system that I think it’s important and it will add a lot to our system which is Provide Course Recommendation Ranking and Reviews for example: student can tell how many credit he/she need to complete and what courses they have not scheduled for yet. Also, there is another paper written by Qurban A. Memon, M. S. (2005) about a similar feature called course priority, which suggests what course student should add or prioritize first.
@@ -80,46 +76,52 @@ Y. Peng, N. Liu, Y. Li and Z. Shao paper he says that the online course registra
 
 Also, Parthiban, K; Nataraj, R. V says Each program has its requirements. Course registration is crucial at educational institutions throughout the academic system. Managing course registration for a semester is a time-consuming job that incorporates various factors such as course design, teacher assignment, and timetable.
 
-Furthermore, course registration for FCFS-based registration will be more time consuming because it will need selecting numerous course instructors who will be teaching multiple courses. This study primarily focuses on investigating a Service Oriented Architecture by combining the curriculum, instructor management, and schedule management in order to provide students with a highly available, dependable online course registration platform. In our project we need a database to save our data and records after reading many papers we are looking about the difference between different types of databases. A. Boicea, F. Radulescu, Laura Ioana Agapin.   This paper compares and contrasts Oracle Database, a SQL database management system, and Mongo DB, a No SQL document-oriented database management system. Theoretical differences, features, constraints, integrity, distribution, system requirements, architecture, query, and insertion times are among the comparison factors.
+Furthermore, course registration for FCFS-based registration will be more time consuming because it will need selecting numerous course instructors who will be teaching multiple courses. This study primarily focuses on investigating a Service Oriented Architecture by combining the curriculum, instructor management, and schedule management in order to provide students with a highly available, dependable online course registration platform. In our project we need a database to save our data and records after reading many papers we are looking about the difference between different types of databases. A. Boicea, F. Radulescu, Laura Ioana Agapin.  
+This paper compares and contrasts Oracle Database, a SQL database management system, and Mongo DB, a No SQL document-oriented database management system. Theoretical differences, features, constraints, integrity, distribution, system requirements, architecture, query, and insertion times are among the comparison factors.
 We also researched the technical aspects, and we found that our project is possible to implement by using the MongoDB extension that the JavaScript programming language support. The most extensive defect of using this method is that we need to learn monody from scratch.
 
-
-### 2.4	Operational Feasibility
+#### 2.3.2 Operational Feasibility
 The proposed service will have a positive effect on the organization structure and procedures because it will be less interaction between student, advisor, and others, which means it will reduce the errors that’s made by humans; therefore, it will save time and effort. Our system will fit the current registration system as it is a new function of it, therefore it has a small effect on day-to-day operations. The only sensible change that may occur is the classes counter that the system is missing.
 
-### 2.5	Schedule Feasibility
+#### 2.3.3 Schedule Feasibility
 I used [MS Project](https://en.wikipedia.org/wiki/Microsoft_Project) to create a plan for the schedule and time management as shown in `Figure 2` and `Figure 3`.
 
 ![Figure 2](https://user-images.githubusercontent.com/56771415/188312927-d9e753c4-2964-4f67-8b8b-91f7d3d6fde0.png)
 ![Figure 3](https://user-images.githubusercontent.com/56771415/188312940-ece5cbce-602e-461c-9aa8-57d91d30e873.png)
 
 
-### 2.6	Economic Feasibility
-Here is the table that shows the cost in `Table 1`.
+#### 2.3.4 Economic Feasibility
+The above `Table 1` shows the balance and the cost for every asset we chose, it also shows if it's under or above our budget.
 
 ![Table 1](https://user-images.githubusercontent.com/56771415/188313100-99815d71-ca65-4d04-b784-b155e2f893ff.png)
 
-### 2.7	Risk Management
+### 2.4 Risk Management
 Risk management is the process of identifying, analyzing, and responding to project risks. It includes risk description, probability, impact, and how to mitigate these risks. Risk management also includes accepting risk.
 
-### 2.7.1 Risk Register
-Here is the table that shows the Register Risk in `Table 2`.
-
+#### 2.4.1 Risk Register
 ![Table 2](https://user-images.githubusercontent.com/56771415/188313245-e5a9f800-6c7b-47a5-b299-b099f947fe59.png)
 
+The above `Table 2` shows the risks we might face in this project and how we can reduce or remove the risk.
 
-### 2.8	Requirements gathering
+### 2.5	Requirements gathering
 Here is the table that shows the Requirements gathering in `Table 3`.
 
 ![Table 3](https://user-images.githubusercontent.com/56771415/188313282-e1c90283-8c03-45b5-9149-458242ed71fe.png)
 
-### 2.9	Conclusion
+### 2.6	Conclusion
 We believe that our system will solve two major problems we have in our current system, which is the lack of classes and the time needed to register for classes. We will solve the first problem which is lack of classes by counting the number of student for each course then display it in the form of report to supervisor which will give him accurate number for each course then he/she can decide how many classes he/she need to open and how many instructors needs for each course. For the second problem, our system will suggest or recommend courses to a student, depending on his/her semester or credit and prioritize the course the student need to complete first.
 By fixing these two problems, we will reduce the amount of interaction between the advisor and student and that will make course registration faster, easier and less stressful for both student and advisor.
 
+The significant challenge that we will face is to test our service on universities portals. Also, it won’t be easy to use the universities portal to test our code. In our project we need to learn the below skills/languages to create our service:
+
+- SQLDeveloper (Oracle) or MongoDB: For our database.
+- Node.js or PHP: To link our database to the service.
+- JavaScript (Vanilla or React Library) and Bootstrap: To create our service UI.
+
+
 ## Chapter 3: Computing-based Solution/System Analysis
 ### 3.1	Introduction
-The first and foremost purpose of the assignment was to test and analyze the whole system that how it going to be built and how it’s going to fulfill the requirements of the institution. The analysis and design part provides a comprehensive idea about the view that how the system will look after the completion. The system analysis part will provide Domain requirements, Functional requirements, and Non-functional requirements.
+The first and foremost purpose of the assignment was to test and analyze the whole system that how it going to be built and how it’s going to fulfill the requirements of the institution. The analysis and design part provides a comprehensive idea about the view that how the system will look after the completion and how it will get, store, and transfer the data and also gives an idea about the data processing inside the system. The system analysis part will provide the cost idea and also provide the UML model of this system so, it would be easy for the developers to read this document and start the development process step by step. The edge system analysis provides us is that it enables us to decrease the risks and deal will all the sensitive components efficiently.
 
 ### 3.2	Domain requirements
 - System must be efficient to fetch complete student information from the college system to calculate courses and generate plan for each student.
@@ -134,18 +136,12 @@ Functional Requirements: Which are the essential things (functions) we want the 
 | 1 | Authentication |
 | 2 | Authorization levels |
 | 3 | Create reports for supervisor |
-| 4 | Send verification code after login |
-| 5 | Send notification to students after drop/add any course |
-| 6 | Generate courses for students |
-| 7 | Calculate how many classes needed for each course |
-| 8 | Advisor can drop/add courses for students |
-| 9 | Students can drop/add courses |
-| 10 | Checking if student need to repeat the course |
-| 11 | Provide courses depending on the student data such as GPA, semester |
-| 12 | Advisor can remove or give permission to allow student to add/delete courses |
-| 13 | Student can view his courses |
-| 14 | Supervisor (admin) can add new user |
-| 15 | Supervisor (admin) can delete a user |
+| 4 | Send notification to students |
+| 5 | Generate plan for students |
+| 6 | Calculate how many classes needed for each course |
+| 7 | Advisor: Edit Student Plan |
+| 8 | Student: Edit Plan |
+| 9 | Checking if student need to repeat the course |
  
 <!-- 1.	Authentication				
 2.	Authorization levels
@@ -168,17 +164,17 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 
 | No. | Requirements |
 | - | ----- |
-| 1 | Responsive website |
+| 1 | Provide multiple plans for students |
 | 2 | Usability: How easily users will interact with the web |
 | 3 | Reliability: Reduce or remove all the bugs |
-| 4 | Mobile version or an app |
-| 5 | Color blind mode |
+| 4 | Front End: CSS and Bootstrap ...etc |
+<!-- | 5 | Color blind mode |
 | 6 | Dark mode |
 | 7 | Provide courses with time |
 | 8 | Prioritize or suggest important courses for student |
 | 9 | Notify advisor if student change any course without permission |
 | 10 | The application should work in most browser such as Safari, Firefox |
-| 11 | Provide auto-register button that register student automatically depending on student data |
+| 11 | Provide auto-register button that register student automatically depending on student data | -->
 
 <!-- 1.	Responsive website
 2.	Usability: How easily users will interact with the web
@@ -193,11 +189,21 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 11.	Provide auto-register button that register student automatically depending on student data -->
 
 ### 3.5 Conclusion
-In conclusion, chapter 3 should provide us with all requirements we need to build the system or what is important to our system and what is not important. Therefore, we will evaluate system according to these requirements. 
+Well, in this task we faced many challenges unfortunately or luckily as you can say because this task gave us hard time but also provided us with knowledge and problem-solving techniques and it was a great experience overall. The major issue that we faced was in the flow chart, we were facing problems in understanding the case because we were trying our best to do it perfectly. So, we repeated the flow chart 4 times and then we got the best one. In this whole scenario, the software development methodology was also a big task because the success ratio of development of the system and especially the system analysis document depends on the methodology that we choose to develop the system, as we all know that it depends on the idea of the system that are we clear about the requirements? And there is no need to change the requirements in the future? Then we choose the best method and suggest developing with that methodology. 
+Cost management is also a huge task when we plan for a system because the estimated cost enables us to use the resources according to the budget and also if we need to outsource for some resources then we feel free to hire someone else for the specific task. 
+The entity-relationship diagram part is also tricky because there should never be any mistake and all the entities and their relationships with each other should follow the rules and regulations of UML modeling. The topics, those students should read before doing these kinds of tasks are as follows:
 
-## Chapter 4: Computing-based Solution/System Design, Implementation, Test and validation
+- Development Methodologies
+- UML Modeling
+- ERD
+- Cost Analysis
+- Risk Management 
+
+## Chapter 4: Computing-based Solution/System Design, Implementation, and Test
 ### 4.1 Introduction
-The purpose of this chapter is to check if the product is ready to be in the stage of full production and product launch also, we will explain the two different phases we went through which design and implantation. 
+Education is one of the major concerns for every state in the present time. Everyone and every country are focusing on the improvement in education system. According to research, the adult literacy rate in Arab Emirates is increased from 53% to 93% and this rate is recorded from 1975 to 2015 and now these days it is improving more. the primary concern of all the states these days. The average increase in literacy rate is 21.02%. With the growing literacy rate of course, we can say that people are getting admissions in different educational institutes rapidly.
+
+So, to takeover this huge amount of registrations day by day, every institution whether it’s a school, college, or university they want an efficient and automatic registration system that fills up their needs and make the registration process easy for both institute and the students. These automatic systems will reduce the workload and work forces in the college. This project is all about that online registration system named as HCT registration system. This system is going to solve all these registration and management problems.
 
 ### 4.2	Testing Techniques
 In this section we will explain how we test our product which is a web application, and how we may deploy the application in the cloud. In this part we will not test the product in terms of code like last assignment, therefore we will not use things like Black-Box or Grey-Box but the test will be more general or from user perspective, for example usability test or functionalities test.
