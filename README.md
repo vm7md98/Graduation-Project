@@ -638,6 +638,32 @@ A programming language is a formal language comprising a set of strings that pro
 #### 4.3.2 Front-End
 Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
 
+| No. | Requirements |
+| - | ----- |
+| HTML | Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content |
+| CSS | Stands for Cascading Style Sheets is one of the style sheet languages like DSSSL and XSL which responsible of the presentation of the website such as layout, colors, fonts |
+| JavaScript | Used to make our website more interactive with users like drop-down menus and contact forms |
+| jQuery | Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more |
+
+
+
+
+| 5 | Generate plan for students |
+| 6 | Calculate how many classes needed for each course |
+| 7 | Advisor: Edit Student Plan |
+| 8 | Student: Edit Plan |
+| 9 | Checking if student need to repeat the course |
+| 1 | Authentication |
+| 2 | Authorization levels |
+| 3 | Create reports for supervisor |
+| 4 | Send notification to students |
+| 5 | Generate plan for students |
+| 6 | Calculate how many classes needed for each course |
+| 7 | Advisor: Edit Student Plan |
+| 8 | Student: Edit Plan |
+| 9 | Checking if student need to repeat the course |
+
+
 ##### 4.3.2.1 HTML
 Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content.
 
