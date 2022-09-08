@@ -539,26 +539,187 @@ In the below diagram, **Auto-register system** is the main process, or we can ca
 ![Figure 35](https://user-images.githubusercontent.com/56771415/189233296-a4145d8f-2472-4656-8b47-feaf3eb7f948.png)
 
 #### System Description
-The system provides the specific Plans for each student and generates reports.
+- The system provides the specific Plans for each student and generates reports.
+- The system filters out those courses that cannot be selected by students because their pre-requisites, GPA , and semester are not satisfied. Repeated courses are also added to the plan.
+- The student makes Plan selections.
+- The advisor has permission to edit or change plans for students.
+- The student can edit or change courses depending on the filtered courses.
+- The system sends confirmation to students and generates reports for the department.
 
-The system filters out those courses that cannot be selected by students because their 
-pre-requisites, GPA , and semester are not satisfied. Repeated courses are also added to the plan.
+#### 4.2.6.2 Level-0 Diagram
+In the context diagram we represent the entire system with a single process, which is **process 0**. However, in **level 0** we represent each process as **sub-processes** and now we can add **data store**, they are together form a complete system. `Figure 36`
 
-The student makes Plan selections.
+**Sub-processes**: Select Plan 0.1 - Get Information 2.0 - Filter Course 3.0.
 
-The advisor has permission to edit or change plans for students.
+**Data store**: Plans Offered and Courses **D1** , Approved Plan **D2**
 
-The student can edit or change courses depending on the filtered courses.
+![Figure 36](https://user-images.githubusercontent.com/56771415/189233869-bd911daa-eaa9-4603-b6cf-064512f4aa1c.png)
 
-The system sends confirmation to students and generates reports for the department.
+#### Level-0 Diagram: Process-1.0, Select Plan
+The student selects which of the planes he prefers. The selected plan (approved plan) is stored. Both student and advisor can make modification if there are courses. Repeat courses cannot be removed. Send confirmation and produce report, then send it to department.
 
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
-#### 4.2.4.8 Design Principles
+#### Level-0 Diagram: Process-2.0, Get Semester Information
+Advisors receive student list from the Advisor Management System.
+Courses offered received from the Course Offering System.
+
+#### Level-0 Diagram: Process-3.0, Filter Course
+Checks if student needs to repeat courses and student status. 
+Other semester courses for the student are provided through Plan Offering System and stored. 
+
+#### 4.2.6.3 Level-1 Diagram
+At level 1 diagram we look at the processes that make up level 0 diagram but with more details. `Figure 37`
+
+Outside the rectangular boundary are external entities and data store however they are out of scope of this level 1 diagram.
+
+![Figure 37](https://user-images.githubusercontent.com/56771415/189234076-3734e3d5-3a65-43ef-9e0d-452660c025fe.png)
+
+#### 4.2.6.4 Discussion
+The first problem we faced in this report was understanding what context, level 0, level 1 diagrams are because many articles and papers contradict each other and because of that we took a lot of time and effort. To solve this problem, we read even more articles and watched many videos. In the end, the problem was there are two types or methods to create context, level 0, level 1 which are old and new. However, **we chose the old system because it is more logical**. 
+
+**Old method**: Starting with creating context then level 0 then level 1 and continue.
+
+**New method**: Starting with creating level 0 then 1 then 2 and continue.
+
+#### 4.2.7 UML Use Case
+#### Use case definition
+A use case diagram is used to describe the interaction between actors and the system that you want to observe, which is Auto-register system. Use case diagram has 4 elements: system, actor, relationships and use cases. Unlike context diagram use case specify how the system interacts with actors without worrying about the details of how that functionality is implemented.
+
+#### Symbols and Notation
+
+![Figure 38](https://user-images.githubusercontent.com/56771415/189234320-980008b8-148c-4b32-b1c0-22b9adc5c236.png)
+
+**Actor**: Stick figures is an end-user but not necessarily sometime can be non-human. `Figure 38`
+
+![Figure 39](https://user-images.githubusercontent.com/56771415/189234328-12c5b864-d9ac-4a65-a95e-3a5919ac019d.png)
+
+**System boundary**: A system boundary defines the scope of what a system will be. `Figure 39`
+
+![Figure 40](https://user-images.githubusercontent.com/56771415/189234336-b3efd3d7-80dc-45fc-b6dc-93a61f35ffac.png)
+
+**Use case**: A use case represents a functionality of the system. `Figure 40`
+
+![Figure 41](https://user-images.githubusercontent.com/56771415/189234340-d4959b45-a055-45ce-8b82-193e617d9e58.png)
+
+**Relationships or Associations**: Used to describe the relationships between actors and the use cases. `Figure 41`
+
+
+#### 4.2.7.1 Use case diagram
+
+![Figure 42](https://user-images.githubusercontent.com/56771415/189234581-f2554878-4955-4ed9-a21b-6f1984d11957.png)
+
+The above `Figure 42` shows the use case diagram of our system.
+
+#### System Description
+
+- All end-users of the system must authenticate to use its services.
+
+- Student must select a plan then, approve it.
+
+- All end-users can manage plan.
+
+- Only supervisor can read report.
+
+
+#### 4.2.8 State Diagram
+![Figure 43](https://user-images.githubusercontent.com/56771415/189234889-82a83c4d-ebb4-44c3-84e7-f83a6ede9d78.png)
+
+The above `Figure 43` shows the state diagram of our system.
+
+#### 4.2.9 Sequence Diagram
+![Figure 44](https://user-images.githubusercontent.com/56771415/189234906-ba1d27e6-d580-4a2b-a6fa-64dc96cbdc7c.png)
+
+The above `Figure 44` shows the sequence diagram of our system.
+
+#### 4.3 Development
+We classify our development tools into these four categories **Programming language, Database, Network configuration, along with other technologies**.
+
+#### 4.3.1 Programming language
+A programming language is a formal language comprising a set of strings that produce various kinds of machine code output or simply mean a way to communicate with computers. We classify programming languages into two categories front-end and Back-end.
+
+#### 4.3.2 Front-End
+Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
+
+#### 4.3.2.1 HTML
+Stands for Hypertext Markup Language is the basic building block of almost any website. The purpose of HTML is to define meaning and structure for web content.
+
+#### 4.3.2.2 CSS
+Stands for Cascading Style Sheets is one of the style sheet languages like DSSSL and XSL which responsible of the presentation of the website such as layout, colors, fonts.
+
+#### 4.3.2.3 JavaScript
+Used to make our website more interactive with users like drop-down menus and contact forms.
+
+#### 4.3.2.4 jQuery
+Is JavaScript library and the purpose of it to simplify HTML DOM tree traversal and manipulation, as well as event handling and more.
+
+#### 4.3.3 Back-End
+Back-end or server-side is everything that happens behind-the-scenes activities such as communicating with servers or databases. However, we removed the database-side because
+we will explain it on the next section ####4.3.4 Database.
+
+#### 4.3.3.1 Node.js
+An open-source, cross-platform, back-end JavaScript runtime environment and it uses JavaScript. The purpose of node.js in this project is to handle all the operations on the server-side such as generate pages, read and write files, collect form data.
+
+#### 4.3.3.2 Embedded JavaScript Templating (EJS)
+Is template language/system that help user to generate html pages with plain JavaScript. It works like a master page in .asp, however, we will use it because it makes things easier when we need to output html using JavaScript.
+
+#### 4.3.3.3 Document Object Model (DOM)
+Programming API for HTML and XML documents and it defines the logical structure of documents. The purpose of DOM is to allow language like JavaScript to style or structure your website.
+
+#### 4.3.3.4 Express.js
+Is a back-end web application framework for Node.js.
+
+#### 4.3.3.5 Mongoose
+Is a library for MongoDB and Node.js that allows you to define schemas with strongly typed data or to make simple it’s an object modeling tool for MongoDB.
+
+## -- ##
+
+#### 4.3.4 Database
+Database is a set of organized collection of structured information or data stored electronically in a computer system. There are many types of databases, but we will use NoSQL database.
+
+#### 4.3.4.1 NoSQL
+Stand for not only SQL is  which mean you can use both SQL and other technologies like JSON to store and retrieve data. There are four types, but we will use **Document-Oriented Database** and to specific we will use MongoDB, this type of database used JSON like document to store data.
+
+#### 4.3.4.2 Atlas
+A service or a cloud service that provided by MongoDB.
+
+#### 4.3.5 Network configuration
+
+
+#### 4.3.5.1 Heroku
+
+
+#### 4.3.5.2 Git
+
+
+#### 4.3.5.3 Configure/deploy
+
+
+#### 
+
+
+#### 
+
+
+#### 
+
+
+#### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
