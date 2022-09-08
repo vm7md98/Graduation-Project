@@ -1624,6 +1624,21 @@ Picture of student_courses page in atlas `Figure 54`
 ![Figure 54](https://user-images.githubusercontent.com/56771415/188986892-70d5ae29-0bbc-4d9b-866d-09e890b626ef.png)
 
 ### 4.7.9 Algorithm
+#### Login
+We used this algorithm in `Code 46` and the purpose and technical details in the same section however the steps are:
+
+1- Get email and password.
+2- Search in the database using the provided email.
+3- Store the result in variable we called it user.
+4- If statement.
+  if user exist
+     compare the password with the hashed password in the database
+        if both password matched
+                  return user
+      else 
+             throw an error    
+  else
+       throw and error
 
 
 
