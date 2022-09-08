@@ -738,7 +738,8 @@ Since we will use Heroku we will explain the steps as developer and for end-user
 | - | ----- | ---- |
 | 1 | Create Account in [Heroku](https://www.heroku.com) & Login (Free) |    |
 | 2 | Download [Heroku Command Line Interface (CLI)](https://devcenter.heroku.com/articles/heroku-cli) and [Git](https://git-scm.com/downloads) |   |
-| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2`| 
+| 3 | Using Command Line Interface like CMD or Git Bash login to Heroku `Code 2`
+| 
 ```CMD 
 C:\Users\User>heroku login
   >> Warning: heroku update availabe from 7.53.0 to 7.59.0. 
