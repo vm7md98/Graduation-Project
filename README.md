@@ -1941,42 +1941,376 @@ module.exports.studentList_get = async (req, res) => {
 ```
 - report_get()
 
-```C#
+This function is responsible for rendering **report.ejs** (report page) and send **JSON** object contain the webpage title also it will send **course list** to the client so which contain information about how many student in each course
 
+```C#
+/**
+ * report get
+ */
+module.exports.report_get = async function (req, res) {
+  const course = await Course.find({});
+
+
+  res.render("report", { title: "report", course });
+};
 ```
 - register_get()
 
-```C#
+This function is responsible for rendering **register.ejs** (register page) and send **JSON** object contain the webpage title also it will send **course list** to the client so which contain information about the course so the student can register the course
 
+```C#
+/**
+ * register get
+ */
+module.exports.register_get = async (req, res) => {
+  //take jwt from cookie
+  const a = req.cookies.jwt;
+  //decode jwt
+  const decode = jwt_decode(a);
+  // search on database for the user we want
+  const user = await User.findOne({ id: decode.id });
+
+  const student = await Student.findOne({ id: user.id });
+
+  const course = await Course.find({ semester: student.semester });
+
+  res.render("register", { title: "register", course });
+};
 ```
 - register_post()
 
-```C#
+This function will be triggered if the user want to register any course.
 
+```C#
+**
+ * register get
+ */
+module.exports.register_post = async (req, res) => {
+  const { code } = req.body;
+  //take jwt from cookie
+  const a = req.cookies.jwt;
+  //decode jwt
+  const decode = jwt_decode(a);
+  // search on database for the user we want
+  const user = await User.findOne({ id: decode.id });
+
+  const student = await Student.findOne({ id: user.id });
+
+  await Student_Course.insertMany([
+    {
+      id: student.id,
+      code,
+    },
+  ])
+    .then(function () {
+      console.log("Data inserted"); // Success
+    })
+    .catch(function (error) {
+      console.log(error); // Failure
+    });
+
+  await Course.updateMany({ code: code }, { $push: { id: [student.id] } });
+
+  otherFunction.sendEmailRegister(user.email);
+
+  res.send("inserted course");
+};
 ```
 - showCourse_Get()
 
-```C#
+This function is responsible for rendering **showCourse.ejs** (showCourse page) and send **JSON** object contain the webpage title also it will send **course list** so the student can see his courses.
 
+```C#
+**
+ * showCourse_Get get
+ */
+module.exports.showCourse_Get = async (req, res) => {
+  try {
+    const a = req.cookies.jwt;
+    const courseArray = [];
+    //decode jwt
+    const decode = jwt_decode(a);
+
+    // search on database for the user we want
+    const user = await User.findOne({ id: decode.id });
+
+    const StudentCourses = await Student_Course.findOne({ id: user.id });
+
+    const course = await Course.find({ code: StudentCourses.code });
+    res.render("showCourse", { title: "show Course", course });
+  } catch (err) {
+    res.status(500).send("You have no courses");
+  }
+};
 ```
 - delete()
 
-```C#
+This function is just to help in development stage which will clear all the database.
 
+```C#
+/**
+ * delete get
+ */
+module.exports.delete = async (req, res) => {
+  await User.deleteMany({ role: "ST" });
+  await User.deleteMany({ role: "AV" });
+  await Advisor.deleteMany({});
+  await Student.deleteMany({});
+  await Student_Course.deleteMany({});
+  await Course.updateMany(
+    { $or: [{ semester: 1 }, { semester: 2 }] },
+    { id: [] }
+  );
+  await VerifyCode.deleteMany({});
+  res.send("delete");
+};
 ```
 - Cookies
 
-```C#
+These function are related to cookies.
 
+```C#
+/**
+ * jwt function
+ */
+const jwt_secret = "Dfdfdfsdfsdfsdfsdfsdfsdfsdcxcsdfs";
+
+const maxAge = 3 * 24 * 60 * 60;
+
+const createToken = (id, role, verify) => {
+  return jwt.sign({ id, role: role, verify }, jwt_secret, {
+    expiresIn: maxAge,
+  });
+};
 ```
 
 ### 4.7.11 authMiddleware.js
+These file contain most middleware we created and the purpose of this middleware is to user rules and user status. For example redirect the user to home page if he does not have access to report page.
+#### Functions
+Middleware are just code or functions therefore in this section we will list all middleware functions.
+
+- requireAuth()
+
+To check if the user is authenticated. If he is not authenticated it will redirect him to login page.
+
+```C#
+//check if user is authenticate or no
+const requireAuth = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        res.redirect("/login");
+      } else {
+        next();
+      }
+    });
+  } else {
+    res.redirect("/login");
+  }
+};
+```
+
+- requireAuthLogIn() & requireAuthVerify()
+
+Both of them are functions to check if the user verified or no.
+
+```C#
+//check cant back to login page
+const requireAuthLogIn = (req, res, next) => {
+  const token = req.cookies.jwt;
+
+  if (token) {
+    jwt.verify(token, jwt_secret, async (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.redirect("/");
+      } else {
+        if (decodedToken.verify === "Not Verified") {
+          next();
+        } else {
+          res.redirect("/");
+        }
+      }
+    });
+  } else {
+    next();
+  }
+};
+```
+
+```C#
+//check if user is verified or not
+const requireAuthVerify = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.redirect("/");
+      } else {
+        if (decodedToken.verify === "Verified") {
+          next();
+        } else {
+          res.redirect("/authentication");
+        }
+      }
+    });
+  } else {
+    res.redirect("/authentication");
+  }
+};
+```
+
+- requireAuthAdmin()
+
+To check if the user role is admin or no. If not he will be redirected to homepage.
+
+```C#
+//check if user is authenticate or no for signup page (admin)
+const requireAuthAdmin = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.redirect("/");
+      } else {
+        if (decodedToken.role === "AD") {
+          next();
+        } else {
+          res.redirect("/");
+        }
+      }
+    });
+  } else {
+    res.redirect("/");
+  }
+};
+```
+
+- requireAuthAdmin_post()
+
+It will check if you are using browser.
+
+```C#
+/check if user is authenticate or no for signup page (admin) but this is for third pary program such as postman
+const requireAuthAdmin_post = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.send("You are not  authorized to this page");
+      } else {
+        if (decodedToken.role === "AD") {
+          next();
+        } else {
+          res.send("You are not authorized to this page");
+        }
+      }
+    });
+  } else {
+    res.send("You are not authorized to this page");
+  }
+};
+```
+
+- requireAuthAdvisor()
+
+To check if the user role is advisor or no. If not he will be redirected to homepage.
+
+```C#
+//check if user is authenticate or no for studentlist page (advisor)
+const requireAuthAdvisor = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.redirect("/");
+      } else {
+        if (decodedToken.role === "AV") {
+          next();
+        } else {
+          res.redirect("/");
+        }
+      }
+    });
+  } else {
+    res.redirect("/");
+  }
+};
+```
+
+- requireAuthStudent()
+
+To check if the user role is student or no. If not he will be redirected to homepage.
+
+```C#
+//check if user is authenticate or no for register page (student)
+const requireAuthStudent = (req, res, next) => {
+  //take the token and store it
+  const token = req.cookies.jwt;
+
+  //check if token exists or no and verified
+  if (token) {
+    jwt.verify(token, jwt_secret, (error, decodedToken) => {
+      if (error) {
+        console.log(error.message);
+        res.redirect("/");
+      } else {
+        if (decodedToken.role === "ST") {
+          next();
+        } else {
+          res.redirect("/");
+        }
+      }
+    });
+  } else {
+    res.redirect("/");
+  }
+};
+```
+
+#### Finally we export all the function so we can use it.
+
+```C#
+module.exports = {
+  requireAuth,
+  checkUser,
+  requireAuthAdmin,
+  requireAuthAdvisor,
+  requireAuthAdmin_post,
+  requireAuthStudent,
+  requireAuthLogIn,
+  requireAuthVerify,
+};
+```
 
 ## Chapter 5: Conclusion
 ### 5.1	Summarize
-### 5.2	Reflection
-### 5.3	Future development
+Our project is Auto-Registration system which allow student to register with much greater ease compared to current system also, it will remove or reduce the needs of the advisor since courses is offered by the system and all the analysis which involves checking **GPA**, **repeated courses** and, **student semester** is done by the system which means it will reduce time and  human error for both advisor and student. At end the system will calculate the number of students in every course and suggest how many classes we need for each course and that will help the collage to decide how many classes they need to open for the next semester.
 
+### 5.2	Reflection
+After finishing the first part of this project, now I can say that I'm more familiar with the structure of building/creating a project from zero. It's really useful and helpful to know how to start a project from the ground and organize/split the work on team members. I learned how to organize my and the team members time by using the MS Project application with helped us to estimate the time we need to work on every part. I also learned how to combine everything I learned in my previous 4 years in one project and now it makes since of why having diagrams which it means it saves a lot of time from the start instead of doing it without it. It really helped us to reduce time and errors from the start of the project.
+
+### 5.3	Future development
+For future plan we don’t think we will continue this project anymore for several reasons but most important reason is registration system is a big project involves many rules and regulations which take huge amount time to make sure that the system is working without any problem. Also I think the technologies we used is unsuitable for this type of project especially our database technology which **NoSQL** because there is no consistency or much harder to make the data consistent compared to **SQL**. However, I think now we can decide what technology is better for us in our future projects.
 
 ## References
 - [1] 	“Usability testing on website wadaya,” [Online]. Available: https://iopscience.iop.org/article/10.1088/1742-6596/1165/1/012012/pdf#page=1. [Accessed 13 4 2022].
