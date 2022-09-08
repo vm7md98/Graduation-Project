@@ -404,23 +404,23 @@ Planning or designing an evaluation for a project is a critical step in every pr
 #### 4.2.4.1 Design Principles
 The rules a designer must follow to create an effective and attractive product or simply what you should do and don’t and it based on knowledge, experience, and common-sense. There are five Design Principles rules Visibility, Feedback, Affordances, Constraints, Consistency.
 
-- **Visibility- **
+- ** Visibility **
 
 This principle is responsible for how the product or what the product is and what used for. 
 
-- **Feedback- **
+- ** Feedback **
 
 This principle is responsible for making a clear response on what has been accomplished by the user. 
 
-- **Affordances- **
+- ** Affordances **
 
 This principle is responsible for how the product is used.
 
-- **Constraints- **
+- ** Constraints **
 
 This principle is responsible for restricting the possible actions that can be performed.
 
-- **Consistency- **
+- ** Consistency **
 
 This principle is responsible for creating a uniform interface or having similar operations and similar elements for similar tasks.
 
