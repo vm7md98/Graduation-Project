@@ -252,11 +252,13 @@ Relational design is the actual design of the database. We have two ERDs one for
 The above `Figure 4` & `Figure 5` shows the SQL Relational Diagram and NoSQL Relational Diagram.
 
 #### 4.2.2 JSON
-Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
+Here is the JSON as `Code 1` shows below.
 
+<!--
 ![Figure 6](https://user-images.githubusercontent.com/56771415/189226954-cd9d94ad-b144-45d0-9775-0d14e8282d5c.png)
 ![Figure 7](https://user-images.githubusercontent.com/56771415/189226968-f0122124-2d9c-4ddc-b161-9b1f6b882a7d.png)
 ![Figure 8](https://user-images.githubusercontent.com/56771415/189226976-2446ba68-68d3-475b-b6af-e43ca23460ed.png)
+-->
 
 ```C#
 [
