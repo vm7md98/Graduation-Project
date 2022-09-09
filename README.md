@@ -122,6 +122,8 @@ Risk management is the process of identifying, analyzing, and responding to proj
 
 The above `Table 2` shows the risks we might face in this project and how we can reduce or remove the risk.
 
+##
+
 ### 2.5	Requirements gathering
 Here is the table that shows the Requirements gathering in `Table 3`.
 
@@ -139,8 +141,6 @@ The significant challenge that we will face is to test our service on universiti
 - Node.js or PHP: To link our database to the service.
 - JavaScript (Vanilla or React Library) and Bootstrap: To create our service UI.
 
-
-##
 
 ## Chapter 3: Computing-based Solution/System Analysis
 ### 3.1	Introduction
@@ -491,6 +491,8 @@ These types of people are blind, or they have any kind of vision loss, and they 
 ##### 4.2.4.4 Discussion
 Designing a website is one of the hardest parts of this project for several reasons. First, we can’t ask people about our design or get feedback from them because there is no time and it’s hard to find people. Second, we can’t design a website that is accessible for all types of people such as people with **Motor Skills/Physical Disabilities** because of time. However, we didn’t include **Usability criteria** because we need to develop the project (website) first then we can test it to see if it meets the criteria or not.
 
+##
+
 #### 4.2.5 Hierarchical Task Analysis (HTA)
 Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity in terms of how to reach the goals. It focuses on physical and observable actions, and also includes actions not related to software.
 
@@ -518,8 +520,6 @@ Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity
 ![Figure 29](https://user-images.githubusercontent.com/56771415/189232216-1bb6befb-669e-4570-ad4c-e0edff74b823.png)
 
 **Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
-
-##
 
 ##### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
 The first step to draw a **HTA** diagram is to make something called **tasks breakdown** which simply means breaking every task you have into smaller tasks. To make a task breakdown we need these steps:
@@ -645,7 +645,6 @@ A use case diagram is used to describe the interaction between actors and the sy
 
 **Relationships or Associations**: Used to describe the relationships between actors and the use cases. `Figure 41`
 
-
 ##### 4.2.7.1 Use case diagram
 
 ![Figure 42](https://user-images.githubusercontent.com/56771415/189234581-f2554878-4955-4ed9-a21b-6f1984d11957.png)
@@ -662,20 +661,17 @@ The above `Figure 42` shows the use case diagram of our system.
 
 - Only supervisor can read report.
 
-
-##
-
 #### 4.2.8 State Diagram
 ![Figure 43](https://user-images.githubusercontent.com/56771415/189234889-82a83c4d-ebb4-44c3-84e7-f83a6ede9d78.png)
 
 The above `Figure 43` shows the state diagram of our system.
 
-##
-
 #### 4.2.9 Sequence Diagram
 ![Figure 44](https://user-images.githubusercontent.com/56771415/189234906-ba1d27e6-d580-4a2b-a6fa-64dc96cbdc7c.png)
 
 The above `Figure 44` shows the sequence diagram of our system.
+
+##
 
 ## 4.3 Development
 We classify our development tools into these four categories **Programming language, Database, Network configuration, along with other technologies**.
