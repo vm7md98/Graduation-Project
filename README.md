@@ -384,6 +384,7 @@ High-fidelity wireframes are more complete version of the end product than low f
 - Approvement
 - Report
 
+##
 
 ##### 4.2.3.3 Login
 ![Figure 9](https://user-images.githubusercontent.com/56771415/189227660-f72e1121-239d-4ee7-9207-64dc8a2cc12f.png)
@@ -393,6 +394,8 @@ High-fidelity wireframes are more complete version of the end product than low f
 #### Description 
 The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page you will see when you enter the portal or website. First you need to Enter your email and password in the **textboxes**, then click on **button**. After you click on the button you will redirect to **Authentication page**.
 
+##
+
 ##### 4.2.3.4 Authentication
 ![Figure 12](https://user-images.githubusercontent.com/56771415/189227950-645fa2d8-d0b4-4d25-ab76-e0659acd1111.png)
 ![Figure 13](https://user-images.githubusercontent.com/56771415/189227956-e8dd617c-2e9c-4e1d-8e7f-b7b13300b4e8.png)
@@ -400,6 +403,8 @@ The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page y
 
 #### Description 
 After being redirected to **Authentication page** the user should receive a code which he needs to enter in the **textbox**, then he needs to click on the **button** to make sure that no one can enter his account as shown in `Figure 12`, `Figure 13` and `Figure 14`. After you click on the button you will redirect to **Select_plan page**.
+
+##
 
 ##### 4.2.3.5 Select_plan
 ![Figure 15](https://user-images.githubusercontent.com/56771415/189228546-0e61bbdb-0a4e-4af7-89a5-cf464896f8ed.png)
@@ -409,6 +414,8 @@ After being redirected to **Authentication page** the user should receive a code
 #### Description 
 After being redirected to **Select_plan** page you need to select a plan by click on button or checkbox then clicking on the confirm button which is on the right side below the plan table. This page is for selecting a plan as shown in `Figure 15`, `Figure 16` and `Figure 17`, after you click on the confirm button you will redirect to **Approvement page**.
 
+##
+
 ##### 4.2.3.6 Approvement
 ![Figure 18](https://user-images.githubusercontent.com/56771415/189228695-ee37c2f2-83c6-439b-98f7-7a2204fd1e40.png)
 ![Figure 19](https://user-images.githubusercontent.com/56771415/189228705-835a46fc-2589-4115-9c03-360e402f59dd.png)
@@ -417,6 +424,8 @@ After being redirected to **Select_plan** page you need to select a plan by clic
 #### Description 
 After being redirected to **Approvement page**, this page is to change your courses or delete them as shown in `Figure 18`, `Figure 19` and `Figure 20`. After you are done you just need to click the approvement button then the system should send SMS or email to make sure you are registered.
 
+##
+
 ##### 4.2.3.7 Report
 ![Figure 21](https://user-images.githubusercontent.com/56771415/189228975-a7568c65-c268-42f4-b2a8-78174e7e2cee.png)
 ![Figure 22](https://user-images.githubusercontent.com/56771415/189228983-424d894f-a11f-4113-a8b0-4cb7b01fa4b7.png)
@@ -424,6 +433,8 @@ After being redirected to **Approvement page**, this page is to change your cour
 
 #### Description
 Report page is for department or supervisor and it’s just for reading. It contains all the information about each course and suggested classes number as shown in `Figure 21`, `Figure 22` and `Figure 23`.
+
+##
 
 ##### 4.2.3.8 PDF's [Low & High Fidelity & Dark]
 [Low-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530736/Low-Fidelity.pdf)
@@ -596,6 +607,8 @@ In the context diagram we represent the entire system with a single process, whi
 
 ![Figure 36](https://user-images.githubusercontent.com/56771415/189233869-bd911daa-eaa9-4603-b6cf-064512f4aa1c.png)
 
+##
+
 #### Level-0 Diagram: Process-1.0, Select Plan
 The student selects which of the planes he prefers. The selected plan (approved plan) is stored. Both student and advisor can make modification if there are courses. Repeat courses cannot be removed. Send confirmation and produce report, then send it to department.
 
@@ -606,6 +619,8 @@ Courses offered received from the Course Offering System.
 #### Level-0 Diagram: Process-3.0, Filter Course
 Checks if student needs to repeat courses and student status. 
 Other semester courses for the student are provided through Plan Offering System and stored. 
+
+##
 
 ##### 4.2.6.3 Level-1 Diagram
 At level 1 diagram we look at the processes that make up level 0 diagram but with more details. `Figure 37`
