@@ -77,9 +77,6 @@ Where the requirements of a system are not subject to change, we use waterfall m
 ##
 
 ### 2.3 Pre-Project Phases
-
-##
-
 #### 2.3.1 Technical feasibility / Literature Review
 In September 2020, SMC student had a course registered in his schedule with 12 credits. The problem is the system only allowing 10 students as minimum and they were 8 students only and the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. This problem leads to more academic issues. After discovering this problem, we read several pieces of literature about course registration systems.
 
