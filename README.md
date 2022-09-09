@@ -245,9 +245,9 @@ Design phase is the longest part in this project because it explains the design 
 #### 4.2.1 Entity Relationship Diagram
 Relational design is the actual design of the database. We have two ERDs one for SQL and NoSQL, both of them are right but at first, we think that we will work with Oracle which SQL but at the end we decide MongoDB is better for us. However, because we are using MongoDB with Document-oriented Database we need to attach our JSON file with it.
 
-![image](https://user-images.githubusercontent.com/56771415/189226707-3bbfaa1c-9691-4420-971d-5c222bcc1e97.png)
+![Figure 4](https://user-images.githubusercontent.com/56771415/189226707-3bbfaa1c-9691-4420-971d-5c222bcc1e97.png)
 
-![image](https://user-images.githubusercontent.com/56771415/189226714-4ef4bf3e-8d98-4488-98ab-8ef85c726fed.png)
+![Figure 5](https://user-images.githubusercontent.com/56771415/189226714-4ef4bf3e-8d98-4488-98ab-8ef85c726fed.png)
 
 The above `Figure 4` & `Figure 5` shows the SQL Relational Diagram and NoSQL Relational Diagram.
 
@@ -389,52 +389,52 @@ High-fidelity wireframes are more complete version of the end product than low f
 ##
 
 ##### 4.2.3.3 Login
-![Figure 9](https://user-images.githubusercontent.com/56771415/189227660-f72e1121-239d-4ee7-9207-64dc8a2cc12f.png)
-![Figure 10](https://user-images.githubusercontent.com/56771415/189227666-82cd754f-3c22-446e-b962-5d788c5ad25d.png)
-![Figure 11](https://user-images.githubusercontent.com/56771415/189227671-7ec8348d-862d-44f2-890d-eba3bf6ecfc7.png)
+![Figure 6](https://user-images.githubusercontent.com/56771415/189227660-f72e1121-239d-4ee7-9207-64dc8a2cc12f.png)
+![Figure 7](https://user-images.githubusercontent.com/56771415/189227666-82cd754f-3c22-446e-b962-5d788c5ad25d.png)
+![Figure 8](https://user-images.githubusercontent.com/56771415/189227671-7ec8348d-862d-44f2-890d-eba3bf6ecfc7.png)
 
 #### Description 
-The above `Figure 9`, `Figure 10` and `Figure 11` Login page is the first page you will see when you enter the portal or website. First you need to Enter your email and password in the **textboxes**, then click on **button**. After you click on the button you will redirect to **Authentication page**.
+The above `Figure 6`, `Figure 7` and `Figure 8` Login page is the first page you will see when you enter the portal or website. First you need to Enter your email and password in the **textboxes**, then click on **button**. After you click on the button you will redirect to **Authentication page**.
 
 ##
 
 ##### 4.2.3.4 Authentication
-![Figure 12](https://user-images.githubusercontent.com/56771415/189227950-645fa2d8-d0b4-4d25-ab76-e0659acd1111.png)
-![Figure 13](https://user-images.githubusercontent.com/56771415/189227956-e8dd617c-2e9c-4e1d-8e7f-b7b13300b4e8.png)
-![Figure 14](https://user-images.githubusercontent.com/56771415/189227967-00d90a0d-1bf7-4f76-b085-106e436719cb.png)
+![Figure 9](https://user-images.githubusercontent.com/56771415/189227950-645fa2d8-d0b4-4d25-ab76-e0659acd1111.png)
+![Figure 10](https://user-images.githubusercontent.com/56771415/189227956-e8dd617c-2e9c-4e1d-8e7f-b7b13300b4e8.png)
+![Figure 11](https://user-images.githubusercontent.com/56771415/189227967-00d90a0d-1bf7-4f76-b085-106e436719cb.png)
 
 #### Description 
-After being redirected to **Authentication page** the user should receive a code which he needs to enter in the **textbox**, then he needs to click on the **button** to make sure that no one can enter his account as shown in `Figure 12`, `Figure 13` and `Figure 14`. After you click on the button you will redirect to **Select_plan page**.
+After being redirected to **Authentication page** the user should receive a code which he needs to enter in the **textbox**, then he needs to click on the **button** to make sure that no one can enter his account as shown in `Figure 9`, `Figure 10` and `Figure 11`. After you click on the button you will redirect to **Select_plan page**.
 
 ##
 
 ##### 4.2.3.5 Select_plan
-![Figure 15](https://user-images.githubusercontent.com/56771415/189228546-0e61bbdb-0a4e-4af7-89a5-cf464896f8ed.png)
-![Figure 16](https://user-images.githubusercontent.com/56771415/189228551-e4c94122-3c2e-4f1d-9ce5-3eddc35993c2.png)
-![Figure 17](https://user-images.githubusercontent.com/56771415/189228560-eeedd927-94a3-4c8e-a30d-f02aab85aa59.png)
+![Figure 12](https://user-images.githubusercontent.com/56771415/189228546-0e61bbdb-0a4e-4af7-89a5-cf464896f8ed.png)
+![Figure 13](https://user-images.githubusercontent.com/56771415/189228551-e4c94122-3c2e-4f1d-9ce5-3eddc35993c2.png)
+![Figure 14](https://user-images.githubusercontent.com/56771415/189228560-eeedd927-94a3-4c8e-a30d-f02aab85aa59.png)
 
 #### Description 
-After being redirected to **Select_plan** page you need to select a plan by click on button or checkbox then clicking on the confirm button which is on the right side below the plan table. This page is for selecting a plan as shown in `Figure 15`, `Figure 16` and `Figure 17`, after you click on the confirm button you will redirect to **Approvement page**.
+After being redirected to **Select_plan** page you need to select a plan by click on button or checkbox then clicking on the confirm button which is on the right side below the plan table. This page is for selecting a plan as shown in `Figure 12`, `Figure 13` and `Figure 14`, after you click on the confirm button you will redirect to **Approvement page**.
 
 ##
 
 ##### 4.2.3.6 Approvement
-![Figure 18](https://user-images.githubusercontent.com/56771415/189228695-ee37c2f2-83c6-439b-98f7-7a2204fd1e40.png)
-![Figure 19](https://user-images.githubusercontent.com/56771415/189228705-835a46fc-2589-4115-9c03-360e402f59dd.png)
-![Figure 20](https://user-images.githubusercontent.com/56771415/189228710-90e28e1d-c494-464b-b212-cbc8777b5dca.png)
+![Figure 15](https://user-images.githubusercontent.com/56771415/189228695-ee37c2f2-83c6-439b-98f7-7a2204fd1e40.png)
+![Figure 16](https://user-images.githubusercontent.com/56771415/189228705-835a46fc-2589-4115-9c03-360e402f59dd.png)
+![Figure 17](https://user-images.githubusercontent.com/56771415/189228710-90e28e1d-c494-464b-b212-cbc8777b5dca.png)
 
 #### Description 
-After being redirected to **Approvement page**, this page is to change your courses or delete them as shown in `Figure 18`, `Figure 19` and `Figure 20`. After you are done you just need to click the approvement button then the system should send SMS or email to make sure you are registered.
+After being redirected to **Approvement page**, this page is to change your courses or delete them as shown in `Figure 15`, `Figure 16` and `Figure 17`. After you are done you just need to click the approvement button then the system should send SMS or email to make sure you are registered.
 
 ##
 
 ##### 4.2.3.7 Report
-![Figure 21](https://user-images.githubusercontent.com/56771415/189228975-a7568c65-c268-42f4-b2a8-78174e7e2cee.png)
-![Figure 22](https://user-images.githubusercontent.com/56771415/189228983-424d894f-a11f-4113-a8b0-4cb7b01fa4b7.png)
-![Figure 23](https://user-images.githubusercontent.com/56771415/189228990-de2eae06-4c2a-4b3a-bf3b-6d95030f8947.png)
+![Figure 18](https://user-images.githubusercontent.com/56771415/189228975-a7568c65-c268-42f4-b2a8-78174e7e2cee.png)
+![Figure 19](https://user-images.githubusercontent.com/56771415/189228983-424d894f-a11f-4113-a8b0-4cb7b01fa4b7.png)
+![Figure 20](https://user-images.githubusercontent.com/56771415/189228990-de2eae06-4c2a-4b3a-bf3b-6d95030f8947.png)
 
 #### Description
-Report page is for department or supervisor and it’s just for reading. It contains all the information about each course and suggested classes number as shown in `Figure 21`, `Figure 22` and `Figure 23`.
+Report page is for department or supervisor and it’s just for reading. It contains all the information about each course and suggested classes number as shown in `Figure 18`, `Figure 19` and `Figure 20`.
 
 ##
 
@@ -510,29 +510,29 @@ Designing a website is one of the hardest parts of this project for several reas
 Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity in terms of how to reach the goals. It focuses on physical and observable actions, and also includes actions not related to software.
 
 #### Symbols and Notation
-![Figure 24](https://user-images.githubusercontent.com/56771415/189231987-5fa7eee4-5242-4df4-913d-47c29a378b87.png)
+![Figure 21](https://user-images.githubusercontent.com/56771415/189231987-5fa7eee4-5242-4df4-913d-47c29a378b87.png)
 
-**Main Task**: main task always starts with number 0. `Figure 24`
+**Main Task**: main task always starts with number 0. `Figure 21`
 
-![Figure 25](https://user-images.githubusercontent.com/56771415/189232069-f2259ab1-9dad-4794-8eac-10527279a3a4.png)
+![Figure 22](https://user-images.githubusercontent.com/56771415/189232069-f2259ab1-9dad-4794-8eac-10527279a3a4.png)
 
-**Sub-Task**: sub-task always starts with number 1 or more. `Figure 25`
+**Sub-Task**: sub-task always starts with number 1 or more. `Figure 22`
 
-![Figure 26](https://user-images.githubusercontent.com/56771415/189232118-d24a46ca-e3a1-46cd-b366-086c70c52a3b.png)
+![Figure 23](https://user-images.githubusercontent.com/56771415/189232118-d24a46ca-e3a1-46cd-b366-086c70c52a3b.png)
 
-**letter “ * ”**: Tasks that are repeated. `Figure 26`
+**letter “ * ”**: Tasks that are repeated. `Figure 23`
 
-![Figure 27](https://user-images.githubusercontent.com/56771415/189232164-479936cc-6ad2-4367-bb69-0179724d601c.png)
+![Figure 24](https://user-images.githubusercontent.com/56771415/189232164-479936cc-6ad2-4367-bb69-0179724d601c.png)
 
-**letter “ O ”**: Tasks that are optional. `Figure 27`
+**letter “ O ”**: Tasks that are optional. `Figure 24`
 
-![Figure 28](https://user-images.githubusercontent.com/56771415/189232200-bfc1dab2-25bc-4f1d-95b2-7491242379ed.png)
+![Figure 25](https://user-images.githubusercontent.com/56771415/189232200-bfc1dab2-25bc-4f1d-95b2-7491242379ed.png)
 
-**A line**: under a task means there are no more subtasks. `Figure 28`
+**A line**: under a task means there are no more subtasks. `Figure 25`
 
-![Figure 29](https://user-images.githubusercontent.com/56771415/189232216-1bb6befb-669e-4570-ad4c-e0edff74b823.png)
+![Figure 26](https://user-images.githubusercontent.com/56771415/189232216-1bb6befb-669e-4570-ad4c-e0edff74b823.png)
 
-**Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
+**Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 26`
 
 ##### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
 The first step to draw a **HTA** diagram is to make something called **tasks breakdown** which simply means breaking every task you have into smaller tasks. To make a task breakdown we need these steps:
@@ -561,9 +561,9 @@ The first step to draw a **HTA** diagram is to make something called **tasks bre
 
 4. Click confirm
 
-After making Task break down, we can draw the diagram. However, the diagram has more details like identifying **essential** and **optional** sub-tasks and finally planning for each path. `Figure 30`
+After making Task break down, we can draw the diagram. However, the diagram has more details like identifying **essential** and **optional** sub-tasks and finally planning for each path. `Figure 27`
 
-![Figure 30](https://user-images.githubusercontent.com/56771415/189232427-d5f34704-720b-4d5a-9007-6b800c09eb46.png)
+![Figure 27](https://user-images.githubusercontent.com/56771415/189232427-d5f34704-720b-4d5a-9007-6b800c09eb46.png)
 
 ##
 
@@ -571,26 +571,26 @@ After making Task break down, we can draw the diagram. However, the diagram has 
 Diagrams or pictures are among the best and oldest forms of human communication They are mainly used for representation. A **context diagram** or **data flow diagram** is a high-level model that shows or illustrates how your system interacts with alternative entities (systems, database, process) and how the data flows. The main benefit of context diagram is that no knowledge or experience is needed to understand the diagram. Levels in a context diagram or data flow diagram are numbered from **level 0** and **level 1** or more, they use a context diagram as a base to draw more detailed diagrams. 
 
 #### Symbols and Notation
-![Figure 31](https://user-images.githubusercontent.com/56771415/189232725-8f809f0f-e8b4-4f09-93e7-544158571719.png)
+![Figure 28](https://user-images.githubusercontent.com/56771415/189232725-8f809f0f-e8b4-4f09-93e7-544158571719.png)
 
-**Process**: Any process that produces , updates, and performs computations. `Figure 31`
+**Process**: Any process that produces , updates, and performs computations. `Figure 28`
 
-![Figure 32](https://user-images.githubusercontent.com/56771415/189232735-009fd71e-58ff-4748-847d-0f83b423e491.png)
+![Figure 29](https://user-images.githubusercontent.com/56771415/189232735-009fd71e-58ff-4748-847d-0f83b423e491.png)
 
-**External entity**: External system that’s interact with the system by sending or receiving. `Figure 32`
+**External entity**: External system that’s interact with the system by sending or receiving. `Figure 29`
 
-![Figure 33](https://user-images.githubusercontent.com/56771415/189232738-dc34daf0-aa5a-4530-bd52-18890684bde6.png)
+![Figure 30](https://user-images.githubusercontent.com/56771415/189232738-dc34daf0-aa5a-4530-bd52-18890684bde6.png)
 
-**Data store**: Is where we store or hold data to use it later (database). `Figure 33`
+**Data store**: Is where we store or hold data to use it later (database). `Figure 30`
 
-![Figure 34](https://user-images.githubusercontent.com/56771415/189232748-1a664d7b-7cf3-4c2d-9b33-d22287c1995e.png)
+![Figure 31](https://user-images.githubusercontent.com/56771415/189232748-1a664d7b-7cf3-4c2d-9b33-d22287c1995e.png)
 
-**Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 34`
+**Data flow**: The route or path that the data travel between external entities, processes and data stores. `Figure 31`
 
 ##### 4.2.6.1 Context level Diagram
-In the below diagram, **Auto-register system** is the main process, or we can call it **process 0**, is the process that represents the entire information system. There are eight entities Student, Advisor, Plan offering system, Course offering system, Advisor management system, Academic history system and Department. `Figure 35`
+In the below diagram, **Auto-register system** is the main process, or we can call it **process 0**, is the process that represents the entire information system. There are eight entities Student, Advisor, Plan offering system, Course offering system, Advisor management system, Academic history system and Department. `Figure 32`
 
-![Figure 35](https://user-images.githubusercontent.com/56771415/189233296-a4145d8f-2472-4656-8b47-feaf3eb7f948.png)
+![Figure 32](https://user-images.githubusercontent.com/56771415/189233296-a4145d8f-2472-4656-8b47-feaf3eb7f948.png)
 
 #### System Description
 - The system provides the specific Plans for each student and generates reports.
@@ -601,13 +601,13 @@ In the below diagram, **Auto-register system** is the main process, or we can ca
 - The system sends confirmation to students and generates reports for the department.
 
 ##### 4.2.6.2 Level-0 Diagram
-In the context diagram we represent the entire system with a single process, which is **process 0**. However, in **level 0** we represent each process as **sub-processes** and now we can add **data store**, they are together form a complete system. `Figure 36`
+In the context diagram we represent the entire system with a single process, which is **process 0**. However, in **level 0** we represent each process as **sub-processes** and now we can add **data store**, they are together form a complete system. `Figure 33`
 
 **Sub-processes**: Select Plan 0.1 - Get Information 2.0 - Filter Course 3.0.
 
 **Data store**: Plans Offered and Courses **D1** , Approved Plan **D2**
 
-![Figure 36](https://user-images.githubusercontent.com/56771415/189233869-bd911daa-eaa9-4603-b6cf-064512f4aa1c.png)
+![Figure 33](https://user-images.githubusercontent.com/56771415/189233869-bd911daa-eaa9-4603-b6cf-064512f4aa1c.png)
 
 ##
 
@@ -625,11 +625,11 @@ Other semester courses for the student are provided through Plan Offering System
 ##
 
 ##### 4.2.6.3 Level-1 Diagram
-At level 1 diagram we look at the processes that make up level 0 diagram but with more details. `Figure 37`
+At level 1 diagram we look at the processes that make up level 0 diagram but with more details. `Figure 34`
 
 Outside the rectangular boundary are external entities and data store however they are out of scope of this level 1 diagram.
 
-![Figure 37](https://user-images.githubusercontent.com/56771415/189234076-3734e3d5-3a65-43ef-9e0d-452660c025fe.png)
+![Figure 34](https://user-images.githubusercontent.com/56771415/189234076-3734e3d5-3a65-43ef-9e0d-452660c025fe.png)
 
 ##### 4.2.6.4 Discussion
 The first problem we faced in this report was understanding what context, level 0, level 1 diagrams are because many articles and papers contradict each other and because of that we took a lot of time and effort. To solve this problem, we read even more articles and watched many videos. In the end, the problem was there are two types or methods to create context, level 0, level 1 which are old and new. However, **we chose the old system because it is more logical**. 
@@ -646,27 +646,27 @@ A use case diagram is used to describe the interaction between actors and the sy
 
 #### Symbols and Notation
 
-![Figure 38](https://user-images.githubusercontent.com/56771415/189234320-980008b8-148c-4b32-b1c0-22b9adc5c236.png)
+![Figure 35](https://user-images.githubusercontent.com/56771415/189234320-980008b8-148c-4b32-b1c0-22b9adc5c236.png)
 
-**Actor**: Stick figures is an end-user but not necessarily sometime can be non-human. `Figure 38`
+**Actor**: Stick figures is an end-user but not necessarily sometime can be non-human. `Figure 35`
 
-![Figure 39](https://user-images.githubusercontent.com/56771415/189234328-12c5b864-d9ac-4a65-a95e-3a5919ac019d.png)
+![Figure 36](https://user-images.githubusercontent.com/56771415/189234328-12c5b864-d9ac-4a65-a95e-3a5919ac019d.png)
 
-**System boundary**: A system boundary defines the scope of what a system will be. `Figure 39`
+**System boundary**: A system boundary defines the scope of what a system will be. `Figure 36`
 
-![Figure 40](https://user-images.githubusercontent.com/56771415/189234336-b3efd3d7-80dc-45fc-b6dc-93a61f35ffac.png)
+![Figure 37](https://user-images.githubusercontent.com/56771415/189234336-b3efd3d7-80dc-45fc-b6dc-93a61f35ffac.png)
 
-**Use case**: A use case represents a functionality of the system. `Figure 40`
+**Use case**: A use case represents a functionality of the system. `Figure 37`
 
-![Figure 41](https://user-images.githubusercontent.com/56771415/189234340-d4959b45-a055-45ce-8b82-193e617d9e58.png)
+![Figure 38](https://user-images.githubusercontent.com/56771415/189234340-d4959b45-a055-45ce-8b82-193e617d9e58.png)
 
-**Relationships or Associations**: Used to describe the relationships between actors and the use cases. `Figure 41`
+**Relationships or Associations**: Used to describe the relationships between actors and the use cases. `Figure 38`
 
 ##### 4.2.7.1 Use case diagram
 
-![Figure 42](https://user-images.githubusercontent.com/56771415/189234581-f2554878-4955-4ed9-a21b-6f1984d11957.png)
+![Figure 39](https://user-images.githubusercontent.com/56771415/189234581-f2554878-4955-4ed9-a21b-6f1984d11957.png)
 
-The above `Figure 42` shows the use case diagram of our system.
+The above `Figure 39` shows the use case diagram of our system.
 
 #### System Description
 
@@ -679,14 +679,14 @@ The above `Figure 42` shows the use case diagram of our system.
 - Only supervisor can read report.
 
 #### 4.2.8 State Diagram
-![Figure 43](https://user-images.githubusercontent.com/56771415/189234889-82a83c4d-ebb4-44c3-84e7-f83a6ede9d78.png)
+![Figure 40](https://user-images.githubusercontent.com/56771415/189234889-82a83c4d-ebb4-44c3-84e7-f83a6ede9d78.png)
 
-The above `Figure 43` shows the state diagram of our system.
+The above `Figure 40` shows the state diagram of our system.
 
 #### 4.2.9 Sequence Diagram
-![Figure 44](https://user-images.githubusercontent.com/56771415/189234906-ba1d27e6-d580-4a2b-a6fa-64dc96cbdc7c.png)
+![Figure 41](https://user-images.githubusercontent.com/56771415/189234906-ba1d27e6-d580-4a2b-a6fa-64dc96cbdc7c.png)
 
-The above `Figure 44` shows the sequence diagram of our system.
+The above `Figure 41` shows the sequence diagram of our system.
 
 ##
 
@@ -923,9 +923,9 @@ After building our front-end we need to build our **Back-End** to handle all the
 
 on the other hand, building **database** is much simpler compared to back-end especially nowadays,  because databases are in cloud such as **Atlas** which we will use. We chose atlas because it has many features such as it’s free, fast and you can store up to 500 collections and you can create 100 databases moreover, you can pay if you more space. Atlas also provides **Security** by using **Authentication**, **Authorization**, **Encryption**, and more therefore, we don’t need to start from scratch we just need to do simple security processes. However, Kristina Cbodorow (2013) said that MongoDB has two main goals which is Easy of Use and Easy Scaling.
 
-Finally, **Network Configuration** is last and the easiest part which all we need to do is deploying our website online using **Heroku** platform. We will use Heroku because it’s free, simple and provide some security or at least for small project `Figure 45`.
+Finally, **Network Configuration** is last and the easiest part which all we need to do is deploying our website online using **Heroku** platform. We will use Heroku because it’s free, simple and provide some security or at least for small project `Figure 42`.
 
-![Figure 45](https://user-images.githubusercontent.com/56771415/189238932-a73fc1b4-db5a-48f1-af98-6de6924b6ebc.png)
+![Figure 42](https://user-images.githubusercontent.com/56771415/189238932-a73fc1b4-db5a-48f1-af98-6de6924b6ebc.png)
 
 ##
 
@@ -939,29 +939,29 @@ Challenges or problems we faced in this project were more than we expected in bo
 ##
 
 ### 4.5 Project Roadmap
-`Figure 46` Shows the whole Roadmap.
+`Figure 43` Shows the whole Roadmap.
 
-![Figure 46](https://user-images.githubusercontent.com/56771415/189240460-25574083-ba8c-4c52-abbf-1efb9c3c9fdc.png)
+![Figure 43](https://user-images.githubusercontent.com/56771415/189240460-25574083-ba8c-4c52-abbf-1efb9c3c9fdc.png)
 
 #### 4.5.1 Initiate Phase
-![Figure 47](https://user-images.githubusercontent.com/56771415/189240558-84397b38-f715-44a0-9413-7ea804f44e0d.png)
+![Figure 44](https://user-images.githubusercontent.com/56771415/189240558-84397b38-f715-44a0-9413-7ea804f44e0d.png)
 
-`Figure 47` shows the Initiate Phase timeline that include Abstract, Introduction, Problem Statement, Project Objectives, Feasibilities, Contribution and Project Deliverables, and References parts.
+`Figure 44` shows the Initiate Phase timeline that include Abstract, Introduction, Problem Statement, Project Objectives, Feasibilities, Contribution and Project Deliverables, and References parts.
 
 #### 4.5.2 Planning & Analysis Phase
-![Figure 48](https://user-images.githubusercontent.com/56771415/189240629-9b8b3ea7-f880-45cf-b6ca-7e2adfc1bd6b.png)
+![Figure 45](https://user-images.githubusercontent.com/56771415/189240629-9b8b3ea7-f880-45cf-b6ca-7e2adfc1bd6b.png)
 
-`Figure 48` shows the Planning & Analysis Phase timeline that include Abstract & Introduction, Methodology Selection & Discussion, Flowcharts, Context Diagrams, Entity Relationship Diagrams, Learning, Building a sample Databases, Functional and Non-Functional Requirements, Time & Cost & Risk Managements, and WBS parts.
+`Figure 45` shows the Planning & Analysis Phase timeline that include Abstract & Introduction, Methodology Selection & Discussion, Flowcharts, Context Diagrams, Entity Relationship Diagrams, Learning, Building a sample Databases, Functional and Non-Functional Requirements, Time & Cost & Risk Managements, and WBS parts.
 
 #### 4.5.3 Design Phase
-![Figure 49](https://user-images.githubusercontent.com/56771415/189240632-a462a65c-ab7f-41fe-8e9e-973840d017d0.png)
+![Figure 46](https://user-images.githubusercontent.com/56771415/189240632-a462a65c-ab7f-41fe-8e9e-973840d017d0.png)
 
-`Figure 49` shows the Design Phase timeline that include Abstract & Introduction, JSON, ERD's, UI Designs (Low & High Fidelities), Design Principles, HTA, System Descriptions, Level 0 and 1 Context Diagrams, Use Case Diagram, and State Diagram parts.
+`Figure 46` shows the Design Phase timeline that include Abstract & Introduction, JSON, ERD's, UI Designs (Low & High Fidelities), Design Principles, HTA, System Descriptions, Level 0 and 1 Context Diagrams, Use Case Diagram, and State Diagram parts.
 
 #### 4.5.4 Implementation Phase
-![Figure 50](https://user-images.githubusercontent.com/56771415/189240640-cc95513b-bea2-4b8e-8fe3-0b8dc61d650e.png)
+![Figure 47](https://user-images.githubusercontent.com/56771415/189240640-cc95513b-bea2-4b8e-8fe3-0b8dc61d650e.png)
 
-`Figure 50` shows the Implementation Phase timeline that Front-End & Back-End. For this part we used a specific programming language for the Front and Back End in our project. We also used MongoDB for our Database and Heroku for server/hosting.
+`Figure 47` shows the Implementation Phase timeline that Front-End & Back-End. For this part we used a specific programming language for the Front and Back End in our project. We also used MongoDB for our Database and Heroku for server/hosting.
 
 ## Chapter 5: Conclusion
 ### 5.1 Conclusion
