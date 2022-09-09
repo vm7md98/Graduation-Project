@@ -23,6 +23,8 @@ Auto-registration system utilizing artificial intelligence (AI) technology, in g
 ### 1.1	Context and motivation
 When I was a second-year student trying to register my courses, I was having many problems, such as what course should I register for? How many courses can I take? Am I allowed to take this course? Because of these questions, I was forced to ask my advisor. This process is repeated every semester and most students face these problems. Therefore, the inspiration and the whole idea came from the beginning of the problem. The main reason why we started this project is that there was a problem that the collage did not solve yet. As a team, we are motivated by our passion for making something useful for the long term and to know our limits and skills. Thus, we have this project idea where we plan on finding solutions to these problems by utilizing smarter solutions such as Internet of things (IoT) to improve the efficiency, enhance the system, optimize the parking utilization, reduce cost and time when using the parking system or even managing it. This project will focus on solving the problems one by one, along with having additional features included to furthermore enhance the user’s experience.
 
+##
+
 ### 1.2	Problem Statement
 In every semester we are facing a problem with lack/surplus of classes due to having unbalanced number of lecturer and students. In 2020 fall semester, SMC student had a math course “Applied Mathematics” registered in his schedule. The problem is the system only allowing 10 students as minimum and they were 8 students only, but the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses which leads to more academic issues. The thought of doing this whole project was to solve this type of a problem and catch irregular behavior in the registration system.
 
@@ -35,6 +37,8 @@ To summarize our problem with the current registration system:
 -	Human error: for example, register for courses for another major.
 -	Lack of feedback: student (user) should get Immediate feedback on their actions for example: when they register/drop to a course or not met the minimum credit.
 
+##
+
 ### 1.3	Project Objectives
 HCT registration system is a system that provides and manages college courses. Their goal is to provide a fast, secure, and easier way to register courses to students across all HCT campuses. 
 HCT registration system providing a lot of services for student such as: Prepare for Registration, Register for Classes, Plan Ahead, Browse, View Registration Information, Browse Course Catalog.
@@ -43,9 +47,16 @@ The above services work efficiently but it is missing some important features/se
 #### Solution
 Our solution to this problem will be create a new feature/service that will count the needed classes numbers based on the student courses registration. This solution will solve a lot of problems that we have talked about previously. It will help the students to get enough classes in every semester. Lecturers can be prepared before the semester starts. It will save a lot of time and effort on advisors. As a supervisor, she/he will have enough data to decide the classes number. Eventually, administration will know the number of classes, budgets, and lecturers needed in every semester. This solution will benefit HCT organization in every aspect, from the financial to the operational processes. We believe that it will lead to less human errors and will add a high value to HCT registration system effectively.
 
+##
+
 ## Chapter 2: Domain related Concepts and Systems
+
+##
+
 ### 2.1	Introduction
 The HCT registration system is going to fulfil all the requirements and problems stated in the problem statement and this system will deal with all those problems efficiently. It will enhance the speed of work and will reduce the workforce cost. The reliability will be increased by the use of HCT registration system. Because in traditional systems generally institutions store the data on documents, files or on spread sheets but now it will provide a specific database in which it will be easy to insert of delete some kind of data about any registration and system will also allow to modify the data.
+
+##
 
 ### 2.2	Adopted Methodology
 As we know that the system is for a Higher College have clear requirements about new system, each and every term associated with the system is well defined and well explained that shows that the requirements of the system are very clear and understandable, due to the reason we choose to use the waterfall methodology for this project. Waterfall methodology is very basic software development methodology which were being use over the decades for software development and system development. 
@@ -64,7 +75,12 @@ This development model allows departmentalization and managerial controls. They 
 
 Where the requirements of a system are not subject to change, we use waterfall methodology as this development methodologies gives us a clear roadmap and help us to focus on our goal. We are using waterfall for the project because it allows the owner to have control over system development team and system development progress can be access easily.
 
+##
+
 ### 2.3 Pre-Project Phases
+
+##
+
 #### 2.3.1 Technical feasibility / Literature Review
 In September 2020, SMC student had a course registered in his schedule with 12 credits. The problem is the system only allowing 10 students as minimum and they were 8 students only and the registration system already accepted it and submit the request. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. Therefore, the lecturer cancels the course and who had 4 courses left with 3 courses. This problem leads to more academic issues. After discovering this problem, we read several pieces of literature about course registration systems.
 
@@ -94,6 +110,8 @@ The above `Table 1` shows the balance and the cost for every asset we chose, it 
 
 ![Table 1](https://user-images.githubusercontent.com/56771415/188313100-99815d71-ca65-4d04-b784-b155e2f893ff.png)
 
+##
+
 ### 2.4 Risk Management
 Risk management is the process of identifying, analyzing, and responding to project risks. It includes risk description, probability, impact, and how to mitigate these risks. Risk management also includes accepting risk.
 
@@ -107,6 +125,8 @@ Here is the table that shows the Requirements gathering in `Table 3`.
 
 ![Table 3](https://user-images.githubusercontent.com/56771415/188313282-e1c90283-8c03-45b5-9149-458242ed71fe.png)
 
+##
+
 ### 2.6	Conclusion
 We believe that our system will solve two major problems we have in our current system, which is the lack of classes and the time needed to register for classes. We will solve the first problem which is lack of classes by counting the number of student for each course then display it in the form of report to supervisor which will give him accurate number for each course then he/she can decide how many classes he/she need to open and how many instructors needs for each course. For the second problem, our system will suggest or recommend courses to a student, depending on his/her semester or credit and prioritize the course the student need to complete first.
 By fixing these two problems, we will reduce the amount of interaction between the advisor and student and that will make course registration faster, easier and less stressful for both student and advisor.
@@ -118,14 +138,20 @@ The significant challenge that we will face is to test our service on universiti
 - JavaScript (Vanilla or React Library) and Bootstrap: To create our service UI.
 
 
+##
+
 ## Chapter 3: Computing-based Solution/System Analysis
 ### 3.1	Introduction
 The first and foremost purpose of the assignment was to test and analyze the whole system that how it going to be built and how it’s going to fulfill the requirements of the institution. The analysis and design part provides a comprehensive idea about the view that how the system will look after the completion and how it will get, store, and transfer the data and also gives an idea about the data processing inside the system. The system analysis part will provide the cost idea and also provide the UML model of this system so, it would be easy for the developers to read this document and start the development process step by step. The edge system analysis provides us is that it enables us to decrease the risks and deal will all the sensitive components efficiently.
+
+##
 
 ### 3.2	Domain requirements
 - System must be efficient to fetch complete student information from the college system to calculate courses and generate plan for each student.
 - System must provide reliable information and if the number of course is less than 4 ask the student to choose another course so he can take 4 courses in one semester.
 - Any student profile which is incomplete or insufficient for generating a course plan will not be entertained in this new registration system.
+
+##
 
 ### 3.3 Functional requirements
 Functional Requirements: Which are the essential things (functions) we want the system to do so we can focus on the important thing and not get distracted. (Specifies things the system should do)
@@ -158,6 +184,8 @@ Functional Requirements: Which are the essential things (functions) we want the 
 14.	Supervisor (admin) can add new user
 15.	Supervisor (admin) can delete a user -->
 
+##
+
 ### 3.4 Non-functional requirements
 Non-Functional Requirements: The behavior of the system like user experience, general characteristics and some features.
 
@@ -188,6 +216,8 @@ Non-Functional Requirements: The behavior of the system like user experience, ge
 10.	The application should work in most browser such as Safari, Firefox.
 11.	Provide auto-register button that register student automatically depending on student data -->
 
+##
+
 ### 3.5 Conclusion
 Well, in this task we faced many challenges unfortunately or luckily as you can say because this task gave us hard time but also provided us with knowledge and problem-solving techniques and it was a great experience overall. The major issue that we faced was in the flow chart, we were facing problems in understanding the case because we were trying our best to do it perfectly. So, we repeated the flow chart 4 times and then we got the best one. In this whole scenario, the software development methodology was also a big task because the success ratio of development of the system and especially the system analysis document depends on the methodology that we choose to develop the system, as we all know that it depends on the idea of the system that are we clear about the requirements? And there is no need to change the requirements in the future? Then we choose the best method and suggest developing with that methodology. 
 Cost management is also a huge task when we plan for a system because the estimated cost enables us to use the resources according to the budget and also if we need to outsource for some resources then we feel free to hire someone else for the specific task. 
@@ -204,6 +234,8 @@ The entity-relationship diagram part is also tricky because there should never b
 Education is one of the major concerns for every state in the present time. Everyone and every country are focusing on the improvement in education system. According to research, the adult literacy rate in Arab Emirates is increased from 53% to 93% and this rate is recorded from 1975 to 2015 and now these days it is improving more. the primary concern of all the states these days. The average increase in literacy rate is 21.02%. With the growing literacy rate of course, we can say that people are getting admissions in different educational institutes rapidly.
 
 So, to takeover this huge amount of registrations day by day, every institution whether it’s a school, college, or university they want an efficient and automatic registration system that fills up their needs and make the registration process easy for both institute and the students. These automatic systems will reduce the workload and work forces in the college. This project is all about that online registration system named as HCT registration system. This system is going to solve all these registration and management problems.
+
+##
 
 ### 4.2 Design
 Design phase is the longest part in this project because it explains the design of the whole computing-based solution from design deliverables, ERDs, Json and other diagrams.
@@ -332,6 +364,8 @@ Here is the JSON as `Figure 6`, `Figure 7`, `Figure 8` and `Code 1` shows below.
 
 ```
 
+##
+
 #### 4.2.3 UI design
 Designing a web page from appearance and functionality to navigation and ease-of-use, can be time consuming and frustrating. Therefore, tools or processes like wireframes and prototypes are there to help designer. Wireframes are blueprints for the website or basic representations of the product. The two types of wireframes are low-fidelity, mid-fidelity and high-fidelity, but in this project, we will use low and high fidelity. Prototypes are early design models of the final UI of your website or simply an advanced wireframe with more visual detail and interaction. The benefit of these tools is to save time and money by having an idea on how the final product will look like.
 
@@ -395,6 +429,8 @@ Report page is for department or supervisor and it’s just for reading. It cont
 [High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530738/High-Fidelity.pdf)
 
 [Dark-Mode-High-Fidelity.pdf](https://github.com/vm7md98/Graduation-Project/files/9530739/Dark-Mode-High-Fidelity.pdf)
+
+##
 
 #### 4.2.4 Design Evaluation
 Planning or designing an evaluation for a project is a critical step in every project because it will give the developer an idea about product quality. The design evaluation criteria are different for every project because the criteria depend on the product. However, Design Principles and Accessibility are the criteria we chose.
@@ -481,6 +517,8 @@ Hierarchical Task Analysis (HTA) is a diagram or method to describe the activity
 
 **Plan**: plan can be numbered based on the task; however, the plan shows the path you need to take to reach your goal or main task. `Figure 29`
 
+##
+
 ##### 4.2.5.1 Hierarchical Task Analysis (HTA) Diagram
 The first step to draw a **HTA** diagram is to make something called **tasks breakdown** which simply means breaking every task you have into smaller tasks. To make a task breakdown we need these steps:
 
@@ -511,6 +549,8 @@ The first step to draw a **HTA** diagram is to make something called **tasks bre
 After making Task break down, we can draw the diagram. However, the diagram has more details like identifying **essential** and **optional** sub-tasks and finally planning for each path. `Figure 30`
 
 ![Figure 30](https://user-images.githubusercontent.com/56771415/189232427-d5f34704-720b-4d5a-9007-6b800c09eb46.png)
+
+##
 
 #### 4.2.6 Context diagram level 0 and 1
 Diagrams or pictures are among the best and oldest forms of human communication They are mainly used for representation. A **context diagram** or **data flow diagram** is a high-level model that shows or illustrates how your system interacts with alternative entities (systems, database, process) and how the data flows. The main benefit of context diagram is that no knowledge or experience is needed to understand the diagram. Levels in a context diagram or data flow diagram are numbered from **level 0** and **level 1** or more, they use a context diagram as a base to draw more detailed diagrams. 
@@ -579,6 +619,8 @@ The first problem we faced in this report was understanding what context, level 
 
 **New method**: Starting with creating level 0 then 1 then 2 and continue.
 
+##
+
 #### 4.2.7 UML Use Case
 #### Use case definition
 A use case diagram is used to describe the interaction between actors and the system that you want to observe, which is Auto-register system. Use case diagram has 4 elements: system, actor, relationships and use cases. Unlike context diagram use case specify how the system interacts with actors without worrying about the details of how that functionality is implemented.
@@ -619,10 +661,14 @@ The above `Figure 42` shows the use case diagram of our system.
 - Only supervisor can read report.
 
 
+##
+
 #### 4.2.8 State Diagram
 ![Figure 43](https://user-images.githubusercontent.com/56771415/189234889-82a83c4d-ebb4-44c3-84e7-f83a6ede9d78.png)
 
 The above `Figure 43` shows the state diagram of our system.
+
+##
 
 #### 4.2.9 Sequence Diagram
 ![Figure 44](https://user-images.githubusercontent.com/56771415/189234906-ba1d27e6-d580-4a2b-a6fa-64dc96cbdc7c.png)
@@ -634,6 +680,9 @@ We classify our development tools into these four categories **Programming langu
 
 #### Programming language
 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output or simply mean a way to communicate with computers. We classify programming languages into two categories front-end and Back-end.
+
+
+##
 
 #### 4.3.1 Front-End
 Front-end or client-side is everything that users interact with from text, colors, buttons, navigation menus and images. In this project we will use HTML, CSS, and JavaScript.
@@ -850,6 +899,8 @@ The tools we used to design our diagrams such as ERD, Context diagram and Use ca
 First **Data Modeler** is a free tool or software made by oracle, we used it to create ERDs. Second **Moon Modeler** is a data modeling tool for MongoDB, PostgreSQL and other however, we used it to create our NoSQL diagram. Lastly [**Lucid**](www.lucid.app) is website to create diagrams and we used [**Lucid**](www.lucid.app) to create diagram such as Context diagrams and Use cases.
 -->
 
+##
+
 #### 4.3.7 Summary
 To sum up, we will use **Front-End** tools like **HTML**, **CSS**, and **JavaScript** to design our interface. We also will use things like **jQuery** to cut or reduce time because it will reduce the code that we need to write like animation or event handling moreover, it’s fast, free and small.
 
@@ -861,6 +912,7 @@ Finally, **Network Configuration** is last and the easiest part which all we nee
 
 ![Figure 45](https://user-images.githubusercontent.com/56771415/189238932-a73fc1b4-db5a-48f1-af98-6de6924b6ebc.png)
 
+##
 
 #### 4.4 Conclusion
 Challenges or problems we faced in this project were more than we expected in both design and development. The first challenge in the design phase was designing a user interface (UI) for both **Low-Fidelity** and **High-Fidelity**. The problem was we needed to design the UI according to **Design Principles** and **Accessibility** and, that took a lot of time from reading previous courses or articles online. The second problem was creating **Level 0** and **Level 1 diagrams**, because level 0 diagram depends on context diagram and level 1 diagram depends on level 0 therefore, if we change context diagram, we need to create all of them from the start and that’s what happened which took a lot of time.
@@ -869,6 +921,7 @@ Challenges or problems we faced in this project were more than we expected in bo
 
  Lastly, **Graphical Tools** were one of the biggest problems we faced because most of them are not free, such as **Moon Modeler** which we used to create our ERD for NoSQL data and [Lucid](www.lucid.app) which we used to create other diagrams such as **level 0**, **1 diagrams** and **Use case**. **Moon Modeler** was free for a limited time (14 days) therefore, we need to create our database within 14days, which was hard because we can’t change it later. Lucid.app on the other hand, there is no limitation on time but there is on how much you can use, such as how many pages you can use or how many shapes you can put in the pages. 
 
+##
 
 ### 4.5 Project Roadmap
 `Figure 46` Shows the whole Roadmap.
