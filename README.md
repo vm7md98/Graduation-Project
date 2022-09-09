@@ -16,8 +16,12 @@ _Project Supervisor: Dr. Madeleine Togher_
 -	MVC – Model-View-Controller, a design pattern used to achieve separation of concerns.
 -	IDE – Integrated Development Environment.
 
+##
+
 ## ABSTRACT
 Auto-registration system utilizing artificial intelligence (AI) technology, in general, the project is providing a new technique that can be used efficiently for student to register. This new technique for registration will depend on server-side or backend. Students will be able to register for the course easily. The main goal of this project is to design a system that can help student to register easily and provide department or management the required data to decide how many classes they need for every course. The system we are using nowadays is not efficient and time consuming for both students and management. Therefore, this system will reduce time and effort.
+
+##
 
 ## Chapter 1: Introduction
 ### 1.1	Context and motivation
