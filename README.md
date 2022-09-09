@@ -55,6 +55,8 @@ Our solution to this problem will be create a new feature/service that will coun
 The HCT registration system is going to fulfil all the requirements and problems stated in the problem statement and this system will deal with all those problems efficiently. It will enhance the speed of work and will reduce the workforce cost. The reliability will be increased by the use of HCT registration system. Because in traditional systems generally institutions store the data on documents, files or on spread sheets but now it will provide a specific database in which it will be easy to insert of delete some kind of data about any registration and system will also allow to modify the data.
 
 
+##
+
 ### 2.2	Adopted Methodology
 As we know that the system is for a Higher College have clear requirements about new system, each and every term associated with the system is well defined and well explained that shows that the requirements of the system are very clear and understandable, due to the reason we choose to use the waterfall methodology for this project. Waterfall methodology is very basic software development methodology which were being use over the decades for software development and system development. 
 We have some advantages of this model, due to these advantages many of the organization still using this model on and off for their projects.
