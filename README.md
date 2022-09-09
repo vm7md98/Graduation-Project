@@ -52,9 +52,6 @@ Our solution to this problem will be create a new feature/service that will coun
 ##
 
 ## Chapter 2: Domain related Concepts and Systems
-
-##
-
 ### 2.1	Introduction
 The HCT registration system is going to fulfil all the requirements and problems stated in the problem statement and this system will deal with all those problems efficiently. It will enhance the speed of work and will reduce the workforce cost. The reliability will be increased by the use of HCT registration system. Because in traditional systems generally institutions store the data on documents, files or on spread sheets but now it will provide a specific database in which it will be easy to insert of delete some kind of data about any registration and system will also allow to modify the data.
 
